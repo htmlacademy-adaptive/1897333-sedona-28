@@ -1,0 +1,12 @@
+.main-header {
+  background-color: #ffffff;
+  display: flex;
+  height: 56px; /*удалить*/
+}
+
+.main-header__logo-link {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -9,15 +9,12 @@
 
 <body class="page-body">
   <!--шапка-->
-  <header class="main-header">
+  <header class="container main-header">
     <!--Логотип style="postition: absolute, top: 0px"-->
-    <a href="./index.html" class="main-header__logo" alt="ссылка на главную страницу">
-      <img src="./img/unredner/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
+    <a href="./index.html" class="main-header__logo-link" alt="ссылка на главную страницу">
+      <img class="main-header__logo" src="./img/unredner/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list left-list">
           <li class="left-list__item left-list__item--active">
@@ -44,12 +41,15 @@
           </li>
         </ul>
       </div>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
     </nav>
   </header>
-  <main class="main-container">
+  <main class="container main-container">
     <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
     <section class="hero">
-      <img class="hero__image" src="./img/unredner/back-mobile.jpg.jpg"
+      <img class="hero__image" src="./img/unredner/back-mobile.jpg"
         alt="Welcome to the geourgeous sedona because the grand canyon sucks">
     </section>
     <div class="intro">
@@ -126,7 +126,7 @@
       <img src="./img/unredner/map-mobile.jpg.jpg">
     </iframe>
   </main>
-  <footer class="main-footer">
+  <footer class="container main-footer">
     <h3 class="main-footer__title">#visited</h3>
     <div class="main-footer__social social">
       <h2 class="visually-hidden">Социальные сети</h2>
