@@ -1,0 +1,40 @@
+.find-hotel {
+  margin: 0 auto;
+  padding: 38px 29px;
+}
+
+.find-hotel__title {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.find-hotel__description {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.find-hotel__link {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #ffffff;
+  border: solid;
+  padding: 16px 49px;
+  background-color: #81B3D2;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
