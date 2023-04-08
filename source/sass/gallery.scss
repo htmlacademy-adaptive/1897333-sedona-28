@@ -1,0 +1,67 @@
+.gallery {
+  margin: 0 auto;
+}
+
+.gallery__list {
+  list-style: none;
+  margin: 0 auto;
+}
+
+.gallery__item {
+  border-top: solid 1px #E5E5E5;
+  padding: 24px 20px;
+  padding-bottom: 25px;
+
+  &:last-child {
+    border-bottom: solid 1px #E5E5E5;
+  }
+}
+
+.gallery__picture {
+
+  margin-bottom: 15px;
+
+  &--road {
+    background-color: #ab772f;
+  }
+
+  &--cactus {
+    background-color: #ad7f59;
+  }
+
+  &--north-road {
+    background-color: #3b4c36;
+  }
+
+  &--devil-bridge {
+    background-color: #9a7c72;
+  }
+}
+
+.gallery__title {
+  margin: 0 auto;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.gallery__author {
+  color: #333333;
+  margin: 0 auto;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 11px;
+}
+
+.gallery__number {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}

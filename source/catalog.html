@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="page__body" style="background-color: grey;">
+<body class="page-body">
   <!--шапка-->
-  <header class="main-header">
-    <!--Логотип style="postition: absolute, top: 0px"-->
-    <a href="./index.html" class="main-header__logo" alt="ссылка на главную страницу">
-      <img src="./img/unredner/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
+  <header class="container main-header">
+    <a href="./index.html" class="main-header__logo-link" alt="ссылка на главную страницу">
+      <img class="main-header__logo" src="./img/unredner/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list left-list">
           <li class="left-list__item left-list__item--active">
@@ -43,98 +41,100 @@
           </li>
         </ul>
       </div>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
     </nav>
   </header>
-  <main class="catalog-main">
+  <main class="main-container container">
     <h1 class="visually-hidden">Достопримечательности города Седоны</h1>
-    <section class="catalog-main__hero hero--mountains">
-      <img class="hero__image hero__image--vector" src="img/unredner/SEDONA.svg" width="1200" height="518"
-        alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+    <section class="hero">
+      <img class="hero__image hero__image--small" src="./img/unredner/back-mobile.jpg"
+        alt="Welcome to the geourgeous sedona because the grand canyon sucks">
     </section>
-    <section class="catalog-main__gallery photo-gallery">
-      <div class="photo-gallery__header gallery-header">
-        <h2 class="gallery-header__title">Фото и видео</h2>
-        <p class="gallery-header__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам
-          забыть
-          о политике и экономике.</p>
-      </div>
-      <div class="photo-gallery__item">
-        <div class="photo-gallery__item photo-card">
-          <img class="photo-card__picture" src="./img/unredner/gallery/photo-1-mobile.jpg" alt="фото дороги">
-          <h3 class="photo-card__title">Неродные просторы</h3>
-          <p class="photo-card__author">Автор фото: Борис</p>
-          <div class="photo-card__rate likes">
-            <img class="likes__icon" src="./img/unredner/like-icon.svg">
-            <p class="likes__number">1350</p>
+    <div class="intro intro--catalog">
+      <h2 class="intro__title">Фото и видео</h2>
+      <p class="intro__description"> Не можете решиться на путешествие из-за курса? Фотографии помогут вам
+        забыть о политике и экономике.</p>
+    </div>
+    <section class="gallery">
+      <ul class="gallery__list">
+        <li class="gallery__item">
+          <img class="gallery__picture gallery__picture--road" src="./img/unredner/gallery/photo-1-mobile.jpg"
+            alt="фото дороги">
+          <h3 class="gallery__title">Неродные просторы</h3>
+          <p class="gallery__author">Автор фото: Борис</p>
+          <div class="gallery__rate">
+            <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+            <p class="gallery__number">1350</p>
           </div>
-        </div>
-      </div>
-      <div class="photo-gallery__item">
-        <div class="photo-gallery__item photo-card">
-          <img class="photo-card__picture" src="./img/unredner/gallery/photo-2-mobile.jpg" alt="фото кактуса">
-          <h3 class="photo-card__title">Местная растительность</h3>
-          <p class="photo-card__author">Автор фото: Сергей</p>
-          <div class="photo-card__rate likes">
-            <img class="likes__icon" src="./img/unredner/like-icon.svg">
-            <p class="likes__number">143</p>
+        </li>
+        <li class="gallery__item">
+          <img class="gallery__picture gallery__picture--cactus" src="./img/unredner/gallery/photo-2-mobile.jpg"
+            alt="фото кактуса">
+          <h3 class="gallery__title">Местная растительность</h3>
+          <p class="gallery__author">Автор фото: Сергей</p>
+          <div class="gallery__rate">
+            <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+            <p class="gallery__number">143</p>
           </div>
-        </div>
-      </div>
-      <div class="photo-gallery__item">
-        <div class="photo-gallery__item photo-card">
-          <img class="photo-card__picture" src="./img/unredner/gallery/photo-3-mobile.jpg" alt="фото дороги в горах">
-          <h3 class="photo-card__title">Дорога на север</h3>
-          <p class="photo-card__author">Автор фото: Петр</p>
-          <div class="photo-card__rate likes">
-            <img class="likes__icon" src="./img/unredner/like-icon.svg">
-            <p class="likes__number">96</p>
+        </li>
+        <li class="gallery__item">
+          <img class="gallery__picture gallery__picture--north-road" src="./img/unredner/gallery/photo-3-mobile.jpg"
+            alt="фото дороги в горах">
+          <h3 class="gallery__title">Дорога на север</h3>
+          <p class="gallery__author">Автор фото: Петр</p>
+          <div class="gallery__rate">
+            <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+            <p class="gallery__number">96</p>
           </div>
-        </div>
-      </div>
-      <div class="photo-gallery__item">
-        <div class="photo-gallery__item photo-card">
-          <img class="photo-card__picture" src="./img/unredner/gallery/photo-4-mobile.jpg" alt="мост дьявола">
-          <h3 class="photo-card__title">Мост дьявола</h3>
-          <p class="photo-card__author">Автор фото: Антон</p>
-          <div class="photo-card__rate likes">
-            <img class="likes__icon" src="./img/unredner/like-icon.svg">
-            <p class="likes__number">254</p>
+        </li>
+        <li class="gallery__item">
+          <img class="gallery__picture gallery__picture--devil-bridge" src="./img/unredner/gallery/photo-4-mobile.jpg"
+            alt="мост дьявола">
+          <h3 class="gallery__title">Мост дьявола</h3>
+          <p class="gallery__author">Автор фото: Антон</p>
+          <div class="gallery__rate">
+            <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+            <p class="gallery__number">254</p>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
-    <section class="catalog-main__moovie moovie">
-      <div class="moovie-wrapper">
-        <h2 class="moovie__title">Все еще сомневаетесь?</h2>
-        <p class="moovie__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+    <section class="argument">
+      <div class="argument__wrapper">
+        <h2 class="argument__title">Все еще сомневаетесь?</h2>
+        <p class="argument__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
           очередной раз!</p>
-        <div class="moovie__video-wrapper">
-          <img class="moovie__video" src="./img/unredner/gallery/video-mobile.jpg">
-        </div>
       </div>
+      <img class="argument__video" src="./img/unredner/gallery/video-mobile.jpg">
     </section>
   </main>
-  <footer class="main-footer">
-    <h3 class="main-footer__title">#visited</h3>
+  <footer class="main-footer container">
+    <h3 class="main-footer__title">#visitsedona</h3>
     <div class="main-footer__social social">
       <h2 class="visually-hidden">Социальные сети</h2>
-      <ul class="social-list">
+      <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-            <img src="" alt="вконтакте">
+            <img src="./img/unredner/social-vk.svg" alt="вконтакте">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-            <img src="" alt="Телеграм">
+            <img src="./img/unredner/social-tg.svg" alt="Телеграм">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-            <img src="" alt="Youtube">
+            <img src="./img/unredner/social-youtube.svg" alt="Youtube">
           </a>
         </li>
       </ul>
+      <a class="main-footer__adademy-link">
+        <span class="main-footer__academy">Разработано</span>
+        <img class="main-footer__academy-logo" src="./img/unredner/htmlacademy.svg" alt="логотип академии">
+      </a>
     </div>
   </footer>
 </body>
