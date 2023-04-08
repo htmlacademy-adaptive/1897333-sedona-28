@@ -6,12 +6,21 @@
   margin: 0 auto;
   padding: 0;
   list-style: none;
+  //
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .advantages__item {
+  //
   margin: 0 auto;
   padding: 54px 18px 40px;
   color: #000000;
+
+  &--image {
+    padding: 0;
+  }
 
   &--blue {
     background-color: #81B3D2;
