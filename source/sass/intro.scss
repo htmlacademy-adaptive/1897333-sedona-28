@@ -10,6 +10,10 @@
     padding: 36px 20px;
     padding-bottom: 28px;
   }
+
+  @media (min-width: 768px) {
+    padding: 47.5px 124px;
+  }
 }
 
 .intro__title {
@@ -22,6 +26,11 @@
   text-transform: uppercase;
   min-width: 300px; //чтобы был правильный перенос
   margin-bottom: 35px;
+
+  @media (min-width: 768px) {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 
 .intro__description {
@@ -33,4 +42,9 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
