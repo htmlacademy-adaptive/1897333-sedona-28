@@ -5,8 +5,11 @@
 
   @media(min-width: 768px) {
     flex-direction: row;
-    justify-content: center;
-    gap: 113.5px;
+    justify-content: space-around;
+  }
+
+  @media (min-width: 1200px) {
+    justify-content: space-around;
   }
 }
 

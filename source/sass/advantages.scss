@@ -51,6 +51,7 @@
   flex-direction: column;
 
   &--blue {
+    color: #ffffff;
     background-color: #81B3D2;
     padding: 33px 18px;
     padding-bottom: 40px;
@@ -75,7 +76,6 @@
 }
 
 .advantages__title {
-  color: #000000;
   margin: 0 auto;
   text-align: center;
   font-family: "PT Sans", sans-serif;
@@ -91,7 +91,6 @@
 }
 
 .advantages__number {
-  color: #000000;
   margin: 0 auto;
   text-align: center;
   font-family: "PT Sans", sans-serif;
@@ -107,7 +106,6 @@
 }
 
 .advantages__description {
-  color: #000000;
   margin: 0 auto;
   text-align: center;
   font-family: "PT Sans", sans-serif;
@@ -123,23 +121,46 @@
 
 .advantages__image {
   padding: 0;
-  color: #000000;
 
   &--city {
-    content: url("../img/unredner/photo-city@1x 1.jpg");
+    content: url("../img/unredner/index/photo-city-mobile@1x.jpg");
+
   }
 
   &--bridge {
-    content: url("../img/unredner/photo-bridge@1x 1.jpg");
+    content: url("../img/unredner/index/photo-bridge-mobile@1x.jpg");
   }
 
   @media (min-width: 768px) {
+
     &--city {
-      content: url("../img/unredner/photo-city@1x.jpg");
+      content: url("../img/unredner/index/photo-city-tablet@1x.jpg");
     }
 
     &--bridge {
-      content: url("../img/unredner/photo-bridge@1x.jpg");
+      content: url("../img/unredner/index/photo-bridge-tablet@1x.jpg");
+      order: -1;
+    }
+
+    @media (min-width: 1200px) {
+      &--city {
+        content: url("../img/unredner/index/photo-city-desktop@1x.jpg");
+
+      }
+
+      &--bridge {
+        content: url("../img/unredner/index/photo-bridge-desktop@1x.jpg");
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &--city {
+      content: url("../img/unredner/index/photo-city-desktop@1x.jpg");
+    }
+
+    &--bridge {
+      content: url("../img/unredner/index/photo-bridge-desktop@1x.jpg");
       order: -1;
     }
   }
@@ -163,7 +184,19 @@
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: 768px) {
+    padding: 60px 33px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+}
+
+.advantages__icon {
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: 768px) {
+    width: 77px;
+    height: 72px;
   }
 }

@@ -1,7 +1,11 @@
 .hero {
   height: 389px;
   background-color: #7691a4;
-  background-image: url("../img/unredner/back-mobile.jpg");
+  background-image: url("../img/unredner/global/hero/back-mobile.jpg.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
+
+  @media(min-width: 768px) {
+    background-image: url("../img/unredner/global/hero/back-desktop.jpg.jpg");
+  }
 }

@@ -15,26 +15,26 @@
     </a>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list left-list">
-          <li class="left-list__item left-list__item--active">
-            <a href="index.html" alt="ссылка на главную страницу">
+        <ul class="main-nav__list main-nav__list--left">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html" alt="ссылка на главную страницу">
               Главная
             </a>
           </li>
-          <li class="left-list__item">
-            <a href="catalog.html" alt="ссылка на галерею">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html" alt="ссылка на галерею">
               Фото и видео
             </a>
           </li>
         </ul>
-        <ul class="main-nav__list right-list">
-          <li class="right-list__item">
-            <a href="form.html" alt="ссылка на форму отзыва">
+        <ul class="main-nav__list main-nav__list--right">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html" alt="ссылка на форму отзыва">
               Форма отзыва
             </a>
           </li>
-          <li class="right-list__item">
-            <a href="https://htmlacademy.ru/" alt="ссылка на HTML Academy">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru/" alt="ссылка на HTML Academy">
               HTML Academy
             </a>
           </li>
@@ -61,7 +61,7 @@
       <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="get">
         <div class="feedback__container">
           <fieldset class="feedback__full-name">
-            <h3 class="feedback__title">Представьтесь:</h3>
+            <legend class="feedback__title">Представьтесь:</legend>
             <div class="feedback__wrapper">
               <label class="feedback__caption" for="first-name">Имя*:</label>
               <input class="feedback__field" type="text" id="first-name" name="first-name" placeholder="Пётр" required>
@@ -76,7 +76,7 @@
             </div>
           </fieldset>
           <fieldset class="feedback__contacts">
-            <h3 class="feedback__title">Контактная информация:</h3>
+            <legend class="feedback__title">Контактная информация:</legend>
             <div class="feedback__wrapper">
               <label class="feedback__caption" for="contacts-phone">Контактный телефон*:</label>
               <input class="feedback__field feedback__field--phone" type="text" id="contacts-phone"
@@ -90,7 +90,7 @@
           </fieldset>
         </div>
         <fieldset class="feedback__impressions">
-          <h3 class="feedback__title">Ваше общее впечатление:</h3>
+          <legend class="feedback__title">Ваше общее впечатление:</legend>
           <ul class="feedback__list">
             <li class="feedback__item">
               <label class="feedback__control">
@@ -116,7 +116,7 @@
           </ul>
         </fieldset>
         <fieldset class="feedback__attractions">
-          <h3 class="feedback__title">Посещенные достопримечательности:</h3>
+          <legend class="feedback__title">Посещенные достопримечательности:</legend>
           <ul class="feedback__list">
             <li class="feedback__item">
               <label class="feedback__control">
@@ -153,12 +153,14 @@
           <textarea class="feedback__field feedback__field--emotions" id="emotions" name="emotions" rows="" cols=""
             placeholder="Опишите подробно все свои восторги" required></textarea>
         </div>
-        <button class="feedback_button" type="submit">Отправить отзыв</button>
-        <p class="feedback__required-field">* — обязательные поля</p>
+        <div class="feedback__wrapper feedback__wrapper--submit">
+          <button class="feedback_button" type="submit">Отправить отзыв</button>
+          <p class="feedback__required-field">* — обязательные поля</p>
+        </div>
       </form>
     </section>
   </main>
-  <footer class="main-footer container">
+  <footer class="container main-footer">
     <h3 class="main-footer__title">#visitsedona</h3>
     <div class="main-footer__social social">
       <h2 class="visually-hidden">Социальные сети</h2>
@@ -179,8 +181,10 @@
           </a>
         </li>
       </ul>
-      <a class="main-footer__adademy-link">
-        <span class="main-footer__academy">Разработано</span>
+    </div>
+    <div class="main-footer__adademy">
+      <a class=" main-footer__adademy-link">
+        <span class="main-footer__academy-capture">Разработано</span>
         <img class="main-footer__academy-logo" src="./img/unredner/htmlacademy.svg" alt="логотип академии">
       </a>
     </div>

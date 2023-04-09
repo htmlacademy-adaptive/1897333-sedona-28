@@ -5,6 +5,16 @@
 .gallery__list {
   list-style: none;
   margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media(min-width:768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .gallery__item {
@@ -15,6 +25,12 @@
   &:last-child {
     border-bottom: solid 1px #E5E5E5;
   }
+
+  @media(min-width:768px) {
+    &:first-child {
+      flex: 1;
+    }
+  }
 }
 
 .gallery__picture {
@@ -23,18 +39,22 @@
 
   &--road {
     background-color: #ab772f;
+    content: url(../img/unredner/catalog/gallery/photo-1-mobile.jpg);
   }
 
   &--cactus {
     background-color: #ad7f59;
+    content: url(../img/unredner/catalog/gallery/photo-2-mobile.jpg);
   }
 
   &--north-road {
     background-color: #3b4c36;
+    content: url(../img/unredner/catalog/gallery/photo-3-mobile.jpg);
   }
 
   &--devil-bridge {
     background-color: #9a7c72;
+    content: url(../img/unredner/catalog/gallery/photo-4-mobile.jpg);
   }
 }
 
@@ -59,9 +79,15 @@
   margin-bottom: 11px;
 }
 
+.gallery__rate {
+  display: flex;
+  flex-direction: row;
+}
+
 .gallery__number {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-family: "PT Sans", sans-serif;
   font-size: 14px;
+  font-weight: 700;
   line-height: 21px;
+  padding-left: 14px;
 }
