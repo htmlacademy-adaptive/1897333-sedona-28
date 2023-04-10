@@ -16,26 +16,26 @@
     </a>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list left-list">
-          <li class="left-list__item left-list__item--active">
-            <a href="index.html" alt="ссылка на главную страницу">
+        <ul class="main-nav__list main-nav__list--left">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html" alt="ссылка на главную страницу">
               Главная
             </a>
           </li>
-          <li class="left-list__item">
-            <a href="catalog.html" alt="ссылка на галерею">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html" alt="ссылка на галерею">
               Фото и видео
             </a>
           </li>
         </ul>
-        <ul class="main-nav__list right-list">
-          <li class="right-list__item">
-            <a href="form.html" alt="ссылка на форму отзыва">
+        <ul class="main-nav__list main-nav__list--right">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html" alt="ссылка на форму отзыва">
               Форма отзыва
             </a>
           </li>
-          <li class="right-list__item">
-            <a href="https://htmlacademy.ru/" alt="ссылка на HTML Academy">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru/" alt="ссылка на HTML Academy">
               HTML Academy
             </a>
           </li>
@@ -60,45 +60,62 @@
     <section class="gallery">
       <ul class="gallery__list">
         <li class="gallery__item">
-          <img class="gallery__picture gallery__picture--road" src="./img/unredner/gallery/photo-1-mobile.jpg"
-            alt="фото дороги">
-          <h3 class="gallery__title">Неродные просторы</h3>
-          <p class="gallery__author">Автор фото: Борис</p>
-          <div class="gallery__rate">
-            <img class="gallery__icon" src="./img/unredner/like-icon.svg">
-            <p class="gallery__number">1350</p>
+          <img class="gallery__picture gallery__picture--road" alt="фото дороги">
+          <div class="gallery__wrapper">
+            <div class="gallery__caption">
+              <h3 class="gallery__title">Неродные просторы</h3>
+              <p class="gallery__author">Автор фото: Борис</p>
+            </div>
+            <div class="gallery__rate">
+              <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+              <p class="gallery__number">1350</p>
+            </div>
           </div>
         </li>
-        <li class="gallery__item">
-          <img class="gallery__picture gallery__picture--cactus" src="./img/unredner/gallery/photo-2-mobile.jpg"
-            alt="фото кактуса">
-          <h3 class="gallery__title">Местная растительность</h3>
-          <p class="gallery__author">Автор фото: Сергей</p>
-          <div class="gallery__rate">
-            <img class="gallery__icon" src="./img/unredner/like-icon.svg">
-            <p class="gallery__number">143</p>
-          </div>
-        </li>
-        <li class="gallery__item">
-          <img class="gallery__picture gallery__picture--north-road" src="./img/unredner/gallery/photo-3-mobile.jpg"
-            alt="фото дороги в горах">
-          <h3 class="gallery__title">Дорога на север</h3>
-          <p class="gallery__author">Автор фото: Петр</p>
-          <div class="gallery__rate">
-            <img class="gallery__icon" src="./img/unredner/like-icon.svg">
-            <p class="gallery__number">96</p>
-          </div>
-        </li>
-        <li class="gallery__item">
-          <img class="gallery__picture gallery__picture--devil-bridge" src="./img/unredner/gallery/photo-4-mobile.jpg"
-            alt="мост дьявола">
-          <h3 class="gallery__title">Мост дьявола</h3>
-          <p class="gallery__author">Автор фото: Антон</p>
-          <div class="gallery__rate">
-            <img class="gallery__icon" src="./img/unredner/like-icon.svg">
-            <p class="gallery__number">254</p>
-          </div>
-        </li>
+        <ul class="gallery__sublist">
+          <li class="gallery__item">
+            <img class="gallery__picture gallery__picture--cactus" alt="фото кактуса">
+            <div class="gallery__wrapper">
+              <div class="gallery__caption">
+
+                <h3 class="gallery__title">Местная растительность</h3>
+                <p class="gallery__author">Автор фото: Сергей</p>
+              </div>
+              <div class="gallery__rate">
+                <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+                <p class="gallery__number">143</p>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__picture gallery__picture--north-road" alt="фото дороги в горах">
+            <div class="gallery__wrapper">
+              <div class="gallery__caption">
+
+                <h3 class="gallery__title">Дорога на север</h3>
+                <p class="gallery__author">Автор фото: Петр</p>
+              </div>
+              <div class="gallery__rate">
+                <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+                <p class="gallery__number">96</p>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__picture gallery__picture--devil-bridge" alt="мост дьявола">
+            <div class="gallery__wrapper">
+              <div class="gallery__caption">
+
+                <h3 class="gallery__title">Мост дьявола</h3>
+                <p class="gallery__author">Автор фото: Антон</p>
+              </div>
+              <div class="gallery__rate">
+                <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+                <p class="gallery__number">254</p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </ul>
     </section>
     <section class="argument">
@@ -110,7 +127,7 @@
       <img class="argument__video" src="./img/unredner/gallery/video-mobile.jpg">
     </section>
   </main>
-  <footer class="main-footer container">
+  <footer class="container main-footer">
     <h3 class="main-footer__title">#visitsedona</h3>
     <div class="main-footer__social social">
       <h2 class="visually-hidden">Социальные сети</h2>
@@ -131,8 +148,10 @@
           </a>
         </li>
       </ul>
-      <a class="main-footer__adademy-link">
-        <span class="main-footer__academy">Разработано</span>
+    </div>
+    <div class="main-footer__adademy">
+      <a class=" main-footer__adademy-link">
+        <span class="main-footer__academy-capture">Разработано</span>
         <img class="main-footer__academy-logo" src="./img/unredner/htmlacademy.svg" alt="логотип академии">
       </a>
     </div>

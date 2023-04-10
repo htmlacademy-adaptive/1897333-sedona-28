@@ -1,15 +1,34 @@
 .feedback {
   margin: 0 auto;
+
+  @media(min-width: 768px) {
+    padding: 0 60px;
+  }
 }
 
-.feedback__full-name,
-.feedback__contacts,
-.feedback__impressions,
-.feedback__attractions,
-.feedback__emotions {
+.feedback__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media(min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.feedback__full-name {
   border: none;
   border-top: solid 1px #E5E5E5;
   padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media(min-width: 768px) {
+    border-right: solid 1px #E5E5E5;
+    width: 50%;
+  }
 }
 
 .feedback__title {
@@ -21,6 +40,17 @@
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--submit {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 .feedback__caption {
@@ -53,19 +83,53 @@
   }
 }
 
-// .feedback__field::-webkit-input-placeholder {
-//   /* Chrome/Opera/Safari */
-//   font-family: 'PT Sans', sans-serif;
-//   font-weight: 700;
-//   font-size: 18px;
-//   line-height: 26px;
-//   text-align: left;
-//   color: #000000;
-//   opacity: 1;
-// }
+.feedback__contacts {
+  border: none;
+  border-top: solid 1px #E5E5E5;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media(min-width: 768px) {
+    width: 50%;
+  }
+}
+
+.feedback__impressions {
+  border: none;
+  border-top: solid 1px #E5E5E5;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .feedback__list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @media(min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.feedback__attractions {
+  border: none;
+  border-top: solid 1px #E5E5E5;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback__emotions {
+  border: none;
+  border-top: solid 1px #E5E5E5;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .feedback_button {
@@ -82,6 +146,10 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+
+  @media(min-width: 768px) {
+    margin: 0;
+  }
 }
 
 .feedback__required-field {
@@ -89,5 +157,5 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  align-items: center;
+  text-align: center;
 }

@@ -1,6 +1,9 @@
 .argument {
   margin: 0 auto;
   padding: 17px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .argument__wrapper {
@@ -26,4 +29,16 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+}
+
+.argument__video {
+  content: url(../img/unredner/catalog/gallery/video-mobile.jpg);
+
+  @media(min-width:768px) {
+    content: url(../img/unredner/catalog/gallery/video-tablet.jpg);
+  }
+
+  @media(min-width:1200px) {
+    content: url(../img/unredner/catalog/gallery/video-desktop.jpg);
+  }
 }

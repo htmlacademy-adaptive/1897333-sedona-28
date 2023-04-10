@@ -10,18 +10,27 @@
     padding: 36px 20px;
     padding-bottom: 28px;
   }
+
+  @media (min-width: 768px) {
+    padding: 47.5px 124px;
+  }
 }
 
 .intro__title {
   margin: 0 auto;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
   min-width: 300px; //чтобы был правильный перенос
   margin-bottom: 35px;
+
+  @media (min-width: 768px) {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 
 .intro__description {
@@ -32,5 +41,11 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  color: #000000;
+  color: #333333;
+
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }

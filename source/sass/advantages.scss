@@ -6,24 +6,71 @@
   margin: 0 auto;
   padding: 0;
   list-style: none;
+  //
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__item {
+  //
   margin: 0 auto;
-  padding: 54px 18px 40px;
-  color: #000000;
+  display: flex;
+  flex-direction: column;
+
+  &--grey {
+    border-bottom: solid 1px #D6D6D6;
+
+    &:last-child>.advantages__wrapper {
+      padding-bottom: 28px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &--grey {
+      border-bottom: none;
+      width: 33%;
+    }
+  }
+}
+
+.advantages__wrapper {
+  display: flex;
+  flex-direction: column;
 
   &--blue {
-    background-color: #81B3D2;
     color: #ffffff;
+    background-color: #81B3D2;
+    padding: 33px 18px;
+    padding-bottom: 40px;
   }
 
   &--grey {
     background-color: #eeeeee;
-    border-bottom: solid 1px #D6D6D6;
+    padding: 24px 26px;
+  }
 
-    &:last-child {
-      border-bottom: none;
+  @media (min-width: 768px) {
+    &--blue {
+      padding: 52px 33px;
+      padding-bottom: 31px;
+    }
+
+    &--grey {
+      padding: 41px 33px;
+      padding-bottom: 63px;
     }
   }
 }
@@ -37,6 +84,10 @@
   line-height: 26px;
   text-transform: uppercase;
   margin-bottom: 11px;
+
+  @media (min-width: 768px) {
+    font-size: 21px;
+  }
 }
 
 .advantages__number {
@@ -48,6 +99,10 @@
   line-height: 26px;
   text-transform: uppercase;
   margin-bottom: 17px;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .advantages__description {
@@ -58,10 +113,90 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.advantages__image {
+  padding: 0;
+
+  &--city {
+    content: url("../img/unredner/index/photo-city-mobile@1x.jpg");
+
+  }
+
+  &--bridge {
+    content: url("../img/unredner/index/photo-bridge-mobile@1x.jpg");
+  }
+
+  @media (min-width: 768px) {
+
+    &--city {
+      content: url("../img/unredner/index/photo-city-tablet@1x.jpg");
+    }
+
+    &--bridge {
+      content: url("../img/unredner/index/photo-bridge-tablet@1x.jpg");
+      order: -1;
+    }
+
+    @media (min-width: 1200px) {
+      &--city {
+        content: url("../img/unredner/index/photo-city-desktop@1x.jpg");
+
+      }
+
+      &--bridge {
+        content: url("../img/unredner/index/photo-bridge-desktop@1x.jpg");
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &--city {
+      content: url("../img/unredner/index/photo-city-desktop@1x.jpg");
+    }
+
+    &--bridge {
+      content: url("../img/unredner/index/photo-bridge-desktop@1x.jpg");
+      order: -1;
+    }
+  }
 }
 
 .advantages__sublist {
   margin: 0 auto;
   padding: 0;
   list-style: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+}
+
+.advantages__subitem {
+  padding: 23px 18px;
+  padding-bottom: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: 768px) {
+    padding: 60px 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.advantages__icon {
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: 768px) {
+    width: 77px;
+    height: 72px;
+  }
 }
