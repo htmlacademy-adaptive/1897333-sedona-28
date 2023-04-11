@@ -32,13 +32,13 @@
 }
 
 .argument__video {
-  content: url(../img/unredner/catalog/gallery/video-mobile.jpg);
+  content: url("../img/unredner/catalog/gallery/video-mobile.jpg");
 
-  @media(min-width:768px) {
-    content: url(../img/unredner/catalog/gallery/video-tablet.jpg);
+  @media (min-width: 768px) {
+    content: url("../img/unredner/catalog/gallery/video-tablet.jpg");
   }
 
-  @media(min-width:1200px) {
-    content: url(../img/unredner/catalog/gallery/video-desktop.jpg);
+  @media (min-width: 1200px) {
+    content: url("../img/unredner/catalog/gallery/video-desktop.jpg");
   }
 }

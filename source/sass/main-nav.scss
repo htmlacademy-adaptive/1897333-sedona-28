@@ -13,7 +13,7 @@
   position: relative;
   width: 100%;
   z-index: 1;
-  background-color: #81B3D2;
+  background-color: #81b3d2;
   display: none;
 
   @media (min-width: 768px) {
@@ -56,7 +56,7 @@
 
 .main-nav__link {
   text-decoration: none;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
