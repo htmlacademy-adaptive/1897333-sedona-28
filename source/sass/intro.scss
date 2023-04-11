@@ -1,5 +1,5 @@
 .intro {
-  padding: 32px 18px;
+  text-align: center;
 
   &--catalog {
     padding: 37px 20px;
@@ -13,6 +13,7 @@
 
   @media (min-width: 768px) {
     padding: 47.5px 124px;
+    background-color: #ffffff;
   }
 }
 

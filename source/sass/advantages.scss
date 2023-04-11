@@ -54,7 +54,7 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     &--grey {
       width: 400px;
     }
@@ -130,6 +130,48 @@
   }
 }
 
+.advantages__sublist {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  background-color: #ffffff;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.advantages__subitem {
+  padding: 23px 0;
+  padding-bottom: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    width: 256px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 1200px) {
+    width: 400px;
+  }
+}
+
+.advantages__icon {
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: 768px) {
+    width: 77px;
+    height: 72px;
+  }
+}
+
 .advantages__image {
   padding: 0;
 
@@ -172,46 +214,5 @@
       content: url("../img/unredner/index/photo-bridge-desktop@1x.jpg");
       order: -1;
     }
-  }
-}
-
-.advantages__sublist {
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-
-  @media (min-width: 768px) {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.advantages__subitem {
-  padding: 23px 0;
-  padding-bottom: 25px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
-
-  @media (min-width: 768px) {
-    width: 256px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @media (min-width: 1200px) {
-    width: 400px;
-  }
-}
-
-.advantages__icon {
-  width: 40px;
-  height: 40px;
-
-  @media (min-width: 768px) {
-    width: 77px;
-    height: 72px;
   }
 }

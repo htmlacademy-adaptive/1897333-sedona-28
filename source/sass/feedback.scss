@@ -4,6 +4,10 @@
   @media (min-width: 768px) {
     padding: 0 60px;
   }
+
+  @media (min-width: 1200px) {
+    background-color: #ffffff;
+  }
 }
 
 .feedback__container {
@@ -25,7 +29,9 @@
   display: flex;
   flex-direction: column;
 
+
   @media (min-width: 768px) {
+    border-top: none;
     border-right: solid 1px #e5e5e5;
     width: 50%;
   }
@@ -40,16 +46,40 @@
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
+
+  &--inside {
+    margin-top: -10px;
+    position: absolute;
+    align-self: center;
+  }
+
+  @media (min-width: 768px) {
+    &--inside {
+      margin-top: 0;
+      position: relative;
+    }
+  }
+
 }
 
 .feedback__wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  &--first {
+    padding-top: 35px;
+  }
 
-  &--submit {
-    flex-direction: row;
-    justify-content: space-around;
+
+
+  @media(min-width: 768px) {
+    align-items: center;
+    &--submit {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    &--first {
+      padding-top: 0;
+    }
   }
 }
 
@@ -91,6 +121,7 @@
   flex-direction: column;
 
   @media (min-width: 768px) {
+    border-top: none;
     width: 50%;
   }
 }
@@ -112,6 +143,11 @@
   @media (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
+
+    &--attractions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
 
@@ -158,4 +194,69 @@
   font-size: 14px;
   line-height: 21px;
   text-align: center;
+}
+
+//-------------RADIO------------//
+.feedback__item {
+  padding-top: 40px;
+}
+
+.feedback__control {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  cursor: pointer;
+}
+
+/* Hide the browser's default radio button */
+.feedback__control-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  padding-top: 20px;
+}
+
+.feedback__control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 46px;
+  width: 46px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.feedback__control:hover input ~ .checkmark {
+  background-color: #e5e5e5;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.feedback__control-mark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.feedback__control input:checked ~ .feedback__control-mark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.feedback__control .feedback__control-mark:after {
+  top: 15px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #333333;
+}
+
+.feedback__control-label {
+  top: 50px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
 }

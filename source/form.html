@@ -61,8 +61,8 @@
       <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="get">
         <div class="feedback__container">
           <fieldset class="feedback__full-name">
-            <legend class="feedback__title">Представьтесь:</legend>
-            <div class="feedback__wrapper">
+            <legend class="feedback__title feedback__title--inside">Представьтесь:</legend>
+            <div class="feedback__wrapper feedback__wrapper--first">
               <label class="feedback__caption" for="first-name">Имя*:</label>
               <input class="feedback__field" type="text" id="first-name" name="first-name" placeholder="Пётр" required>
             </div>
@@ -76,8 +76,8 @@
             </div>
           </fieldset>
           <fieldset class="feedback__contacts">
-            <legend class="feedback__title">Контактная информация:</legend>
-            <div class="feedback__wrapper">
+            <legend class="feedback__title feedback__title--inside">Контактная информация:</legend>
+            <div class="feedback__wrapper feedback__wrapper--first">
               <label class="feedback__caption" for="contacts-phone">Контактный телефон*:</label>
               <input class="feedback__field feedback__field--phone" type="text" id="contacts-phone"
                 name="contacts-phone" placeholder="Введите телефон" required>
@@ -90,7 +90,7 @@
           </fieldset>
         </div>
         <fieldset class="feedback__impressions">
-          <legend class="feedback__title">Ваше общее впечатление:</legend>
+          <legend class="feedback__title feedback__title--inside">Ваше общее впечатление:</legend>
           <ul class="feedback__list">
             <li class="feedback__item">
               <label class="feedback__control">
@@ -116,8 +116,8 @@
           </ul>
         </fieldset>
         <fieldset class="feedback__attractions">
-          <legend class="feedback__title">Посещенные достопримечательности:</legend>
-          <ul class="feedback__list">
+          <legend class="feedback__title feedback__title--inside">Посещенные достопримечательности:</legend>
+          <ul class="feedback__list feedback__list--attractions">
             <li class="feedback__item">
               <label class="feedback__control">
                 <input class="feedback__control-input" type="checkbox" name="devils-bridge" checked>
