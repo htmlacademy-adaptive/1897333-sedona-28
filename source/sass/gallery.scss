@@ -141,8 +141,10 @@
   }
 
   @media (min-width: 1200px) {
-    margin-top: -108px;
-    background-color: transparent;
+    padding: 0;
+    position: relative;
+    margin-top: -53px;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 

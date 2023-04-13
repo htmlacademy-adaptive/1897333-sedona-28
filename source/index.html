@@ -43,6 +43,9 @@
       </div>
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
+        <span class="main-nav__toggle-line"></span>
+        <span class="main-nav__toggle-line"></span>
+        <span class="main-nav__toggle-line"></span>
       </button>
     </nav>
   </header>
@@ -162,5 +165,12 @@
     </div>
   </footer>
 </body>
+<script>
+  let menuBtn = document.querySelector('.main-nav__toggle');
+  let menu = document.querySelector('.main-nav__wrapper');
+  menuBtn.addEventListener('click', function(){
+	menu.classList.toggle('main-nav__wrapper--active');
+})
+</script>
 
 </html>
