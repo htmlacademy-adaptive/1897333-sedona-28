@@ -1,24 +1,12 @@
 .intro {
   text-align: center;
 
-  &--catalog {
-    padding: 37px 20px;
-    padding-bottom: 25px;
-  }
-
-  &--form {
-    padding: 36px 20px;
-    padding-bottom: 28px;
-  }
-
   @media (min-width: 768px) {
-    padding: 47.5px 124px;
     background-color: #ffffff;
   }
 }
 
 .intro__title {
-  margin: 0 auto;
   text-align: center;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -26,7 +14,6 @@
   line-height: 26px;
   text-transform: uppercase;
   min-width: 300px; //чтобы был правильный перенос
-  margin-bottom: 35px;
 
   @media (min-width: 768px) {
     font-size: 21px;
@@ -35,7 +22,6 @@
 }
 
 .intro__description {
-  margin: 0 auto;
   text-align: center;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;

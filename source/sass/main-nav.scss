@@ -31,12 +31,13 @@
     z-index: 0;
     background-color: #ffffff;
     justify-content: space-between;
+    transform: translateX(0);
+    transition: none;
   }
 }
 
 .main-nav__list {
   list-style: none;
-  padding: 0;
   margin: 0;
 
   @media (min-width: 768px) {
@@ -45,13 +46,11 @@
 
     &--left {
       width: 37%;
-      padding: 0 108px 0 48px;
       justify-content: space-between;
     }
 
     &--right {
       width: 37%;
-      padding: 0 48px 0 108px;
       justify-content: space-between;
     }
   }
@@ -59,8 +58,8 @@
 
 .main-nav__item {
   text-align: center;
-  padding-top: 17px;
-  padding-bottom: 12px;
+  -top: 17px;
+  -bottom: 12px;
   margin-bottom: 1px;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
@@ -92,7 +91,6 @@
   border: none;
   width: calc(22.9px + 20px * 2);
   height: 57px;
-  padding: 17px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

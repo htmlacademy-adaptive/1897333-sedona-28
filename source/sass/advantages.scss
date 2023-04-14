@@ -1,5 +1,4 @@
 .advantages {
-  margin: 0 auto;
   max-width: 410px;
 
   @media (min-width: 768px) {
@@ -12,13 +11,11 @@
 }
 
 .advantages__list {
-  margin: 0 auto;
-  padding: 0;
   list-style: none;
-  //
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -28,13 +25,11 @@
 
 .advantages__item {
   //
-  margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
 
   &--grey {
-    padding: 24px 0;
     background-color: #eeeeee;
 
     &:not(:last-child) {
@@ -45,7 +40,6 @@
   @media (min-width: 768px) {
     flex-direction: row;
     flex-wrap: nowrap;
-    margin: 0;
 
     &--grey {
       border: none;
@@ -71,7 +65,6 @@
   &--blue {
     color: #ffffff;
     background-color: #81b3d2;
-    padding: 54px 18px 40px;
   }
 
   @media (min-width: 768px) {
@@ -85,7 +78,6 @@
 
   @media (min-width: 1200px) {
     min-width: 400px;
-    padding: 52px 0;
   }
 }
 
@@ -96,10 +88,10 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
-  margin-bottom: 11px;
 
-  &--subtitle {
+  &--subitem {
     text-align: start;
+    vertical-align:middle;
   }
 
   @media (min-width: 768px) {
@@ -114,7 +106,6 @@
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
-  margin-bottom: 17px;
 
   @media (min-width: 768px) {
     font-size: 14px;
@@ -128,7 +119,9 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  padding-right: 20px;
+  &--subitem {
+    text-align: left;
+  }
 
   @media (min-width: 768px) {
     font-size: 14px;
@@ -136,21 +129,16 @@
 }
 
 .advantages__sublist {
-  margin: 0 auto;
-  padding: 0;
   list-style: none;
   background-color: #ffffff;
 
   @media (min-width: 768px) {
-    margin: 0;
     display: flex;
     justify-content: space-between;
   }
 }
 
 .advantages__subitem {
-  padding: 23px 0;
-  padding-bottom: 25px;
   display: grid;
   grid-template-columns: 47px 1fr;
 
@@ -177,7 +165,6 @@
 }
 
 .advantages__image {
-  padding: 0;
 
   &--city {
     content: url("../img/unredner/index/photo-city-mobile@1x.jpg");

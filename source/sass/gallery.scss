@@ -1,16 +1,12 @@
 .gallery {
-  margin: 0 auto;
 
   @media (min-width: 768px) {
-    padding: 0 60px;
   }
 }
 
 
 .gallery__list {
   list-style: none;
-  margin: 0 auto;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +24,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -43,17 +38,12 @@
 
 .gallery__item {
   border-top: solid 1px #e5e5e5;
-  padding: 24px 20px;
-  padding-bottom: 25px;
-  margin: 0 auto;
 
   &:last-child {
     border-bottom: solid 1px #e5e5e5;
   }
 
   @media (min-width: 768px) {
-    padding: 0;
-    margin: 0;
 
     &:nth-child(2n) > .gallery__wrapper {
       background-color: #eaeaea;
@@ -68,8 +58,6 @@
 }
 
 .gallery__picture {
-
-  margin-bottom: 15px;
 
   &--road {
     background-color: #ab772f;
@@ -124,7 +112,6 @@
   }
 
   @media (min-width: 768px) {
-    margin: 0;
   }
 }
 
@@ -133,17 +120,13 @@
   flex-direction: column;
 
   @media (min-width: 768px) {
-    padding: 28px 20px;
-    padding-bottom: 27px;
     flex-direction: row;
     justify-content: space-between;
     background-color: #f2f2f2;
   }
 
   @media (min-width: 1200px) {
-    padding: 0;
     position: relative;
-    margin-top: -53px;
     background-color: rgba(0, 0, 0, 0.3);
   }
 }
@@ -154,9 +137,8 @@
 }
 
 .gallery__title {
-  margin: 0;
   text-align: left;
-  font-family: "Roboto", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
@@ -169,16 +151,14 @@
 
 .gallery__author {
   color: #333333;
-  margin: 0;
   text-align: left;
-  font-family: "Roboto", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 11px;
 
   @media (min-width: 768px) {
-    margin: 0;
   }
 
   @media (min-width: 1200px) {
@@ -196,7 +176,6 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
-  padding-left: 14px;
 
   @media (min-width: 1200px) {
     color: #ffffff;

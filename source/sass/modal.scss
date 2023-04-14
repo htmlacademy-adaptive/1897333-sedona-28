@@ -11,7 +11,6 @@
   flex-direction: column;
   align-items: center;
   //
-  padding: 45px 42px 35px 41px;
 }
 
 .modal__title {
@@ -21,11 +20,7 @@
   line-height: 26px;
   letter-spacing: 0;
   text-align: center;
-  margin: 0;
-  padding: 0;
   text-transform: uppercase;
-  //
-  padding-bottom: 37px;
 }
 
 .modal__caption {
@@ -35,21 +30,14 @@
   line-height: 21px;
   letter-spacing: 0;
   text-align: center;
-  margin: 0;
-  padding: 0;
   text-transform: uppercase;
-  //
-  padding-bottom: 28px;
 }
 
 .modal__wrapper {
   width: 100%;
   background-color: #f2f2f2;
   position: absolute;
-  bottom: 0;
-  padding: 20px;
   text-align: center;
-  padding-bottom: -50px;
 }
 
 .modal__confirm {
@@ -59,11 +47,9 @@
   line-height: 26px;
   letter-spacing: 0;
   text-align: center;
-  margin: 0;
   text-transform: uppercase;
   //
   color: #ffffff;
   background-color: #81b3d2;
   border: none;
-  padding: 18px 64px 14px;
 }
