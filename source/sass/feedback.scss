@@ -1,4 +1,7 @@
 .feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media (min-width: 768px) {}
 
   @media (min-width: 1200px) {
@@ -18,11 +21,21 @@
   }
 }
 
+.feedback__inner {
+  width: 100%;
+}
+
 .feedback__full-name {
+  position: relative;
   border: none;
   border-top: solid 1px #e5e5e5;
   display: flex;
   flex-direction: column;
+  //
+  padding: 0;
+  margin: 0;
+  padding-top: 70px;
+  padding-bottom: 39px;
 
 
   @media (min-width: 768px) {
@@ -41,14 +54,16 @@
   text-transform: uppercase;
 
   &--inside {
-    margin-top: -10px;
     position: absolute;
     align-self: center;
+    //
+    top: 24px;
   }
 
   @media (min-width: 768px) {
     &--inside {
       margin-top: 0;
+      //
       position: relative;
     }
   }
@@ -73,7 +88,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  align-items: center;
   text-transform: uppercase;
   color: #333333;
 }
@@ -81,6 +95,8 @@
 .feedback__field {
   background-color: #f2f2f2;
   border: none;
+  //
+  padding: 16px;
 
   &:not(:last-child) {
     margin-bottom: 16px;
@@ -96,10 +112,16 @@
 }
 
 .feedback__contacts {
+  position: relative;
   border: none;
   border-top: solid 1px #e5e5e5;
   display: flex;
   flex-direction: column;
+  //
+  padding: 0;
+  margin: 0;
+  padding-top: 70px;
+  padding-bottom: 34px;
 
   @media (min-width: 768px) {
     border-top: none;
@@ -108,17 +130,25 @@
 }
 
 .feedback__impressions {
+  position: relative;
   border: none;
   border-top: solid 1px #e5e5e5;
   display: flex;
   flex-direction: column;
   align-items: center;
+  //
+  padding: 0;
+  margin: 0;
+  padding-top: 70px;
 }
 
 .feedback__list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -172,9 +202,8 @@
 }
 
 //-------------RADIO------------//
-.feedback__item {
-  padding-top: 40px;
-}
+// .feedback__item {
+// }
 
 .feedback__control {
   display: block;
@@ -199,6 +228,8 @@
   width: 46px;
   background-color: #f2f2f2;
   border-radius: 50%;
+  //
+  margin-top: -10px;
 }
 
 /* On mouse-over, add a grey background color */

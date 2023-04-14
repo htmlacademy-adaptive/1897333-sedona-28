@@ -10,7 +10,7 @@
 
 <body class="page-body">
   <!--шапка-->
-  <header class="container main-header">
+  <header class="main-header">
     <a href="./index.html" class="main-header__logo-link" alt="ссылка на главную страницу">
       <img class="main-header__logo" src="./img/unredner/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
     </a>
@@ -43,14 +43,19 @@
       </div>
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
+        <span class="main-nav__toggle-line"></span>
+        <span class="main-nav__toggle-line"></span>
+        <span class="main-nav__toggle-line"></span>
       </button>
     </nav>
   </header>
   <main class="main-container container">
     <h1 class="visually-hidden">Достопримечательности города Седоны</h1>
     <section class="hero">
-      <img class="hero__image hero__image--small" src="./img/unredner/back-mobile.jpg"
-        alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+      <div class="hero__container">
+        <img class="hero__image" src="./img/unredner/global/hero/back-mobile.jpg"
+          alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+      </div>
     </section>
     <div class="intro intro--catalog">
       <h2 class="intro__title">Фото и видео</h2>
@@ -156,5 +161,12 @@
     </div>
   </footer>
 </body>
+<script>
+  let menuBtn = document.querySelector('.main-nav__toggle');
+  let menu = document.querySelector('.main-nav__wrapper');
+  menuBtn.addEventListener('click', function(){
+  menu.classList.toggle('main-nav__wrapper--active');
+})
+</script>
 
 </html>

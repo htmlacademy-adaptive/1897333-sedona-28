@@ -52,8 +52,10 @@
   <main class="main-container">
     <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
     <section class="hero">
-      <!-- <img class="hero__image" src="./img/unredner/back-mobile.jpg"
-        alt="Welcome to the geourgeous sedona because the grand canyon sucks"> -->
+      <div class="hero__container">
+        <img class="hero__image" src="./img/unredner/global/hero/back-mobile.jpg"
+          alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+      </div>
     </section>
     <div class="intro">
       <h2 class="intro__title">Седона — небольшой городок в Аризоне, заслуживающий
@@ -77,14 +79,16 @@
             <img class="advantages__icon" src="./img/unredner/icon-house.svg" alt="иконка дома">
             <h3 class="advantages__title advantages__title--subitem">Жилье</h3>
             <span></span>
-            <p class="advantages__description advantages__description--subitem">Рекомендуем пожить в настоящем мотеле, все
+            <p class="advantages__description advantages__description--subitem">Рекомендуем пожить в настоящем мотеле,
+              все
               как в кино!</p>
           </li>
           <li class="advantages__subitem">
             <img class="advantages__icon" src="./img/unredner/icon-burger.svg" alt="иконка бургера">
             <h3 class="advantages__title advantages__title--subitem">Еда</h3>
             <span></span>
-            <p class="advantages__description advantages__description--subitem">Всегда заказывайте фирменный бургер, вы не
+            <p class="advantages__description advantages__description--subitem">Всегда заказывайте фирменный бургер, вы
+              не
               разочаруетесь!</p>
           </li>
           <li class="advantages__subitem">
@@ -131,7 +135,9 @@
       <h3 class="find-hotel__title">Заинтересовались?</h3>
       <p class="find-hotel__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
         гостиниц в седоне</p>
-      <a class="find-hotel__link" href="./catalog.html">Найти гостиницу</a>
+      <div class="find-hotel__wrapper">
+        <a class="find-hotel__link" href="./catalog.html">Найти гостиницу</a>
+      </div>
     </section>
     <img class="map">
   </main>
@@ -168,9 +174,9 @@
 <script>
   let menuBtn = document.querySelector('.main-nav__toggle');
   let menu = document.querySelector('.main-nav__wrapper');
-  menuBtn.addEventListener('click', function(){
-  menu.classList.toggle('main-nav__wrapper--active');
-})
+  menuBtn.addEventListener('click', function () {
+    menu.classList.toggle('main-nav__wrapper--active');
+  })
 </script>
 
 </html>

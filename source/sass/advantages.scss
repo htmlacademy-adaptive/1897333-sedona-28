@@ -1,21 +1,10 @@
-.advantages {
-  max-width: 410px;
-
-  @media (min-width: 768px) {
-    max-width: 768px;
-  }
-
-  @media (min-width: 1200px) {
-    max-width: 1200px;
-  }
-}
-
 .advantages__list {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0;
+  margin: 0;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -24,7 +13,6 @@
 }
 
 .advantages__item {
-  //
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -43,17 +31,11 @@
 
     &--grey {
       border: none;
-      width: 256px;
+      width: calc(100% / 3);
 
       &:not(:last-child) {
         border-bottom: none;
       }
-    }
-  }
-
-  @media (min-width: 1200px) {
-    &--grey {
-      width: 400px;
     }
   }
 }
@@ -69,11 +51,8 @@
 
   @media (min-width: 768px) {
     &--blue {
-      width: 256px;
+      width: calc(100% / 3);
     }
-
-    // &--grey {
-    // }
   }
 
   @media (min-width: 1200px) {
@@ -88,10 +67,11 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
+  //
+  margin: 0;
 
   &--subitem {
     text-align: start;
-    vertical-align:middle;
   }
 
   @media (min-width: 768px) {
@@ -106,6 +86,8 @@
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
+  //
+  margin: 0;
 
   @media (min-width: 768px) {
     font-size: 14px;
@@ -119,6 +101,9 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  //
+  margin: 0;
+
   &--subitem {
     text-align: left;
   }
@@ -131,6 +116,7 @@
 .advantages__sublist {
   list-style: none;
   background-color: #ffffff;
+  padding: 0;
 
   @media (min-width: 768px) {
     display: flex;
@@ -141,12 +127,13 @@
 .advantages__subitem {
   display: grid;
   grid-template-columns: 47px 1fr;
+  align-items: center;
 
   @media (min-width: 768px) {
-    width: 256px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: calc(100% / 3);
   }
 
   @media (min-width: 1200px) {
@@ -165,7 +152,6 @@
 }
 
 .advantages__image {
-
   &--city {
     content: url("../img/unredner/index/photo-city-mobile@1x.jpg");
   }
@@ -175,6 +161,8 @@
   }
 
   @media (min-width: 768px) {
+    width: calc(100% / 3  * 2);
+
     &--city {
       content: url("../img/unredner/index/photo-city-tablet@1x.jpg");
     }
