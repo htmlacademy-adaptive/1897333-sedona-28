@@ -59,24 +59,25 @@
       position: relative;
     }
   }
-
 }
 
 .feedback__wrapper {
   display: flex;
   flex-direction: column;
+
   &--first {
     padding-top: 35px;
   }
 
 
-
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     align-items: center;
+
     &--submit {
       flex-direction: row;
       justify-content: space-around;
     }
+
     &--first {
       padding-top: 0;
     }
@@ -239,12 +240,12 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.feedback__control input:checked ~ .feedback__control-mark:after {
+.feedback__control input:checked ~ .feedback__control-mark::after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.feedback__control .feedback__control-mark:after {
+.feedback__control .feedback__control-mark::after {
   top: 15px;
   left: 15px;
   width: 16px;

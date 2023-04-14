@@ -17,3 +17,9 @@
 @use "./social.scss";
 @use "./visually-hidden.scss";
 @use "./modal.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
