@@ -1,39 +1,31 @@
 .intro {
   width: 100%;
   text-align: center;
+  padding: 32px $mobile-padding;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     background-color: #ffffff;
+    padding: 47.5px 124px 55.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 59px 359px 44px;
   }
 }
 
 .intro__title {
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
+  @include heading-mobile;
+  @include reset;
   min-width: 300px; //чтобы был правильный перенос
 
-  @media (min-width: 768px) {
-    font-size: 21px;
-    line-height: 26px;
+  @media (min-width: $tablet-width) {
+    @include heading-desktop;
   }
 }
 
 .intro__description {
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
+  @include paragraph-mobile;
+  @include reset;
   color: #333333;
-
-
-  @media (min-width: 768px) {
-    font-size: 14px;
-    line-height: 21px;
-  }
+  padding-top: 35px;
 }

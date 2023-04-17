@@ -25,7 +25,7 @@
   //
   padding: 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     //
@@ -45,9 +45,10 @@
     border-bottom: solid 1px #e5e5e5;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding-top: 0;
     border: none;
+
     &:last-child {
       border-bottom: none;
     }
@@ -60,7 +61,7 @@
     background-color: #ab772f;
     content: url("../img/unredner/catalog/gallery/photo-1-mobile.jpg");
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       content: url("../img/unredner/catalog/gallery/photo-1-tablet.jpg");
     }
 
@@ -73,7 +74,7 @@
     background-color: #ad7f59;
     content: url("../img/unredner/catalog/gallery/photo-2-mobile.jpg");
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       content: url("../img/unredner/catalog/gallery/photo-2-tablet.jpg");
     }
 
@@ -86,7 +87,7 @@
     background-color: #3b4c36;
     content: url("../img/unredner/catalog/gallery/photo-3-mobile.jpg");
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       content: url("../img/unredner/catalog/gallery/photo-3-tablet.jpg");
     }
 
@@ -99,7 +100,7 @@
     background-color: #9a7c72;
     content: url("../img/unredner/catalog/gallery/photo-4-mobile.jpg");
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       content: url("../img/unredner/catalog/gallery/photo-4-tablet.jpg");
     }
 
@@ -113,10 +114,11 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     background-color: #f2f2f2;
+
     &--even {
       background-color: #eaeaea;
     }
@@ -126,6 +128,7 @@
     position: relative;
     background-color: rgba(0, 0, 0, 0.3);
     margin-top: -61px;
+
     &--even {
       background-color: rgba(0, 0, 0, 0.3);
     }
@@ -138,12 +141,8 @@
 }
 
 .gallery__title {
+  @include heading-mobile;
   text-align: left;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
   //
   padding-top: 15px;
   margin: 0;
@@ -154,17 +153,13 @@
 }
 
 .gallery__author {
+  @include paragraph-mobile;
   color: #333333;
   text-align: left;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  margin-bottom: 11px;
   //
   margin: 0;
 
-  @media (min-width: 768px) {}
+  @media (min-width: $tablet-width) {}
 
   @media (min-width: 1200px) {
     color: #ffffff;
@@ -181,10 +176,7 @@
 }
 
 .gallery__number {
-  font-family: "PT Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 21px;
+  @include paragraph-mobile;
 
   @media (min-width: 1200px) {
     color: #ffffff;

@@ -5,27 +5,17 @@
 }
 
 .argument__title {
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  text-transform: uppercase;
+  @include heading-desktop;
 }
 
 .argument__description {
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
+  @include paragraph-mobile;
 }
 
 .argument__video {
   content: url("../img/unredner/catalog/gallery/video-mobile.jpg");
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     content: url("../img/unredner/catalog/gallery/video-tablet.jpg");
   }
 

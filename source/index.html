@@ -42,7 +42,6 @@
         </ul>
       </div>
       <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
         <span class="main-nav__toggle-line"></span>
         <span class="main-nav__toggle-line"></span>
         <span class="main-nav__toggle-line"></span>
@@ -53,7 +52,7 @@
     <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
     <section class="hero">
       <div class="hero__container">
-        <img class="hero__image" src="./img/unredner/global/hero/back-mobile.jpg"
+        <img class="hero__image" src="./img/unredner/global/hero/back-desktop.jpg"
           alt="Welcome to the geourgeous sedona because the grand canyon sucks">
       </div>
     </section>
@@ -107,28 +106,29 @@
           </div>
           <img class="advantages__image advantages__image--bridge" alt="Фото моста дьявола">
         </li>
-
-        <li class="advantages__item advantages__item--grey">
-          <div class="advantages__wrapper advantages__wrapper--grey">
-            <h3 class="advantages__title">Небольшая площадь</h3>
-            <p class="advantages__number">— №3 —</p>
-            <p class="advantages__description">Все интересные места находятся очень близко</p>
-          </div>
-        </li>
-        <li class="advantages__item advantages__item--grey">
-          <div class="advantages__wrapper advantages__wrapper--grey">
-            <h3 class="advantages__title">Красивая дорога</h3>
-            <p class="advantages__number">— №4 —</p>
-            <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </div>
-        </li>
-        <li class="advantages__item advantages__item--grey">
-          <div class="advantages__wrapper advantages__wrapper--grey">
-            <h3 class="advantages__title">Мало туристов</h3>
-            <p class="advantages__number">— №5 —</p>
-            <p class="advantages__description">Большинство едет в гранд каньон и толпятся там</p>
-          </div>
-        </li>
+        <ul class="advantages__sublist advantages__sublist--grey">
+          <li class="advantages__item advantages__item--grey">
+            <div class="advantages__wrapper advantages__wrapper--grey">
+              <h3 class="advantages__title advantages__title--grey">Небольшая площадь</h3>
+              <p class="advantages__number">— №3 —</p>
+              <p class="advantages__description">Все интересные места находятся очень близко</p>
+            </div>
+          </li>
+          <li class="advantages__item advantages__item--grey">
+            <div class="advantages__wrapper advantages__wrapper--grey">
+              <h3 class="advantages__title advantages__title--grey">Красивая дорога</h3>
+              <p class="advantages__number">— №4 —</p>
+              <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
+          </li>
+          <li class="advantages__item advantages__item--grey">
+            <div class="advantages__wrapper advantages__wrapper--grey advantages__wrapper--grey--last">
+              <h3 class="advantages__title advantages__title--grey">Мало туристов</h3>
+              <p class="advantages__number">— №5 —</p>
+              <p class="advantages__description">Большинство едет в гранд каньон и толпятся там</p>
+            </div>
+          </li>
+        </ul>
       </ul>
     </section>
     <section class="find-hotel">
@@ -139,9 +139,14 @@
         <a class="find-hotel__link" href="./catalog.html">Найти гостиницу</a>
       </div>
     </section>
-    <img class="map">
+    <div class="map">
+      <div class="map__container">
+        <img class="map__image" src="./img/unredner/global/map-desktop.jpg.jpg"
+          alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+      </div>
+    </div>
   </main>
-  <footer class="container main-footer">
+  <footer class="main-footer">
     <h3 class="main-footer__title">#visitsedona</h3>
     <div class="main-footer__social social">
       <h2 class="visually-hidden">Социальные сети</h2>
@@ -174,8 +179,11 @@
 <script>
   let menuBtn = document.querySelector('.main-nav__toggle');
   let menu = document.querySelector('.main-nav__wrapper');
+  let cross = document.querySelectorAll('.main-nav__toggle-line');
   menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('.main-nav__toggle--active');
     menu.classList.toggle('main-nav__wrapper--active');
+    cross.forEach((element) => { element.classList.toggle('.main-nav__toggle-line--active'); })
   })
 </script>
 

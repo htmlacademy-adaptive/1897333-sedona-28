@@ -4,58 +4,43 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 38px $mobile-padding 32px;
+  @media (min-width: $tablet-width) {
+    padding: 60px 155px 55px;
+  }
 }
 
 .find-hotel__title {
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-
-  @media (min-width: 768px) {
-    font-size: 30px;
-  }
+  @include heading-desktop;
+  @include reset;
 }
 
 .find-hotel__description {
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-
-  @media (min-width: 768px) {
-    font-size: 14px;
-  }
+  @include paragraph-mobile;
+  @include reset;
+  padding-top: 30px;
 }
 
 .find-hotel__wrapper {
+  padding-top: 32px;
   min-width: 284px;
   max-width: 400px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     min-width: 458px;
     max-width: 550px;
   }
 }
 
 .find-hotel__link {
+  @include heading-mobile;
   display: block;
   text-decoration: none;
   color: #ffffff;
-  border: solid;
   background-color: #81b3d2;
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
+  padding: 16px 49px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 21px;
     line-height: 26px;
   }

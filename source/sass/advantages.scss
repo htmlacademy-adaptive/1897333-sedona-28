@@ -1,3 +1,25 @@
+.advantages {
+  position: relative;
+
+  &::after {
+    content: '';
+    background: url("../img/unredner/global/advantage-border-top.svg");
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 37px;
+    top: 0;
+
+    @media(min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+  }
+}
+
 .advantages__list {
   list-style: none;
   display: flex;
@@ -6,7 +28,7 @@
   padding: 0;
   margin: 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -17,110 +39,141 @@
   display: flex;
   flex-direction: column;
 
-  &--grey {
-    background-color: #eeeeee;
-
-    &:not(:last-child) {
-      border-bottom: solid 1px #d6d6d6;
-    }
-  }
-
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: nowrap;
 
     &--grey {
       border: none;
       width: calc(100% / 3);
+    }
+  }
 
-      &:not(:last-child) {
-        border-bottom: none;
-      }
+  @media (min-width: $desktop-width) {
+    &--grey {
+      @include reset;
     }
   }
 }
 
+
 .advantages__wrapper {
   display: flex;
   flex-direction: column;
+  padding: 0 $mobile-padding;
 
   &--blue {
     color: #ffffff;
     background-color: #81b3d2;
+    padding-top: 37px;
+    padding-bottom: 37px;
+
+    &:first-child {
+      padding-top: 54px;
+      padding-bottom: 40px;
+    }
   }
 
-  @media (min-width: 768px) {
+  &--grey {
+    padding: 24px 0;
+    margin: 0 $mobile-padding;
+    border-bottom: solid 1px #d6d6d6;
+
+    &--last {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
     &--blue {
       width: calc(100% / 3);
+    }
+
+    &--grey {
+      @include reset;
+      padding: 41px $tablet-padding;
+      border-bottom: none;
     }
   }
 
   @media (min-width: 1200px) {
     min-width: 400px;
+    &--grey {
+      padding: 52px 50px;
+    }
   }
 }
 
 .advantages__title {
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  //
-  margin: 0;
+  @include heading-mobile;
+  @include reset;
 
   &--subitem {
+    padding: 0;
     text-align: start;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 21px;
+
+    &--subitem {
+      padding-top: 26px;
+    }
+
+    &--grey {
+      padding: 0 15px; //для корректного переноса
+    }
   }
 }
 
 .advantages__number {
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  //
-  margin: 0;
+  @include paragraph-mobile;
+  @include reset;
+  padding-top: 11px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 14px;
+    padding-top: 20px;
   }
 }
 
 .advantages__description {
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  //
-  margin: 0;
+  @include paragraph-mobile;
+  @include reset;
+  padding-top: 17px;
 
   &--subitem {
+    padding: 16px 0;
     text-align: left;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    padding-top: 33px;
     font-size: 14px;
+    text-align: center;
+
+    &--subitem {
+      padding: 0;
+      padding-top: 33px;
+    }
   }
 }
 
 .advantages__sublist {
   list-style: none;
   background-color: #ffffff;
-  padding: 0;
+  padding: 23px $mobile-padding 22px;
 
-  @media (min-width: 768px) {
+  &--grey {
+    padding: 0;
+    width: 100%;
+    background-color: #eeeeee;
+    min-height: 256px;
+  }
+
+  @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
+    padding: 0;
   }
 }
 
@@ -129,11 +182,13 @@
   grid-template-columns: 47px 1fr;
   align-items: center;
 
-  @media (min-width: 768px) {
+
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: calc(100% / 3);
+    padding: 60px $tablet-padding;
   }
 
   @media (min-width: 1200px) {
@@ -145,7 +200,7 @@
   width: 40px;
   height: 40px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 77px;
     height: 72px;
   }
@@ -160,8 +215,8 @@
     content: url("../img/unredner/index/photo-bridge-mobile@1x.jpg");
   }
 
-  @media (min-width: 768px) {
-    width: calc(100% / 3  * 2);
+  @media (min-width: $tablet-width) {
+    width: calc(100% / 3 * 2);
 
     &--city {
       content: url("../img/unredner/index/photo-city-tablet@1x.jpg");
