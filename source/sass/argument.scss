@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 62px;
+    padding-bottom: 84px;
+  }
 }
 
 .argument__title {
@@ -20,6 +26,7 @@
   }
 
   @media (min-width: 1200px) {
+    padding-top: 64px;
     content: url("../img/unredner/catalog/gallery/video-desktop.jpg");
   }
 }

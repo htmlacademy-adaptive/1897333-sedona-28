@@ -38,8 +38,12 @@
 }
 
 .gallery__item {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
   border-top: solid 1px #e5e5e5;
   padding-top: 24px;
+  padding-bottom: 25px;
 
   &:last-child {
     border-bottom: solid 1px #e5e5e5;
@@ -47,74 +51,92 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
+    padding-bottom: 0;
     border: none;
 
     &:last-child {
       border-bottom: none;
     }
   }
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }
 
+
 .gallery__picture {
+  margin: 0 $catalog-mobile-padding;
 
   &--road {
     background-color: #ab772f;
     content: url("../img/unredner/catalog/gallery/photo-1-mobile.jpg");
-
-    @media (min-width: $tablet-width) {
-      content: url("../img/unredner/catalog/gallery/photo-1-tablet.jpg");
-    }
-
-    @media (min-width: 1200px) {
-      content: url("../img/unredner/catalog/gallery/photo-1-desktop.jpg");
-    }
   }
 
   &--cactus {
     background-color: #ad7f59;
     content: url("../img/unredner/catalog/gallery/photo-2-mobile.jpg");
-
-    @media (min-width: $tablet-width) {
-      content: url("../img/unredner/catalog/gallery/photo-2-tablet.jpg");
-    }
-
-    @media (min-width: 1200px) {
-      content: url("../img/unredner/catalog/gallery/photo-2-desktop.jpg");
-    }
   }
 
   &--north-road {
     background-color: #3b4c36;
     content: url("../img/unredner/catalog/gallery/photo-3-mobile.jpg");
-
-    @media (min-width: $tablet-width) {
-      content: url("../img/unredner/catalog/gallery/photo-3-tablet.jpg");
-    }
-
-    @media (min-width: 1200px) {
-      content: url("../img/unredner/catalog/gallery/photo-3-desktop.jpg");
-    }
   }
 
   &--devil-bridge {
     background-color: #9a7c72;
     content: url("../img/unredner/catalog/gallery/photo-4-mobile.jpg");
+  }
 
-    @media (min-width: $tablet-width) {
-      content: url("../img/unredner/catalog/gallery/photo-4-tablet.jpg");
+  @media (min-width: $tablet-width) {
+    margin: 0;
+
+    &--road {
+      content: url("../img/unredner/catalog/gallery/photo-1-tablet.jpg");
     }
 
-    @media (min-width: 1200px) {
+    &--cactus {
+      content: url("../img/unredner/catalog/gallery/photo-2-tablet.jpg");
+    }
+
+    &--north-road {
+      content: url("../img/unredner/catalog/gallery/photo-3-tablet.jpg");
+    }
+
+    &--devil-bridge {
+      content: url("../img/unredner/catalog/gallery/photo-4-tablet.jpg");
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &--road {
+      content: url("../img/unredner/catalog/gallery/photo-1-desktop.jpg");
+    }
+
+    &--cactus {
+      content: url("../img/unredner/catalog/gallery/photo-2-desktop.jpg");
+    }
+
+    &--north-road {
+      content: url("../img/unredner/catalog/gallery/photo-3-desktop.jpg");
+    }
+
+    &--devil-bridge {
       content: url("../img/unredner/catalog/gallery/photo-4-desktop.jpg");
     }
   }
 }
 
+
+
 .gallery__wrapper {
   display: flex;
   flex-direction: column;
+  padding: 0 $catalog-mobile-padding;
+  padding-top: 15px;
 
   @media (min-width: $tablet-width) {
+    padding: 22px $catalog-mobile-padding 15px;
+    //
     flex-direction: row;
     justify-content: space-between;
     background-color: #f2f2f2;
@@ -127,7 +149,7 @@
   @media (min-width: 1200px) {
     position: relative;
     background-color: rgba(0, 0, 0, 0.3);
-    margin-top: -61px;
+    margin-top: -79px;
 
     &--even {
       background-color: rgba(0, 0, 0, 0.3);
@@ -141,10 +163,15 @@
 }
 
 .gallery__title {
-  @include heading-mobile;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
   text-align: left;
+  overflow-wrap: anywhere;
   //
-  padding-top: 15px;
   margin: 0;
 
   @media (min-width: 1200px) {
@@ -154,8 +181,10 @@
 
 .gallery__author {
   @include paragraph-mobile;
+  text-transform: none;
   color: #333333;
   text-align: left;
+  overflow-wrap: anywhere;
   //
   margin: 0;
 
@@ -169,6 +198,12 @@
 .gallery__rate {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding-top: 11px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .gallery__icon {
@@ -176,7 +211,14 @@
 }
 
 .gallery__number {
-  @include paragraph-mobile;
+  @include reset;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: left;
+
 
   @media (min-width: 1200px) {
     color: #ffffff;
