@@ -70,29 +70,29 @@
               <legend class="feedback__legend">Представьтесь:</legend>
               <div class="feedback__wrapper">
                 <label class="feedback__caption" for="first-name">Имя*:</label>
-                <input class="feedback__field" type="text" id="first-name" name="first-name" placeholder="Пётр"
+                <input class="feedback__field feedback__field--blackplaceholder" type="text" id="first-name" name="first-name" placeholder="Пётр"
                   required>
               </div>
               <div class="feedback__wrapper">
                 <label class="feedback__caption" for="last-name">Фамилия*:</label>
-                <input class="feedback__field" type="text" id="last-name" name="last-name" placeholder="Пустота"
+                <input class="feedback__field feedback__field--blackplaceholder" type="text" id="last-name" name="last-name" placeholder="Пустота"
                   required>
               </div>
               <div class="feedback__wrapper">
                 <label class="feedback__caption" for="patronymic">Отчество:</label>
-                <input class="feedback__field" type="text" id="patronymic" name="patronymic" placeholder="Викторович">
+                <input class="feedback__field feedback__field--blackplaceholder" type="text" id="patronymic" name="patronymic" placeholder="Викторович">
               </div>
             </fieldset>
           </div>
           <div class="feedback__inner">
             <fieldset class="feedback__fieldset feedback__fieldset__contacts">
               <legend class="feedback__legend">Контактная информация:</legend>
-              <div class="feedback__wrapper">
+              <div class="feedback__wrapper feedback__wrapper--phone">
                 <label class="feedback__caption" for="contacts-phone">Контактный телефон*:</label>
                 <input class="feedback__field feedback__field--phone" type="text" id="contacts-phone"
                   name="contacts-phone" placeholder="Введите телефон" required>
               </div>
-              <div class="feedback__wrapper">
+              <div class="feedback__wrapper feedback__wrapper--email">
                 <label class="feedback__caption" for="e-mail">Электронная почта*:</label>
                 <input class="feedback__field feedback__field--email" type="email" id="e-mail" name="e-mail"
                   placeholder="Введите e-mail" required>
@@ -105,24 +105,24 @@
             <legend class="feedback__legend">Ваше общее впечатление:</legend>
             <ul class="feedback__list">
               <li class="feedback__item">
-                <label class="feedback__control">
+                <label class="feedback__control feedback__control--radio">
                   <input class="feedback__control-input" type="radio" name="type-of-impressions" value="positive"
                     checked>
-                  <span class="feedback__control-mark"></span>
+                  <span class="feedback__control-mark feedback__control-mark--radio"></span>
                   <span class="feedback__control-label">Скорее положительное</span>
                 </label>
               </li>
               <li class="feedback__item">
-                <label class="feedback__control">
+                <label class="feedback__control feedback__control--radio">
                   <input class="feedback__control-input" type="radio" name="type-of-impressions" value="negative">
-                  <span class="feedback__control-mark"></span>
+                  <span class="feedback__control-mark feedback__control-mark--radio"></span>
                   <span class="feedback__control-label">Скорее отрицательное</span>
                 </label>
               </li>
               <li class="feedback__item">
-                <label class="feedback__control">
+                <label class="feedback__control feedback__control--radio">
                   <input class="feedback__control-input" type="radio" name="type-of-impressions" value="difficult">
-                  <span class="feedback__control-mark"></span>
+                  <span class="feedback__control-mark feedback__control-mark--radio"></span>
                   <span class="feedback__control-label">Затрудняюсь ответить</span>
                 </label>
               </li>
@@ -134,30 +134,30 @@
             <legend class="feedback__legend">Посещенные достопримечательности:</legend>
             <ul class="feedback__list feedback__list--attractions">
               <li class="feedback__item">
-                <label class="feedback__control">
+                <label class="feedback__control feedback__control--checkbox">
                   <input class="feedback__control-input" type="checkbox" name="devils-bridge" checked>
-                  <span class="feedback__control-mark"></span>
+                  <span class="feedback__control-mark feedback__control-mark--checkbox"></span>
                   <span class="feedback__control-label">Мост Дьявола</span>
                 </label>
               </li>
               <li class="feedback__item">
-                <label class="feedback__control">
+                <label class="feedback__control feedback__control--checkbox">
                   <input class="feedback__control-input" type="checkbox" name="bell-mountain" checked>
-                  <span class="feedback__control-mark"></span>
+                  <span class="feedback__control-mark feedback__control-mark--checkbox"></span>
                   <span class="feedback__control-label">Гора-Колокол</span>
                 </label>
               </li>
               <li class="feedback__item">
-                <label class="feedback__control">
+                <label class="feedback__control feedback__control--checkbox">
                   <input class="feedback__control-input" type="checkbox" name="slide-park" checked>
-                  <span class="feedback__control-mark"></span>
+                  <span class="feedback__control-mark feedback__control-mark--checkbox"></span>
                   <span class="feedback__control-label">Слайд-парк</span>
                 </label>
               </li>
               <li class="feedback__item">
-                <label class="feedback__control">
+                <label class="feedback__control feedback__control--checkbox">
                   <input class="feedback__control-input" type="checkbox" name="red-rocks">
-                  <span class="feedback__control-mark"></span>
+                  <span class="feedback__control-mark feedback__control-mark--checkbox"></span>
                   <span class="feedback__control-label">Красные скалы</span>
                 </label>
               </li>
@@ -171,10 +171,10 @@
               placeholder="Опишите подробно все свои восторги" required></textarea>
           </div>
         </div>
-        <div class="feedback__inner">
+        <div class="feedback__inner feedback__inner--last">
           <div class="feedback__wrapper">
             <button class="feedback_button" type="submit">Отправить отзыв</button>
-            <p class="feedback__required-field">* — обязательные поля</p>
+            <p class="feedback__warning">* — обязательные поля</p>
           </div>
         </div>
       </form>

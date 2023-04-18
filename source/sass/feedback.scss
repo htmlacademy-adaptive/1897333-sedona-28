@@ -2,45 +2,76 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.feedback__form {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .feedback__container {
-
-
   @media (min-width: $tablet-width) {
+    padding: 0 60px;
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
   }
 }
 
 .feedback__inner {
   border-top: solid 1px #e5e5e5;
   width: 100%;
+  padding: 24px 20px 39px;
+  &--last {
+    border-top: none;
+  }
+  @media (min-width: $tablet-width) {
+    border-top: none;
+  }
 }
 
 .feedback__fieldset {
+  @include reset;
   position: relative;
   border: none;
   display: flex;
   flex-direction: column;
 }
 
-.feedback__legend {
+.feedback__legend,
+.feedback__title {
   @include heading-mobile;
+  padding-bottom: 20px;
 }
 
 .feedback__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
+  padding-bottom: 16px;
 
-  @media (min-width: $tablet-width) {
-    align-items: center;
+  &--phone::after {
+    content: url(../img/unredner/form/phone.svg);
+    position: absolute;
+    margin: 0;
+    right: 0;
+    bottom: 16px;
+    padding: 18px;
+    background-color: #e6e6e6;
+  }
 
-    &--submit {
-      flex-direction: row;
-      justify-content: space-around;
-    }
+  &--email::after {
+    content: url(../img/unredner/form/mail.svg);
+    position: absolute;
+    margin: 0;
+    right: 0;
+    bottom: 16px;
+    padding: 20px;
+    padding-top: 19px;
+    background-color: #e6e6e6;
   }
 }
 
@@ -53,17 +84,23 @@
 .feedback__field {
   background-color: #f2f2f2;
   border: none;
+  height: 58px;
   //
   padding: 16px;
 
-  &:not(:last-child) {
-    margin-bottom: 16px;
+  &::placeholder {
+    @include heading-mobile;
+    text-transform: none;
+    text-align: start;
+  }
+
+  &--blackplaceholder::placeholder {
+    color: #000000;
   }
 
   &--emotions {
     width: 100%;
     height: 150px;
-    box-sizing: border-box;
     border: none;
     resize: none;
   }
@@ -80,11 +117,6 @@
   margin: 0;
   padding-top: 70px;
   padding-bottom: 34px;
-
-  @media (min-width: $tablet-width) {
-    border-top: none;
-    width: 50%;
-  }
 }
 
 .feedback__impressions {
@@ -104,19 +136,9 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 25px;
+  gap: 36px;
   padding: 0;
   margin: 0;
-
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    &--attractions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
 }
 
 .feedback__attractions {
@@ -129,27 +151,27 @@
 
 .feedback__emotions {
   border: none;
-  border-top: solid 1px #e5e5e5;
   display: flex;
   flex-direction: column;
 }
 
 .feedback_button {
   @include paragraph-mobile;
-  display: block;
   text-decoration: none;
   color: #ffffff;
   background-color: #81b3d2;
+  padding: 16px 49px;
+  border: none;
 }
 
-.feedback__required-field {
+.feedback__warning {
   @include paragraph-mobile;
+  @include reset;
+  text-align: end;
+  color: rgba(51, 51, 51, 0.6);
 }
 
-//-------------RADIO------------//
-// .feedback__item {
-// }
-
+//-------------RADIO&CHECKBOX------------//
 .feedback__control {
   display: block;
   position: relative;
@@ -162,7 +184,8 @@
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  padding-top: 20px;
+  left: 12px;
+  top: 3px;
 }
 
 .feedback__control-mark {
@@ -172,14 +195,16 @@
   height: 46px;
   width: 46px;
   background-color: #f2f2f2;
-  border-radius: 50%;
   //
   margin-top: -10px;
-}
 
-/* On mouse-over, add a grey background color */
-.feedback__control:hover input ~ .checkmark {
-  background-color: #e5e5e5;
+  &--radio {
+    border-radius: 50%;
+  }
+
+  &--checkbox {
+    border-radius: 4px;
+  }
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -190,12 +215,12 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.feedback__control input:checked ~ .feedback__control-mark::after {
+.feedback__control input:checked~.feedback__control-mark::after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.feedback__control .feedback__control-mark::after {
+.feedback__control--radio .feedback__control-mark::after {
   top: 15px;
   left: 15px;
   width: 16px;
@@ -204,7 +229,13 @@
   background: #333333;
 }
 
+.feedback__control--checkbox .feedback__control-mark::after {
+  content: url("../img/unredner/form/tick.svg");
+  padding: 15px 12px;
+}
+
 .feedback__control-label {
-  top: 50px;
   @include heading-mobile;
+  text-transform: none;
+  padding-left: 16px;
 }
