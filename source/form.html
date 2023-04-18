@@ -66,9 +66,9 @@
       <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="get">
         <div class="feedback__container">
           <div class="feedback__inner">
-            <fieldset class="feedback__full-name">
-              <legend class="feedback__title feedback__title--inside">Представьтесь:</legend>
-              <div class="feedback__wrapper feedback__wrapper--first">
+            <fieldset class="feedback__fieldset feedback__fieldset--full-name">
+              <legend class="feedback__legend">Представьтесь:</legend>
+              <div class="feedback__wrapper">
                 <label class="feedback__caption" for="first-name">Имя*:</label>
                 <input class="feedback__field" type="text" id="first-name" name="first-name" placeholder="Пётр"
                   required>
@@ -85,9 +85,9 @@
             </fieldset>
           </div>
           <div class="feedback__inner">
-            <fieldset class="feedback__contacts">
-              <legend class="feedback__title feedback__title--inside">Контактная информация:</legend>
-              <div class="feedback__wrapper feedback__wrapper--first">
+            <fieldset class="feedback__fieldset feedback__fieldset__contacts">
+              <legend class="feedback__legend">Контактная информация:</legend>
+              <div class="feedback__wrapper">
                 <label class="feedback__caption" for="contacts-phone">Контактный телефон*:</label>
                 <input class="feedback__field feedback__field--phone" type="text" id="contacts-phone"
                   name="contacts-phone" placeholder="Введите телефон" required>
@@ -101,8 +101,8 @@
           </div>
         </div>
         <div class="feedback__inner">
-          <fieldset class="feedback__impressions">
-            <legend class="feedback__title feedback__title--inside">Ваше общее впечатление:</legend>
+          <fieldset class="feedback__fieldset feedback__fieldset--impressions">
+            <legend class="feedback__legend">Ваше общее впечатление:</legend>
             <ul class="feedback__list">
               <li class="feedback__item">
                 <label class="feedback__control">
@@ -130,8 +130,8 @@
           </fieldset>
         </div>
         <div class="feedback__inner">
-          <fieldset class="feedback__attractions">
-            <legend class="feedback__title feedback__title--inside">Посещенные достопримечательности:</legend>
+          <fieldset class="feedback__fieldset feedback__fieldset--attractions">
+            <legend class="feedback__legend">Посещенные достопримечательности:</legend>
             <ul class="feedback__list feedback__list--attractions">
               <li class="feedback__item">
                 <label class="feedback__control">
@@ -172,7 +172,7 @@
           </div>
         </div>
         <div class="feedback__inner">
-          <div class="feedback__wrapper feedback__wrapper--submit">
+          <div class="feedback__wrapper">
             <button class="feedback_button" type="submit">Отправить отзыв</button>
             <p class="feedback__required-field">* — обязательные поля</p>
           </div>

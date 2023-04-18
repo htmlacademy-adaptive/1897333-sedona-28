@@ -2,17 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: $tablet-width) {}
-
-  @media (min-width: 1200px) {
-    background-color: #ffffff;
-  }
 }
 
 .feedback__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -26,26 +19,15 @@
   width: 100%;
 }
 
-.feedback__full-name {
+.feedback__fieldset {
   position: relative;
   border: none;
-
   display: flex;
   flex-direction: column;
-  //
-  padding-top: 50px;
-
-
-  @media (min-width: $tablet-width) {
-    border-top: none;
-    border-right: solid 1px #e5e5e5;
-    width: 50%;
-  }
 }
 
-.feedback__title {
+.feedback__legend {
   @include heading-mobile;
-  margin-bottom: -50px;
 }
 
 .feedback__wrapper {
@@ -64,6 +46,8 @@
 
 .feedback__caption {
   @include paragraph-mobile;
+  text-align: start;
+  padding-left: 16px;
 }
 
 .feedback__field {
