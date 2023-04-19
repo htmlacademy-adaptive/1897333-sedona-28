@@ -1,44 +1,33 @@
 .argument {
-  margin: 0 auto;
-  padding: 17px 26px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.argument__wrapper {
-  margin-bottom: 38px;
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 62px;
+    padding-bottom: 84px;
+  }
 }
 
 .argument__title {
-  margin: 0 auto;
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  text-transform: uppercase;
-  margin-bottom: 39px;
+  @include heading-desktop;
 }
 
 .argument__description {
-  margin: 0 auto;
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
+  @include paragraph-mobile;
 }
 
 .argument__video {
-  content: url(../img/unredner/catalog/gallery/video-mobile.jpg);
+  content: url("../img/unredner/catalog/gallery/video-mobile.jpg");
 
-  @media(min-width:768px) {
-    content: url(../img/unredner/catalog/gallery/video-tablet.jpg);
+  @media (min-width: $tablet-width) {
+    content: url("../img/unredner/catalog/gallery/video-tablet.jpg");
   }
 
-  @media(min-width:1200px) {
-    content: url(../img/unredner/catalog/gallery/video-desktop.jpg);
+  @media (min-width: 1200px) {
+    padding-top: 64px;
+    content: url("../img/unredner/catalog/gallery/video-desktop.jpg");
   }
 }

@@ -1,124 +1,250 @@
 .feedback {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  @media(min-width: 768px) {
-    padding: 0 60px;
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.feedback__form {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    background-color: #ffffff;
   }
 }
 
 .feedback__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media(min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
   }
 }
 
-.feedback__full-name {
+.feedback__inner {
+  border-top: solid 1px #e5e5e5;
+  width: 100%;
+  padding: 24px 20px 39px;
+
+  &--last {
+    border-top: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include reset;
+    border-top: none;
+    margin-top: 48px;
+    padding: 0 60px;
+
+    &--full-name {
+      padding-right: 43px;
+      border-right: solid 1px #e5e5e5;
+    }
+
+    &--contacts {
+      padding-left: 43px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 120px;
+  }
+}
+
+.feedback__fieldset {
+  @include reset;
+  position: relative;
   border: none;
-  border-top: solid 1px #E5E5E5;
-  padding: 24px 20px;
   display: flex;
   flex-direction: column;
 
-  @media(min-width: 768px) {
-    border-right: solid 1px #E5E5E5;
-    width: 50%;
+  @media (min-width: $tablet-width) {
+    &--impressions {
+      border-top: solid 1px #e5e5e5;
+    }
+
+    &--attractions {
+      border-top: solid 1px #e5e5e5;
+    }
+
+    &--emotions {
+      border-top: solid 1px #e5e5e5;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--emotions {
+      padding: 0 60px;
+    }
   }
 }
 
-.feedback__title {
-  margin: 0 auto;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+
+.feedback__legend {
+  @include heading-mobile;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+
+    &--contacts {
+      margin: 0 calc(26px - 43px);
+    }
+
+    &--impressions {
+      padding: 0 66px;
+    }
+
+    &--attractions {
+      padding: 0 66px;
+      width: 407px;
+    }
+
+    &--emotions {
+      padding: 0 66px;
+    }
+  }
 }
 
 .feedback__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-bottom: 16px;
 
-  &--submit {
-    flex-direction: row;
-    justify-content: space-around;
+  &--phone::after {
+    content: url("../img/unredner/form/phone.svg");
+    position: absolute;
+    margin: 0;
+    right: 0;
+    bottom: 16px;
+    padding: 18px;
+    background-color: #e6e6e6;
+  }
+
+  &--email::after {
+    content: url("../img/unredner/form/mail.svg");
+    position: absolute;
+    margin: 0;
+    right: 0;
+    bottom: 16px;
+    padding: 20px;
+    padding-top: 19px;
+    background-color: #e6e6e6;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--submit {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--submit {
+      padding: 48px 64px;
+    }
   }
 }
 
 .feedback__caption {
+  @include paragraph-mobile;
+  text-align: start;
   padding-left: 16px;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  align-items: center;
-  text-transform: uppercase;
-  color: #333333;
 }
 
 .feedback__field {
-  padding: 16px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border: none;
+  height: 58px;
+  //
+  padding: 16px;
 
-  &:not(:last-child) {
-    margin-bottom: 16px;
+  &::placeholder {
+    @include heading-mobile;
+    text-transform: none;
+    text-align: start;
+  }
+
+  &--blackplaceholder::placeholder {
+    color: #000000;
   }
 
   &--emotions {
     width: 100%;
     height: 150px;
-    padding: 16px;
-    box-sizing: border-box;
     border: none;
     resize: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--emotions {
+      margin-top: 28px;
+    }
   }
 }
 
 .feedback__contacts {
+  position: relative;
   border: none;
-  border-top: solid 1px #E5E5E5;
-  padding: 24px 20px;
+  border-top: solid 1px #e5e5e5;
   display: flex;
   flex-direction: column;
-
-  @media(min-width: 768px) {
-    width: 50%;
-  }
+  //
+  padding: 0;
+  margin: 0;
+  padding-top: 70px;
+  padding-bottom: 34px;
 }
 
 .feedback__impressions {
+  position: relative;
   border: none;
-  border-top: solid 1px #E5E5E5;
-  padding: 24px 20px;
+  border-top: solid 1px #e5e5e5;
   display: flex;
   flex-direction: column;
   align-items: center;
+  //
+  padding: 0;
+  margin: 0;
+  padding-top: 70px;
 }
 
 .feedback__list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 36px;
+  padding: 0;
+  margin: 0;
 
-  @media(min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
+  @media (min-width: $tablet-width) {
+    padding: 28px 36px;
+    row-gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 46px 46px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 0;
+    grid-template-rows: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    &--attractions {
+      grid-template-rows: 108px;
+      column-gap: 40px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   }
 }
 
 .feedback__attractions {
   border: none;
-  border-top: solid 1px #E5E5E5;
-  padding: 24px 20px;
+  border-top: solid 1px #e5e5e5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,36 +252,95 @@
 
 .feedback__emotions {
   border: none;
-  border-top: solid 1px #E5E5E5;
-  padding: 24px 20px;
   display: flex;
   flex-direction: column;
 }
 
 .feedback_button {
-  display: block;
-  margin: 0 auto;
+  @include paragraph-mobile;
   text-decoration: none;
   color: #ffffff;
-  border: solid;
+  background-color: #81b3d2;
   padding: 16px 49px;
-  background-color: #81B3D2;
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
+  border: none;
 
-  @media(min-width: 768px) {
-    margin: 0;
+  @media (min-width: $tablet-width) {
+    padding: 16px 71px;
   }
 }
 
-.feedback__required-field {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
+.feedback__warning {
+  @include paragraph-mobile;
+  @include reset;
+  text-align: end;
+  color: rgba(51, 51, 51, 0.6);
+}
+
+//-------------RADIO&CHECKBOX------------//
+.feedback__control {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  cursor: pointer;
+}
+
+/* Hide the browser's default radio button */
+.feedback__control-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  left: 12px;
+  top: 3px;
+}
+
+.feedback__control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 46px;
+  width: 46px;
+  background-color: #f2f2f2;
+  //
+  margin-top: -10px;
+
+  &--radio {
+    border-radius: 50%;
+  }
+
+  &--checkbox {
+    border-radius: 4px;
+  }
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.feedback__control-mark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.feedback__control input:checked ~ .feedback__control-mark::after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.feedback__control--radio .feedback__control-mark::after {
+  top: 15px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #333333;
+}
+
+.feedback__control--checkbox .feedback__control-mark::after {
+  content: url("../img/unredner/form/tick.svg");
+  padding: 15px 12px;
+}
+
+.feedback__control-label {
+  @include heading-mobile;
+  text-transform: none;
+  padding-left: 16px;
 }

@@ -1,137 +1,223 @@
 .advantages {
-  margin: 0 auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    background: url("../img/unredner/global/advantage-border-top.svg");
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 37px;
+    top: 0;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+  }
 }
 
 .advantages__list {
-  margin: 0 auto;
-  padding: 0;
   list-style: none;
-  //
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0;
+  margin: 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
 
 .advantages__item {
-  //
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
-  &--grey {
-    border-bottom: solid 1px #D6D6D6;
-
-    &:last-child>.advantages__wrapper {
-      padding-bottom: 28px;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 1px;
-    }
-  }
-
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: nowrap;
 
     &--grey {
-      border-bottom: none;
-      width: 33%;
+      border: none;
+      width: calc(100% / 3);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--grey {
+      @include reset;
     }
   }
 }
 
+
 .advantages__wrapper {
   display: flex;
   flex-direction: column;
+  padding: 0 $mobile-padding;
 
   &--blue {
     color: #ffffff;
-    background-color: #81B3D2;
-    padding: 33px 18px;
-    padding-bottom: 40px;
+    background-color: #81b3d2;
+    padding-top: 37px;
+    padding-bottom: 37px;
+
+    &:first-child {
+      padding-top: 54px;
+      padding-bottom: 40px;
+    }
   }
 
   &--grey {
-    background-color: #eeeeee;
-    padding: 24px 26px;
+    padding: 24px 0;
+    margin: 0 $mobile-padding;
+    border-bottom: solid 1px #d6d6d6;
+
+    &--last {
+      border-bottom: none;
+    }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     &--blue {
-      padding: 52px 33px;
-      padding-bottom: 31px;
+      width: calc(100% / 3);
     }
 
     &--grey {
-      padding: 41px 33px;
-      padding-bottom: 63px;
+      @include reset;
+      padding: 41px $tablet-padding;
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    min-width: 400px;
+
+    &--grey {
+      padding: 52px 50px;
     }
   }
 }
 
 .advantages__title {
-  margin: 0 auto;
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  margin-bottom: 11px;
+  @include heading-mobile;
+  @include reset;
 
-  @media (min-width: 768px) {
+  &--subitem {
+    padding: 0;
+    text-align: start;
+  }
+
+  @media (min-width: $tablet-width) {
     font-size: 21px;
+
+    &--subitem {
+      padding-top: 26px;
+    }
+
+    &--grey {
+      padding: 0 15px; //для корректного переноса
+    }
   }
 }
 
 .advantages__number {
-  margin: 0 auto;
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  margin-bottom: 17px;
+  @include paragraph-mobile;
+  @include reset;
+  padding-top: 11px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 14px;
+    padding-top: 20px;
   }
 }
 
 .advantages__description {
-  margin: 0 auto;
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
+  @include paragraph-mobile;
+  @include reset;
+  padding-top: 17px;
 
-  @media (min-width: 768px) {
+  &--subitem {
+    padding: 16px 0;
+    text-align: left;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 33px;
     font-size: 14px;
+    text-align: center;
+
+    &--subitem {
+      padding: 0;
+      padding-top: 33px;
+    }
+  }
+}
+
+.advantages__sublist {
+  list-style: none;
+  background-color: #ffffff;
+  padding: 23px $mobile-padding 22px;
+
+  &--grey {
+    padding: 0;
+    width: 100%;
+    background-color: #eeeeee;
+    min-height: 256px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    padding: 0;
+  }
+}
+
+.advantages__subitem {
+  display: grid;
+  grid-template-columns: 47px 1fr;
+  align-items: center;
+
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3);
+    padding: 60px $tablet-padding;
+  }
+
+  @media (min-width: 1200px) {
+    width: 400px;
+  }
+}
+
+.advantages__icon {
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 77px;
+    height: 72px;
   }
 }
 
 .advantages__image {
-  padding: 0;
-
   &--city {
     content: url("../img/unredner/index/photo-city-mobile@1x.jpg");
-
   }
 
   &--bridge {
     content: url("../img/unredner/index/photo-bridge-mobile@1x.jpg");
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    width: calc(100% / 3 * 2);
 
     &--city {
       content: url("../img/unredner/index/photo-city-tablet@1x.jpg");
@@ -145,7 +231,6 @@
     @media (min-width: 1200px) {
       &--city {
         content: url("../img/unredner/index/photo-city-desktop@1x.jpg");
-
       }
 
       &--bridge {
@@ -155,6 +240,8 @@
   }
 
   @media (min-width: 1200px) {
+    flex-grow: 1;
+
     &--city {
       content: url("../img/unredner/index/photo-city-desktop@1x.jpg");
     }
@@ -163,40 +250,5 @@
       content: url("../img/unredner/index/photo-bridge-desktop@1x.jpg");
       order: -1;
     }
-  }
-}
-
-.advantages__sublist {
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-
-  @media (min-width: 768px) {
-    display: flex;
-  }
-
-}
-
-.advantages__subitem {
-  padding: 23px 18px;
-  padding-bottom: 25px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  @media (min-width: 768px) {
-    padding: 60px 33px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.advantages__icon {
-  width: 40px;
-  height: 40px;
-
-  @media (min-width: 768px) {
-    width: 77px;
-    height: 72px;
   }
 }
