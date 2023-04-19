@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
 </head>
 
 <body class="page-body">
@@ -65,9 +66,9 @@
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="get">
         <div class="feedback__container">
-          <div class="feedback__inner">
+          <div class="feedback__inner feedback__inner--full-name">
             <fieldset class="feedback__fieldset feedback__fieldset--full-name">
-              <legend class="feedback__legend">Представьтесь:</legend>
+              <legend class="feedback__legend feedback__legend--full-name">Представьтесь:</legend>
               <div class="feedback__wrapper">
                 <label class="feedback__caption" for="first-name">Имя*:</label>
                 <input class="feedback__field feedback__field--blackplaceholder" type="text" id="first-name" name="first-name" placeholder="Пётр"
@@ -84,9 +85,9 @@
               </div>
             </fieldset>
           </div>
-          <div class="feedback__inner">
-            <fieldset class="feedback__fieldset feedback__fieldset__contacts">
-              <legend class="feedback__legend">Контактная информация:</legend>
+          <div class="feedback__inner feedback__inner--contacts">
+            <fieldset class="feedback__fieldset feedback__fieldset--contacts">
+              <legend class="feedback__legend feedback__legend--contacts">Контактная информация:</legend>
               <div class="feedback__wrapper feedback__wrapper--phone">
                 <label class="feedback__caption" for="contacts-phone">Контактный телефон*:</label>
                 <input class="feedback__field feedback__field--phone" type="text" id="contacts-phone"
@@ -100,9 +101,9 @@
             </fieldset>
           </div>
         </div>
-        <div class="feedback__inner">
+        <div class="feedback__inner feedback__inner--impressions">
           <fieldset class="feedback__fieldset feedback__fieldset--impressions">
-            <legend class="feedback__legend">Ваше общее впечатление:</legend>
+            <legend class="feedback__legend feedback__legend--impressions">Ваше общее впечатление:</legend>
             <ul class="feedback__list">
               <li class="feedback__item">
                 <label class="feedback__control feedback__control--radio">
@@ -129,9 +130,9 @@
             </ul>
           </fieldset>
         </div>
-        <div class="feedback__inner">
+        <div class="feedback__inner feedback__inner--attractions">
           <fieldset class="feedback__fieldset feedback__fieldset--attractions">
-            <legend class="feedback__legend">Посещенные достопримечательности:</legend>
+            <legend class="feedback__legend feedback__legend--attractions">Посещенные достопримечательности:</legend>
             <ul class="feedback__list feedback__list--attractions">
               <li class="feedback__item">
                 <label class="feedback__control feedback__control--checkbox">
@@ -165,14 +166,14 @@
           </fieldset>
         </div>
         <div class="feedback__inner">
-          <div class="feedback__emotions">
-            <label class="feedback__title" for="emotions">Опишите свои эмоции:</label>
+          <fieldset class="feedback__fieldset feedback__fieldset--emotions">
+            <legend class="feedback__legend feedback__legend--emotions" for="emotions">Опишите свои эмоции:</legend>
             <textarea class="feedback__field feedback__field--emotions" id="emotions" name="emotions" rows="" cols=""
               placeholder="Опишите подробно все свои восторги" required></textarea>
-          </div>
+          </fieldset>
         </div>
         <div class="feedback__inner feedback__inner--last">
-          <div class="feedback__wrapper">
+          <div class="feedback__wrapper feedback__wrapper--submit">
             <button class="feedback_button" type="submit">Отправить отзыв</button>
             <p class="feedback__warning">* — обязательные поля</p>
           </div>
