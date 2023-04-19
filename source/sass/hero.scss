@@ -6,11 +6,33 @@
   height: 389px;
   position: relative;
 
-  &::after {
-    object-fit: cover;
+  &::before {
     content: "";
     display: block;
-    block-size: fit-content;
+    background: url("../img/unredner/global/hero-greeting.svg");
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 52px;
+    top: 90px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background: url("../img/unredner/global/hero-sedona.svg");
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 52px;
+    top: 50%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
     background: url("../img/unredner/global/hero-border-bottom.svg");
     background-position: center;
     position: absolute;

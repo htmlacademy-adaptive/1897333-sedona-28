@@ -53,8 +53,11 @@
     <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
     <section class="hero">
       <div class="hero__container">
-        <img class="hero__image" src="./img/unredner/global/hero/back-desktop.jpg"
-          alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/unredner/global/hero/back-desktop.jpg 1x, ./img/unredner/global/hero/back-desktop@2x.jpg 2x">
+          <img class="hero__image" src="./img/unredner/global/hero/back-desktop.jpg" srcset="./img/unredner/global/hero/back-mobile@2x.jpg 2x" width="901"
+            height="389" alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+        </picture>
       </div>
     </section>
     <div class="intro">
@@ -72,7 +75,12 @@
             <p class="advantages__number">— №1 —</p>
             <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <img class="advantages__image advantages__image--city" alt="Фото города">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/unredner/index/photo-city-desktop@1x.jpg 1x, ./img/unredner/index/photo-city-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="./img/unredner/index/photo-city-tablet@1x.jpg 1x, ./img/unredner/index/photo-city-tablet@2x.jpg 2x">
+            <img class="advantages__image advantages__image--city" src="./img/unredner/index/photo-city-mobile@1x.jpg" srcset="./img/unredner/index/photo-city-mobile@2x.jpg 2x" width="320"
+              height="260" alt="Фото города">
+          </picture>
         </li>
         <ul class="advantages__sublist">
           <li class="advantages__subitem">

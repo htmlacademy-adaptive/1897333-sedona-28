@@ -3,6 +3,13 @@
   text-align: center;
   padding: 32px $mobile-padding;
 
+  &--catalog {
+    max-width: 320px;
+    @media (min-width: $tablet-width) {
+      max-width: 100%;
+    }
+  }
+
   &--form {
     padding: 36px $mobile-padding 28px;
   }

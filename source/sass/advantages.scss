@@ -208,47 +208,37 @@
 }
 
 .advantages__image {
-  &--city {
-    content: url("../img/unredner/index/photo-city-mobile@1x.jpg");
-  }
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  // &--city {
+  //   content: url("../img/unredner/index/photo-city-mobile@1x.jpg");
+  // }
 
   &--bridge {
     content: url("../img/unredner/index/photo-bridge-mobile@1x.jpg");
   }
 
   @media (min-width: $tablet-width) {
-    width: calc(100% / 3 * 2);
+    // width: calc(100% / 3 * 2);
 
-    &--city {
-      content: url("../img/unredner/index/photo-city-tablet@1x.jpg");
-    }
+    // &--city {
+    //   content: url("../img/unredner/index/photo-city-tablet@1x.jpg");
+    // }
 
     &--bridge {
       content: url("../img/unredner/index/photo-bridge-tablet@1x.jpg");
       order: -1;
     }
-
-    @media (min-width: 1200px) {
-      &--city {
-        content: url("../img/unredner/index/photo-city-desktop@1x.jpg");
-      }
-
-      &--bridge {
-        content: url("../img/unredner/index/photo-bridge-desktop@1x.jpg");
-      }
-    }
   }
 
   @media (min-width: 1200px) {
-    flex-grow: 1;
-
-    &--city {
-      content: url("../img/unredner/index/photo-city-desktop@1x.jpg");
-    }
+    // &--city {
+    //   content: url("../img/unredner/index/photo-city-desktop@1x.jpg");
+    // }
 
     &--bridge {
       content: url("../img/unredner/index/photo-bridge-desktop@1x.jpg");
-      order: -1;
     }
   }
 }

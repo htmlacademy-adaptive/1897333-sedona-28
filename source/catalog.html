@@ -66,7 +66,15 @@
     <section class="gallery">
       <ul class="gallery__list">
         <li class="gallery__item">
-          <img class="gallery__picture gallery__picture--road" alt="фото дороги">
+          <picture>
+            <source media="(min-width: 1200px)"
+              srcset="./img/unredner/catalog/gallery/photo-1-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-1-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/unredner/catalog/gallery/photo-1-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-1-tablet@2x.jpg 2x">
+            <img class="gallery__picture gallery__picture--road" src="./img/unredner/catalog/gallery/photo-1-mobile.jpg"
+              srcset="./img/unredner/catalog/gallery/photo-1-mobile@2x.jpg 2x" width="280px" height="280px"
+              alt="фото дороги">
+          </picture>
           <div class="gallery__wrapper">
             <div class="gallery__caption">
               <h3 class="gallery__title">Неродные просторы</h3>
@@ -80,7 +88,15 @@
         </li>
         <ul class="gallery__sublist">
           <li class="gallery__item">
-            <img class="gallery__picture gallery__picture--cactus" alt="фото кактуса">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/unredner/catalog/gallery/photo-2-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/unredner/catalog/gallery/photo-2-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-2-tablet@2x.jpg 2x">
+              <img src="./img/unredner/catalog/gallery/photo-2-mobile.jpg"
+                srcset="./img/unredner/catalog/gallery/photo-2-mobile@2x.jpg 2x"
+                class="gallery__picture gallery__picture--cactus" width="280px" height="280px" alt="фото кактуса">
+            </picture>
             <div class="gallery__wrapper">
               <div class="gallery__caption">
 
@@ -94,7 +110,15 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__picture gallery__picture--north-road" alt="фото дороги в горах">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/unredner/catalog/gallery/photo-3-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/unredner/catalog/gallery/photo-3-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-3-tablet@2x.jpg 2x">
+              <img src="./img/unredner/catalog/gallery/photo-3-mobile.jpg"
+                srcset="./img/unredner/catalog/gallery/photo-3-mobile@2x.jpg 2x"
+                class="gallery__picture gallery__picture--north-road" width="280px" height="280px" alt="фото дороги в горах">
+            </picture>
             <div class="gallery__wrapper gallery__wrapper--even">
               <div class="gallery__caption">
                 <h3 class="gallery__title">Дорога на север</h3>
@@ -107,7 +131,15 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__picture gallery__picture--devil-bridge" alt="мост дьявола">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/unredner/catalog/gallery/photo-4-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/unredner/catalog/gallery/photo-4-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-4-tablet@2x.jpg 2x">
+              <img src="./img/unredner/catalog/gallery/photo-4-mobile.jpg"
+                srcset="./img/unredner/catalog/gallery/photo-4-mobile@2x.jpg 2x"
+                class="gallery__picture gallery__picture--devil-bridge" width="280px" height="280px" alt="мост дьявола">
+            </picture>
             <div class="gallery__wrapper">
               <div class="gallery__caption">
 
@@ -165,9 +197,9 @@
 <script>
   let menuBtn = document.querySelector('.main-nav__toggle');
   let menu = document.querySelector('.main-nav__wrapper');
-  menuBtn.addEventListener('click', function(){
-  menu.classList.toggle('main-nav__wrapper--active');
-})
+  menuBtn.addEventListener('click', function () {
+    menu.classList.toggle('main-nav__wrapper--active');
+  })
 </script>
 
 </html>
