@@ -2,6 +2,7 @@
   width: 100%;
   text-align: center;
   padding: 32px $mobile-padding;
+
   &--form {
     padding: 36px $mobile-padding 28px;
   }
@@ -9,6 +10,7 @@
   @media (min-width: $tablet-width) {
     background-color: #ffffff;
     padding: 47.5px 124px 55.5px;
+
     &--form {
       padding: 64px 150px calc(108px - 48px);
     }

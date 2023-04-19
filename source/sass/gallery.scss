@@ -58,6 +58,7 @@
       border-bottom: none;
     }
   }
+
   @media (min-width: $desktop-width) {
     position: relative;
   }
@@ -127,7 +128,6 @@
 }
 
 
-
 .gallery__wrapper {
   display: flex;
   flex-direction: column;
@@ -167,7 +167,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   text-transform: uppercase;
   text-align: left;
   overflow-wrap: anywhere;
@@ -187,8 +187,6 @@
   overflow-wrap: anywhere;
   //
   margin: 0;
-
-  @media (min-width: $tablet-width) {}
 
   @media (min-width: 1200px) {
     color: #ffffff;
@@ -216,7 +214,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   text-align: left;
 
 

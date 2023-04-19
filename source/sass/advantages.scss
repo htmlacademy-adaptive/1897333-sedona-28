@@ -2,7 +2,7 @@
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     background: url("../img/unredner/global/advantage-border-top.svg");
     background-position: center;
     position: absolute;
@@ -10,7 +10,7 @@
     height: 37px;
     top: 0;
 
-    @media(min-width: $tablet-width) {
+    @media (min-width: $tablet-width) {
       display: none;
     }
   }
@@ -98,6 +98,7 @@
 
   @media (min-width: 1200px) {
     min-width: 400px;
+
     &--grey {
       padding: 52px 50px;
     }

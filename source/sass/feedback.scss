@@ -114,7 +114,7 @@
   padding-bottom: 16px;
 
   &--phone::after {
-    content: url(../img/unredner/form/phone.svg);
+    content: url("../img/unredner/form/phone.svg");
     position: absolute;
     margin: 0;
     right: 0;
@@ -124,7 +124,7 @@
   }
 
   &--email::after {
-    content: url(../img/unredner/form/mail.svg);
+    content: url("../img/unredner/form/mail.svg");
     position: absolute;
     margin: 0;
     right: 0;
@@ -134,7 +134,7 @@
     background-color: #e6e6e6;
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     &--submit {
       display: flex;
       flex-direction: row;
@@ -143,7 +143,7 @@
     }
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     &--submit {
       padding: 48px 64px;
     }
@@ -180,7 +180,7 @@
     resize: none;
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     &--emotions {
       margin-top: 28px;
     }
@@ -320,7 +320,7 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.feedback__control input:checked~.feedback__control-mark::after {
+.feedback__control input:checked ~ .feedback__control-mark::after {
   display: block;
 }
 

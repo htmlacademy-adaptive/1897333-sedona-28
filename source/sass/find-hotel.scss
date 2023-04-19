@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   padding: 38px $mobile-padding 32px;
+
   @media (min-width: $tablet-width) {
     padding: 60px 155px 55px;
   }

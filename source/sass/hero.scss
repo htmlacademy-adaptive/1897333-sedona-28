@@ -1,17 +1,17 @@
 .hero {
   width: 100%;
-  background-color: aqua;
 }
 
 .hero__container {
   height: 389px;
   position: relative;
+
   &::after {
     object-fit: cover;
-    content: '';
+    content: "";
     display: block;
     block-size: fit-content;
-    background: url(../img/unredner/global/hero-border-bottom.svg);
+    background: url("../img/unredner/global/hero-border-bottom.svg");
     background-position: center;
     position: absolute;
     background-repeat: no-repeat;
@@ -19,6 +19,7 @@
     height: 57px;
     bottom: 0;
   }
+
   @media (min-width: $tablet-width) {
     height: 518px;
   }
