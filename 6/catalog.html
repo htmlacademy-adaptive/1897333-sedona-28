@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./favicon.ico"><!-- 32×32 -->
+  <base href="https://htmlacademy-adaptive.github.io/1897333-sedona-28/6/">
+</head>
+
+<body class="page-body">
+  <!--шапка-->
+  <header class="main-header main-header--overflow">
+    <a href="./index.html" class="main-header__logo-link" alt="ссылка на главную страницу">
+      <img class="main-header__logo" src="./img/unredner/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
+    </a>
+    <nav class="main-nav">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list main-nav__list--left">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html" alt="ссылка на главную страницу">
+              Главная
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html" alt="ссылка на галерею">
+              Фото и видео
+            </a>
+          </li>
+        </ul>
+        <ul class="main-nav__list main-nav__list--right">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html" alt="ссылка на форму отзыва">
+              Форма отзыва
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru/" alt="ссылка на HTML Academy">
+              HTML Academy
+            </a>
+          </li>
+        </ul>
+      </div>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="main-nav__toggle-line"></span>
+        <span class="main-nav__toggle-line"></span>
+        <span class="main-nav__toggle-line"></span>
+      </button>
+    </nav>
+  </header>
+  <main class="main-container">
+    <h1 class="visually-hidden">Достопримечательности города Седоны</h1>
+    <section class="hero">
+      <div class="hero__container hero__container--small">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/unredner/global/hero/back-desktop.jpg 1x, ./img/unredner/global/hero/back-desktop@2x.jpg 2x">
+          <img class="hero__image hero__image--small" src="./img/unredner/global/hero/back-desktop.jpg" srcset="./img/unredner/global/hero/back-mobile@2x.jpg 2x" width="901"
+            height="389" alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+        </picture>
+        <img class="hero__caption hero__caption--small" src="./img/unredner/global/hero-sedona.svg" alt="Надпись SEDONA">
+      </div>
+    </section>
+    <div class="intro intro--catalog">
+      <h2 class="intro__title">Фото и видео</h2>
+      <p class="intro__description"> Не можете решиться на путешествие из-за курса? Фотографии помогут вам
+        забыть о политике и экономике.</p>
+    </div>
+    <section class="gallery">
+      <ul class="gallery__list">
+        <li class="gallery__item">
+          <picture>
+            <source media="(min-width: 1200px)"
+              srcset="./img/unredner/catalog/gallery/photo-1-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-1-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/unredner/catalog/gallery/photo-1-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-1-tablet@2x.jpg 2x">
+            <img class="gallery__picture gallery__picture--road" src="./img/unredner/catalog/gallery/photo-1-mobile.jpg"
+              srcset="./img/unredner/catalog/gallery/photo-1-mobile@2x.jpg 2x" width="280px" height="280px"
+              alt="фото дороги">
+          </picture>
+          <div class="gallery__wrapper">
+            <div class="gallery__caption">
+              <h3 class="gallery__title">Неродные просторы</h3>
+              <p class="gallery__author">Автор фото: Борис</p>
+            </div>
+            <div class="gallery__rate">
+              <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+              <p class="gallery__number">1350</p>
+            </div>
+          </div>
+        </li>
+        <ul class="gallery__sublist">
+          <li class="gallery__item">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/unredner/catalog/gallery/photo-2-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/unredner/catalog/gallery/photo-2-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-2-tablet@2x.jpg 2x">
+              <img src="./img/unredner/catalog/gallery/photo-2-mobile.jpg"
+                srcset="./img/unredner/catalog/gallery/photo-2-mobile@2x.jpg 2x"
+                class="gallery__picture gallery__picture--cactus" width="280px" height="280px" alt="фото кактуса">
+            </picture>
+            <div class="gallery__wrapper">
+              <div class="gallery__caption">
+
+                <h3 class="gallery__title">Местная растительность</h3>
+                <p class="gallery__author">Автор фото: Сергей</p>
+              </div>
+              <div class="gallery__rate">
+                <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+                <p class="gallery__number">143</p>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/unredner/catalog/gallery/photo-3-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/unredner/catalog/gallery/photo-3-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-3-tablet@2x.jpg 2x">
+              <img src="./img/unredner/catalog/gallery/photo-3-mobile.jpg"
+                srcset="./img/unredner/catalog/gallery/photo-3-mobile@2x.jpg 2x"
+                class="gallery__picture gallery__picture--north-road" width="280px" height="280px" alt="фото дороги в горах">
+            </picture>
+            <div class="gallery__wrapper gallery__wrapper--even">
+              <div class="gallery__caption">
+                <h3 class="gallery__title">Дорога на север</h3>
+                <p class="gallery__author">Автор фото: Петр</p>
+              </div>
+              <div class="gallery__rate">
+                <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+                <p class="gallery__number">96</p>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/unredner/catalog/gallery/photo-4-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/unredner/catalog/gallery/photo-4-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-4-tablet@2x.jpg 2x">
+              <img src="./img/unredner/catalog/gallery/photo-4-mobile.jpg"
+                srcset="./img/unredner/catalog/gallery/photo-4-mobile@2x.jpg 2x"
+                class="gallery__picture gallery__picture--devil-bridge" width="280px" height="280px" alt="мост дьявола">
+            </picture>
+            <div class="gallery__wrapper">
+              <div class="gallery__caption">
+
+                <h3 class="gallery__title">Мост дьявола</h3>
+                <p class="gallery__author">Автор фото: Антон</p>
+              </div>
+              <div class="gallery__rate">
+                <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+                <p class="gallery__number">254</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </ul>
+    </section>
+    <section class="argument">
+      <div class="argument__wrapper">
+        <h2 class="argument__title">Все еще сомневаетесь?</h2>
+        <p class="argument__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+          очередной раз!</p>
+      </div>
+      <img class="argument__video" src="./img/unredner/gallery/video-mobile.jpg">
+    </section>
+  </main>
+  <footer class="container main-footer">
+    <h3 class="main-footer__title">#visitsedona</h3>
+    <div class="main-footer__social social">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <img src="./img/unredner/social-vk.svg" alt="вконтакте">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <img src="./img/unredner/social-tg.svg" alt="Телеграм">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <img src="./img/unredner/social-youtube.svg" alt="Youtube">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main-footer__adademy">
+      <a class=" main-footer__adademy-link">
+        <span class="main-footer__academy-capture">Разработано</span>
+        <img class="main-footer__academy-logo" src="./img/unredner/htmlacademy.svg" alt="логотип академии">
+      </a>
+    </div>
+  </footer>
+</body>
+<script>
+  let menuBtn = document.querySelector('.main-nav__toggle');
+  let menu = document.querySelector('.main-nav__wrapper');
+  menuBtn.addEventListener('click', function () {
+    menu.classList.toggle('main-nav__wrapper--active');
+  })
+</script>
+
+</html>
