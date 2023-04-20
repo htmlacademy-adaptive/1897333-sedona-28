@@ -1,5 +1,11 @@
 .main-header {
   height: 56px;
+  &--overflow {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-color: #ffffff;
+  }
 }
 
 .main-header__logo-link {

@@ -10,7 +10,7 @@
 
 <body class="page-body">
   <!--шапка-->
-  <header class="main-header">
+  <header class="main-header main-header--overflow">
     <a href="./index.html" class="main-header__logo-link" alt="ссылка на главную страницу">
       <img class="main-header__logo" src="./img/unredner/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
     </a>
@@ -52,9 +52,13 @@
   <main class="main-container">
     <h1 class="visually-hidden">Пожалуйста оставьте свой отзыв</h1>
     <section class="hero">
-      <div class="hero__container">
-        <img class="hero__image" src="./img/unredner/global/hero/back-mobile.jpg"
-          alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+      <div class="hero__container hero__container--small">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/unredner/global/hero/back-desktop.jpg 1x, ./img/unredner/global/hero/back-desktop@2x.jpg 2x">
+          <img class="hero__image hero__image--small" src="./img/unredner/global/hero/back-desktop.jpg" srcset="./img/unredner/global/hero/back-mobile@2x.jpg 2x" width="901"
+            height="389" alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+        </picture>
+        <img class="hero__caption hero__caption--small" src="./img/unredner/global/hero-sedona.svg" alt="Надпись SEDONA">
       </div>
     </section>
     <section class="intro intro--form">
