@@ -207,38 +207,21 @@
   }
 }
 
+.advantages__picture {
+  display: contents;
+}
+
 .advantages__image {
   object-fit: cover;
   width: 100%;
   height: auto;
-  // &--city {
-  //   content: url("../img/unredner/index/photo-city-mobile@1x.jpg");
-  // }
-
-  &--bridge {
-    content: url("../img/unredner/index/photo-bridge-mobile@1x.jpg");
-  }
+  display: block;
 
   @media (min-width: $tablet-width) {
-    // width: calc(100% / 3 * 2);
-
-    // &--city {
-    //   content: url("../img/unredner/index/photo-city-tablet@1x.jpg");
-    // }
+    width: calc(100% / 3 * 2);
 
     &--bridge {
-      content: url("../img/unredner/index/photo-bridge-tablet@1x.jpg");
       order: -1;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    // &--city {
-    //   content: url("../img/unredner/index/photo-city-desktop@1x.jpg");
-    // }
-
-    &--bridge {
-      content: url("../img/unredner/index/photo-bridge-desktop@1x.jpg");
     }
   }
 }

@@ -84,7 +84,7 @@
             <p class="advantages__number">— №1 —</p>
             <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <picture>
+          <picture class="advantages__picture">
             <source media="(min-width: 1200px)"
               srcset="./img/unredner/index/photo-city-desktop@1x.jpg 1x, ./img/unredner/index/photo-city-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)"
@@ -99,16 +99,14 @@
             <h3 class="advantages__title advantages__title--subitem">Жилье</h3>
             <span></span>
             <p class="advantages__description advantages__description--subitem">Рекомендуем пожить в настоящем мотеле,
-              все
-              как в кино!</p>
+              все как в кино!</p>
           </li>
           <li class="advantages__subitem">
             <img class="advantages__icon" src="./img/unredner/icon-burger.svg" alt="иконка бургера">
             <h3 class="advantages__title advantages__title--subitem">Еда</h3>
             <span></span>
             <p class="advantages__description advantages__description--subitem">Всегда заказывайте фирменный бургер, вы
-              не
-              разочаруетесь!</p>
+              не разочаруетесь!</p>
           </li>
           <li class="advantages__subitem">
             <img class="advantages__icon" src="./img/unredner/icon-gift.svg" alt="иконка подарка">
@@ -124,7 +122,15 @@
             <p class="advantages__number">— №2 —</p>
             <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
-          <img class="advantages__image advantages__image--bridge" alt="Фото моста дьявола">
+          <picture class="advantages__picture advantages__picture--reverse">
+            <source media="(min-width: 1200px)"
+              srcset="./img/unredner/index/photo-bridge-desktop@1x.jpg 1x, ./img/unredner/index/photo-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/unredner/index/photo-bridge-tablet@1x.jpg 1x, ./img/unredner/index/photo-bridge-tablet@2x.jpg 2x">
+            <img class="advantages__image advantages__image--bridge"
+              src="./img/unredner/index/photo-bridge-mobile@1x.jpg"
+              srcset="./img/unredner/index/photo-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Фото города">
+          </picture>
         </li>
         <ul class="advantages__sublist advantages__sublist--grey">
           <li class="advantages__item advantages__item--grey">
@@ -167,32 +173,34 @@
     </div>
   </main>
   <footer class="main-footer">
-    <h3 class="main-footer__title">#visitsedona</h3>
-    <div class="main-footer__social social">
-      <h2 class="visually-hidden">Социальные сети</h2>
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-            <img src="./img/unredner/social-vk.svg" alt="вконтакте">
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-            <img src="./img/unredner/social-tg.svg" alt="Телеграм">
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-            <img src="./img/unredner/social-youtube.svg" alt="Youtube">
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-footer__adademy">
-      <a class=" main-footer__adademy-link">
-        <span class="main-footer__academy-capture">Разработано</span>
-        <img class="main-footer__academy-logo" src="./img/unredner/htmlacademy.svg" alt="логотип академии">
-      </a>
+    <div class="main-footer__wrapper">
+      <h3 class="main-footer__title">#visitsedona</h3>
+      <div class="main-footer__social social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <img src="./img/unredner/social-vk.svg" alt="вконтакте">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <img src="./img/unredner/social-tg.svg" alt="Телеграм">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <img src="./img/unredner/social-youtube.svg" alt="Youtube">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__adademy">
+        <a class=" main-footer__adademy-link">
+          <span class="main-footer__academy-capture">Разработано</span>
+          <img class="main-footer__academy-logo" src="./img/unredner/htmlacademy.svg" alt="логотип академии">
+        </a>
+      </div>
     </div>
   </footer>
 </body>
