@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 38px $mobile-padding 32px;
+  padding: 44px $mobile-padding 49px;
 
   @media (min-width: $tablet-width) {
     padding: 60px 155px 55px;
@@ -19,7 +19,7 @@
 .find-hotel__description {
   @include paragraph-mobile;
   @include reset;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .find-hotel__wrapper {
@@ -34,7 +34,7 @@
 }
 
 .find-hotel__link {
-  @include heading-mobile;
+  @include heading-desktop;
   display: block;
   text-decoration: none;
   color: #ffffff;

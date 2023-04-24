@@ -1,7 +1,7 @@
 .intro {
   width: 100%;
   text-align: center;
-  padding: 32px $mobile-padding;
+  padding: 34px $mobile-padding;
 
   &--catalog {
     max-width: 320px;
@@ -31,7 +31,8 @@
 .intro__title {
   @include heading-mobile;
   @include reset;
-  min-width: 300px; //чтобы был правильный перенос
+  display: inline-block;
+  max-width: 272px; //чтобы был правильный перенос
 
   @media (min-width: $tablet-width) {
     @include heading-desktop;
