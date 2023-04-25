@@ -183,7 +183,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     padding: 0;
   }
 }
