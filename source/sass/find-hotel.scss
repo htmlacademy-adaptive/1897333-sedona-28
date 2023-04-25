@@ -14,12 +14,20 @@
 .find-hotel__title {
   @include heading-desktop;
   @include reset;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .find-hotel__description {
   @include paragraph-mobile;
   @include reset;
   padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 32px;
+  }
 }
 
 .find-hotel__wrapper {
@@ -28,6 +36,7 @@
   max-width: 400px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 46px;
     min-width: 458px;
     max-width: 550px;
   }
@@ -44,5 +53,6 @@
   @media (min-width: $tablet-width) {
     font-size: 21px;
     line-height: 26px;
+    padding-top: 15px;
   }
 }

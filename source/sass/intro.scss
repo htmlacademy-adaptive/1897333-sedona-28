@@ -36,6 +36,7 @@
 
   @media (min-width: $tablet-width) {
     @include heading-desktop;
+    max-width: 434px;
   }
 }
 
@@ -46,6 +47,6 @@
   padding-top: 35px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 20px;
+    padding-top: 30px;
   }
 }

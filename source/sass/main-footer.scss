@@ -5,6 +5,10 @@
   justify-content: end;
   flex-grow: 1;
   padding-top: 42px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 36px;
+  }
 }
 
 .main-footer__wrapper {
