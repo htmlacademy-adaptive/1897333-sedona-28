@@ -156,6 +156,10 @@
     }
   }
 
+  &--grey {
+    padding: 17px 17px 0;
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 33px;
     font-size: 14px;
