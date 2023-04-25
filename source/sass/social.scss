@@ -1,7 +1,6 @@
 .social__list {
+  @include reset;
   list-style: none;
   display: flex;
-  gap: 6px;
-  padding: 0;
-  margin-bottom: 30px;
+  column-gap: 6px;
 }

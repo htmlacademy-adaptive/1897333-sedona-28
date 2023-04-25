@@ -6,12 +6,18 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="./favicon.ico"><!-- 32×32 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body class="page-body">
   <!--шапка-->
-  <header class="main-header">
+  <header class="main-header main-header--overflow">
     <a href="./index.html" class="main-header__logo-link" alt="ссылка на главную страницу">
       <img class="main-header__logo" src="./img/unredner/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
     </a>
@@ -53,9 +59,16 @@
   <main class="main-container">
     <h1 class="visually-hidden">Достопримечательности города Седоны</h1>
     <section class="hero">
-      <div class="hero__container">
-        <img class="hero__image" src="./img/unredner/global/hero/back-mobile.jpg"
-          alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+      <div class="hero__container hero__container--small">
+        <picture>
+          <source media="(min-width: 768px)"
+            srcset="./img/unredner/global/hero/back-desktop.jpg 1x, ./img/unredner/global/hero/back-desktop@2x.jpg 2x">
+          <img class="hero__image hero__image--small" src="./img/unredner/global/hero/back-desktop.jpg"
+            srcset="./img/unredner/global/hero/back-mobile@2x.jpg 2x" width="901" height="389"
+            alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+        </picture>
+        <img class="hero__caption hero__caption--small" src="./img/unredner/global/hero-sedona.svg"
+          alt="Надпись SEDONA">
       </div>
     </section>
     <div class="intro intro--catalog">
@@ -66,7 +79,15 @@
     <section class="gallery">
       <ul class="gallery__list">
         <li class="gallery__item">
-          <img class="gallery__picture gallery__picture--road" alt="фото дороги">
+          <picture>
+            <source media="(min-width: 1200px)"
+              srcset="./img/unredner/catalog/gallery/photo-1-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-1-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/unredner/catalog/gallery/photo-1-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-1-tablet@2x.jpg 2x">
+            <img class="gallery__picture gallery__picture--road" src="./img/unredner/catalog/gallery/photo-1-mobile.jpg"
+              srcset="./img/unredner/catalog/gallery/photo-1-mobile@2x.jpg 2x" width="280px" height="280px"
+              alt="фото дороги">
+          </picture>
           <div class="gallery__wrapper">
             <div class="gallery__caption">
               <h3 class="gallery__title">Неродные просторы</h3>
@@ -80,7 +101,15 @@
         </li>
         <ul class="gallery__sublist">
           <li class="gallery__item">
-            <img class="gallery__picture gallery__picture--cactus" alt="фото кактуса">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/unredner/catalog/gallery/photo-2-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/unredner/catalog/gallery/photo-2-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-2-tablet@2x.jpg 2x">
+              <img src="./img/unredner/catalog/gallery/photo-2-mobile.jpg"
+                srcset="./img/unredner/catalog/gallery/photo-2-mobile@2x.jpg 2x"
+                class="gallery__picture gallery__picture--cactus" width="280px" height="280px" alt="фото кактуса">
+            </picture>
             <div class="gallery__wrapper">
               <div class="gallery__caption">
 
@@ -94,7 +123,16 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__picture gallery__picture--north-road" alt="фото дороги в горах">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/unredner/catalog/gallery/photo-3-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/unredner/catalog/gallery/photo-3-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-3-tablet@2x.jpg 2x">
+              <img src="./img/unredner/catalog/gallery/photo-3-mobile.jpg"
+                srcset="./img/unredner/catalog/gallery/photo-3-mobile@2x.jpg 2x"
+                class="gallery__picture gallery__picture--north-road" width="280px" height="280px"
+                alt="фото дороги в горах">
+            </picture>
             <div class="gallery__wrapper gallery__wrapper--even">
               <div class="gallery__caption">
                 <h3 class="gallery__title">Дорога на север</h3>
@@ -107,7 +145,15 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__picture gallery__picture--devil-bridge" alt="мост дьявола">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/unredner/catalog/gallery/photo-4-desktop.jpg 1x, ./img/unredner/catalog/gallery/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/unredner/catalog/gallery/photo-4-tablet.jpg 1x, ./img/unredner/catalog/gallery/photo-4-tablet@2x.jpg 2x">
+              <img src="./img/unredner/catalog/gallery/photo-4-mobile.jpg"
+                srcset="./img/unredner/catalog/gallery/photo-4-mobile@2x.jpg 2x"
+                class="gallery__picture gallery__picture--devil-bridge" width="280px" height="280px" alt="мост дьявола">
+            </picture>
             <div class="gallery__wrapper">
               <div class="gallery__caption">
 
@@ -165,9 +211,9 @@
 <script>
   let menuBtn = document.querySelector('.main-nav__toggle');
   let menu = document.querySelector('.main-nav__wrapper');
-  menuBtn.addEventListener('click', function(){
-  menu.classList.toggle('main-nav__wrapper--active');
-})
+  menuBtn.addEventListener('click', function () {
+    menu.classList.toggle('main-nav__wrapper--active');
+  })
 </script>
 
 </html>

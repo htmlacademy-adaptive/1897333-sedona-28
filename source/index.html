@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="./favicon.ico"><!-- 32×32 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body class="page-body">
@@ -52,9 +58,15 @@
   <main class="main-container">
     <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
     <section class="hero">
-      <div class="hero__container">
-        <img class="hero__image" src="./img/unredner/global/hero/back-desktop.jpg"
-          alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+      <div class="hero__container hero__container--main">
+        <picture>
+          <source media="(min-width: 768px)"
+            srcset="./img/unredner/global/hero/back-desktop.jpg 1x, ./img/unredner/global/hero/back-desktop@2x.jpg 2x">
+          <img class="hero__image" src="./img/unredner/global/hero/back-desktop.jpg"
+            srcset="./img/unredner/global/hero/back-mobile@2x.jpg 2x" width="901" height="389"
+            alt="Welcome to the geourgeous sedona because the grand canyon sucks">
+        </picture>
+        <img class="hero__caption" src="./img/unredner/global/hero-sedona.svg" alt="Надпись SEDONA">
       </div>
     </section>
     <div class="intro">
@@ -65,31 +77,36 @@
     </div>
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
-      <ul class="advantages__list">
+      <ol class="advantages__list">
         <li class="advantages__item advantages__item--blue">
           <div class="advantages__wrapper advantages__wrapper--blue">
-            <h3 class="advantages__title">Настоящий городок</h3>
+            <h3 class="advantages__title advantages__title--blue">Настоящий городок</h3>
             <p class="advantages__number">— №1 —</p>
             <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <img class="advantages__image advantages__image--city" alt="Фото города">
+          <picture class="advantages__picture">
+            <source media="(min-width: 1200px)"
+              srcset="./img/unredner/index/photo-city-desktop@1x.jpg 1x, ./img/unredner/index/photo-city-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/unredner/index/photo-city-tablet@1x.jpg 1x, ./img/unredner/index/photo-city-tablet@2x.jpg 2x">
+            <img class="advantages__image advantages__image--city" src="./img/unredner/index/photo-city-mobile@1x.jpg"
+              srcset="./img/unredner/index/photo-city-mobile@2x.jpg 2x" width="320" height="260" alt="Фото города">
+          </picture>
         </li>
         <ul class="advantages__sublist">
           <li class="advantages__subitem">
             <img class="advantages__icon" src="./img/unredner/icon-house.svg" alt="иконка дома">
             <h3 class="advantages__title advantages__title--subitem">Жилье</h3>
             <span></span>
-            <p class="advantages__description advantages__description--subitem">Рекомендуем пожить в настоящем мотеле,
-              все
-              как в кино!</p>
+            <p class="advantages__description advantages__description--subitem advantages__description--subitem--first">Рекомендуем пожить в настоящем мотеле,
+              все как в кино!</p>
           </li>
           <li class="advantages__subitem">
             <img class="advantages__icon" src="./img/unredner/icon-burger.svg" alt="иконка бургера">
             <h3 class="advantages__title advantages__title--subitem">Еда</h3>
             <span></span>
             <p class="advantages__description advantages__description--subitem">Всегда заказывайте фирменный бургер, вы
-              не
-              разочаруетесь!</p>
+              не разочаруетесь!</p>
           </li>
           <li class="advantages__subitem">
             <img class="advantages__icon" src="./img/unredner/icon-gift.svg" alt="иконка подарка">
@@ -101,11 +118,19 @@
         </ul>
         <li class="advantages__item advantages__item--blue">
           <div class="advantages__wrapper advantages__wrapper--blue">
-            <h3 class="advantages__title">Там есть мост дьявола</h3>
+            <h3 class="advantages__title advantages__title--blue">Там есть мост дьявола</h3>
             <p class="advantages__number">— №2 —</p>
             <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
-          <img class="advantages__image advantages__image--bridge" alt="Фото моста дьявола">
+          <picture class="advantages__picture advantages__picture--reverse">
+            <source media="(min-width: 1200px)"
+              srcset="./img/unredner/index/photo-bridge-desktop@1x.jpg 1x, ./img/unredner/index/photo-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/unredner/index/photo-bridge-tablet@1x.jpg 1x, ./img/unredner/index/photo-bridge-tablet@2x.jpg 2x">
+            <img class="advantages__image advantages__image--bridge"
+              src="./img/unredner/index/photo-bridge-mobile@1x.jpg"
+              srcset="./img/unredner/index/photo-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Фото города">
+          </picture>
         </li>
         <ul class="advantages__sublist advantages__sublist--grey">
           <li class="advantages__item advantages__item--grey">
@@ -130,7 +155,7 @@
             </div>
           </li>
         </ul>
-      </ul>
+      </ol>
     </section>
     <section class="find-hotel">
       <h3 class="find-hotel__title">Заинтересовались?</h3>
@@ -148,32 +173,34 @@
     </div>
   </main>
   <footer class="main-footer">
-    <h3 class="main-footer__title">#visitsedona</h3>
-    <div class="main-footer__social social">
-      <h2 class="visually-hidden">Социальные сети</h2>
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-            <img src="./img/unredner/social-vk.svg" alt="вконтакте">
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-            <img src="./img/unredner/social-tg.svg" alt="Телеграм">
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-            <img src="./img/unredner/social-youtube.svg" alt="Youtube">
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-footer__adademy">
-      <a class=" main-footer__adademy-link">
-        <span class="main-footer__academy-capture">Разработано</span>
-        <img class="main-footer__academy-logo" src="./img/unredner/htmlacademy.svg" alt="логотип академии">
-      </a>
+    <div class="main-footer__wrapper">
+      <h3 class="main-footer__title">#visitsedona</h3>
+      <div class="main-footer__social social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <img src="./img/unredner/social-vk.svg" alt="вконтакте">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <img src="./img/unredner/social-tg.svg" alt="Телеграм">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <img src="./img/unredner/social-youtube.svg" alt="Youtube">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__academy">
+        <a class="main-footer__academy-link">
+          <span class="main-footer__academy-capture">Разработано</span>
+          <img class="main-footer__academy-logo" src="./img/unredner/htmlacademy.svg" alt="логотип академии">
+        </a>
+      </div>
     </div>
   </footer>
 </body>

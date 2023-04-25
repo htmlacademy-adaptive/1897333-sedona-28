@@ -11,6 +11,13 @@
   }
 }
 
+.argument__wrapper {
+  max-width: 320px;
+  @media (min-width: $tablet-width) {
+    max-width: 445px;
+  }
+}
+
 .argument__title {
   @include heading-desktop;
 }
