@@ -9,6 +9,11 @@
   @media (min-width: $tablet-width) {
     padding: 60px 155px 55px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 62px;
+    padding-bottom: 66px;
+  }
 }
 
 .find-hotel__title {
@@ -26,6 +31,11 @@
   padding-top: 20px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 220px;
     padding-top: 32px;
   }
 }
