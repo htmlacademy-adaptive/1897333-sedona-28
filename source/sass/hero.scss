@@ -1,31 +1,31 @@
 .hero {
   width: 100%;
+  background-image: url("../img/unredner/global/hero/back-mobile.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width) {
+    background-image: url("../img/unredner/global/hero/back-desktop.jpg");
+  }
 }
 
 .hero__container {
   height: 389px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   &--small {
     height: 214px;
   }
 
-  &--main::before {
-    content: "";
-    display: block;
-    background: url("../img/unredner/global/hero-greeting.svg");
-    background-position: center;
-    position: absolute;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 214px;
-    top: 90px;
-  }
-
   &::after {
     content: "";
     display: block;
-    background: url("../img/unredner/global/hero-border-bottom.svg");
+    background: url("../img/unredner/global/hero/hero-border-bottom.svg");
     background-position: center;
     position: absolute;
     background-repeat: no-repeat;
@@ -38,49 +38,58 @@
     height: 518px;
 
     &--small {
-      height: 290px;
+      height: calc(290px + 56px);
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    &--small {
-      height: 357px;
-    }
-  }
-}
-
-.hero__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  &--small {
-    top: 214px;
-    object-fit: none;
-    object-position: center bottom;
-  }
-}
-
-.hero__caption {
-  position: absolute;
-  width: 100%;
-  height: 49px;
-  top: 173px;
-  left: 0;
-
-  &--small {
-    top: 108px;
   }
 
   @media (min-width: $tablet-width) {
     &--small {
-      top: calc(95px + 56px);
+      height: calc(300px + 56px);
+    }
+  }
+}
+
+.hero__text {
+  width: 282px;
+  height: 100%;
+
+  &--small {
+    width: 229px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 461px;
+
+    &--small {
+      width: 457px;
+      margin-bottom: -32px;
     }
   }
 
   @media (min-width: $desktop-width) {
+    width: 460px;
+
     &--small {
-      top: calc(101px + 56px);
+      height: 357px;
+      margin-bottom: -36px;
     }
+  }
+}
+
+.hero__welcome {
+  &--small {
+    display: none;
+  }
+}
+
+.hero__sedona {
+  &--small {
+    width: 229px;
+  }
+}
+
+.hero__slogan {
+  &--small {
+    display: none;
   }
 }

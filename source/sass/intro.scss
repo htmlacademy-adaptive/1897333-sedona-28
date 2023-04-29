@@ -24,7 +24,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 59px 359px 44px;
+    padding: 59px 350px 44px;
   }
 }
 
@@ -32,7 +32,6 @@
   @include heading-mobile;
   @include reset;
   display: inline-block;
-  max-width: 272px; //чтобы был правильный перенос
 
   @media (min-width: $tablet-width) {
     @include heading-desktop;
@@ -46,6 +45,6 @@
   padding-top: 35px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 20px;
+    padding-top: 30px;
   }
 }
