@@ -71,7 +71,7 @@
   &--blue {
     color: #ffffff;
     background-color: #81b3d2;
-    padding-top: 26px;
+    padding-top: 32px;
     padding-bottom: 37px;
   }
 
@@ -149,7 +149,7 @@
   padding-top: 17px;
 
   &--subitem {
-    padding-top: 10px;
+    padding-top: 8px;
     text-align: left;
     &--first {
       padding-bottom: 24px;
@@ -173,7 +173,7 @@
   flex-direction: column;
   list-style: none;
   background-color: #ffffff;
-  padding: 0px $mobile-padding 21px;;
+  padding: 0px $mobile-padding 21px;
 
   &--grey {
     padding: 0;
