@@ -38,11 +38,11 @@
     height: 518px;
 
     &--small {
-      height: calc(290px + 56px);
+      height: 346px;
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     &--small {
       height: calc(300px + 56px);
     }
@@ -51,12 +51,17 @@
 
 .hero__text {
   width: 282px;
-  height: 100%;
 
   &--small {
-    top: 214px;
-    object-fit: none;
-    object-position: center bottom;
+    margin-top: -15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 457px;
+
+    &--small {
+      top:50px;
+    }
   }
 }
 
@@ -68,8 +73,8 @@
   left: 0;
 
   &--small {
-    height: 40px;
-    top: 108px;
+    width: 232px;
+    margin-top: 39px;
   }
 
   @media (min-width: $tablet-width) {

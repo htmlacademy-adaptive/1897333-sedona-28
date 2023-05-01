@@ -92,6 +92,10 @@
       margin: 0 calc(26px - 43px);
     }
 
+    &--full-name {
+      padding-left: 46px;
+    }
+
     &--impressions {
       padding: 0 66px;
     }
@@ -177,10 +181,6 @@
   height: 58px;
   //
   padding: 16px;
-
-  &--email {
-
-  }
 
   &::placeholder {
     @include heading-mobile;

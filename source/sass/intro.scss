@@ -35,6 +35,13 @@
 
   @media (min-width: $tablet-width) {
     @include heading-desktop;
+    &--form {
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include heading-desktop;
   }
 }
 
@@ -42,9 +49,12 @@
   @include paragraph-mobile;
   @include reset;
   color: #333333;
-  padding-top: 35px;
+  padding-top: 25px;
 
   @media (min-width: $tablet-width) {
     padding-top: 30px;
+    &--form {
+      padding-top: 19px;
+    }
   }
 }
