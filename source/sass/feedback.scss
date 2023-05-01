@@ -25,7 +25,7 @@
 .feedback__inner {
   border-top: solid 1px #e5e5e5;
   width: 100%;
-  padding: 24px 20px 39px;
+  padding: 24px 20px 24px;
 
   &--last {
     border-top: none;
@@ -111,28 +111,43 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
+
+  &--submit {
+    margin-top: 8px;
+  }
+
+  &--last {
+    margin-bottom: 0;
+  }
+
+  &--patronymic {
+    margin-bottom: calc(39px - 24px);
+  }
 
   &--phone::after {
     content: url("../img/unredner/form/phone.svg");
     position: absolute;
     margin: 0;
     right: 0;
-    bottom: 16px;
+    bottom: 0;
     padding: 18px;
     background-color: #e6e6e6;
   }
 
-  &--email::after {
+  &--email {
+    margin-bottom: calc(34px - 24px);
+    &::after {
     content: url("../img/unredner/form/mail.svg");
     position: absolute;
     margin: 0;
     right: 0;
-    bottom: 16px;
+    bottom: 0px;
     padding: 20px;
     padding-top: 19px;
     background-color: #e6e6e6;
   }
+}
 
   @media (min-width: $tablet-width) {
     &--submit {
@@ -162,6 +177,10 @@
   height: 58px;
   //
   padding: 16px;
+
+  &--email {
+
+  }
 
   &::placeholder {
     @include heading-mobile;
@@ -214,12 +233,12 @@
 }
 
 .feedback__list {
+  @include reset;
+  padding: 10px 0;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 36px;
-  padding: 0;
-  margin: 0;
 
   @media (min-width: $tablet-width) {
     padding: 28px 36px;
@@ -257,11 +276,11 @@
 }
 
 .feedback_button {
-  @include paragraph-mobile;
+  @include heading-desktop;
   text-decoration: none;
   color: #ffffff;
   background-color: #81b3d2;
-  padding: 16px 49px;
+  padding: 16px 0;
   border: none;
 
   @media (min-width: $tablet-width) {
@@ -272,6 +291,7 @@
 .feedback__warning {
   @include paragraph-mobile;
   @include reset;
+  font-size: 12px;
   text-align: end;
   color: rgba(51, 51, 51, 0.6);
 }
@@ -280,7 +300,7 @@
 .feedback__control {
   display: block;
   position: relative;
-  padding-left: 50px;
+  padding-left: 47px;
   cursor: pointer;
 }
 
