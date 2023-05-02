@@ -59,7 +59,11 @@
   @include paragraph-mobile;
   @include reset;
   color: #333333;
-  padding-top: 25px;
+  padding-top: 36px;
+
+  &--form {
+    padding-top: 25px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 30px;
