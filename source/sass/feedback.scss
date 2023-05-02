@@ -45,6 +45,14 @@
     &--contacts {
       padding-left: 43px;
     }
+
+    &--attractions {
+      margin-top: 20px;
+    }
+
+    &--emotions {
+      margin-top: 15px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -86,6 +94,7 @@
   padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 28px;
     font-size: 21px;
 
     &--contacts {
@@ -108,6 +117,9 @@
     &--emotions {
       padding: 0 66px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
   }
 }
 
@@ -162,7 +174,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     &--submit {
       padding: 48px 64px;
     }
@@ -202,6 +214,7 @@
   @media (min-width: $tablet-width) {
     &--emotions {
       margin-top: 28px;
+      height: 160px;
     }
   }
 }
@@ -243,9 +256,14 @@
   @media (min-width: $tablet-width) {
     padding: 28px 36px;
     row-gap: 16px;
+    column-gap: 30px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 46px 46px;
     align-items: center;
+
+    &--attractions {
+      padding: 28px 83px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -294,6 +312,9 @@
   font-size: 12px;
   text-align: end;
   color: rgba(51, 51, 51, 0.6);
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
 }
 
 //-------------RADIO&CHECKBOX------------//

@@ -83,7 +83,7 @@
     </section>
     <section class="intro intro--form">
       <h2 class="intro__title intro__title--form">оставьте свой отзыв</h2>
-      <p class="intro__description intro__description--form">Помогите нашим отелям стать лучше!<br class="for-mobile"> оставьте отзыв о них<br class="for-tablet"> а также о<br class="for-mobile"> посещенных вами<br class="for-mobile">
+      <p class="intro__description intro__description--form">Помогите нашим отелям стать лучше!<br class="for-mobile"> оставьте отзыв о них<br class="for-tablet"><br class="for-desktop"> а также о<br class="for-mobile"> посещенных вами<br class="for-mobile">
         достопримечательностях</p>
     </section>
     <section class="feedback">
@@ -129,7 +129,7 @@
         <div class="feedback__inner feedback__inner--impressions">
           <fieldset class="feedback__fieldset feedback__fieldset--impressions">
             <legend class="feedback__legend feedback__legend--impressions">Ваше общее впечатление:</legend>
-            <ul class="feedback__list">
+            <ul class="feedback__list feedback__list--impressions">
               <li class="feedback__item">
                 <label class="feedback__control feedback__control--radio">
                   <input class="feedback__control-input" type="radio" name="type-of-impressions" value="positive"
@@ -190,14 +190,14 @@
             </ul>
           </fieldset>
         </div>
-        <div class="feedback__inner">
+        <div class="feedback__inner feedback__inner--emotions">
           <fieldset class="feedback__fieldset feedback__fieldset--emotions">
             <legend class="feedback__legend feedback__legend--emotions" for="emotions">Опишите свои эмоции:</legend>
             <textarea class="feedback__field feedback__field--emotions" id="emotions" name="emotions" rows="" cols=""
               placeholder="Опишите подробно все свои восторги" required></textarea>
           </fieldset>
         </div>
-        <div class="feedback__inner feedback__inner--last">
+        <div class="feedback__inner feedback__inner--submit feedback__inner--last">
           <div class="feedback__wrapper feedback__wrapper--submit">
             <button class="feedback_button" type="submit">Отправить отзыв</button>
             <p class="feedback__warning">* — обязательные поля</p>

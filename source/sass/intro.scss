@@ -5,6 +5,7 @@
 
   &--catalog {
     max-width: 320px;
+
     @media (min-width: $tablet-width) {
       max-width: 100%;
     }
@@ -25,6 +26,10 @@
 
   @media (min-width: $desktop-width) {
     padding: 59px 350px 44px;
+
+    &--form {
+      padding: 116px 350px 21px
+    }
   }
 }
 
@@ -35,6 +40,7 @@
 
   @media (min-width: $tablet-width) {
     @include heading-desktop;
+
     &--form {
       font-size: 30px;
     }
@@ -42,6 +48,10 @@
 
   @media (min-width: $desktop-width) {
     @include heading-desktop;
+
+    &--form {
+      font-size: 30px;
+    }
   }
 }
 
@@ -53,8 +63,15 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 30px;
+
     &--form {
       padding-top: 19px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--form {
+      padding-top: 30px;
     }
   }
 }
