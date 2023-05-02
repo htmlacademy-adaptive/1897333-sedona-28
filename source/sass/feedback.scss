@@ -208,7 +208,7 @@
 
   @media (min-width: $desktop-width) {
     &--submit {
-      padding: 48px 64px;
+      padding: 0 96px;
     }
   }
 }
@@ -340,6 +340,10 @@
 
   @media (min-width: $tablet-width) {
     padding: 16px 71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 16px 100px;
   }
 }
 
