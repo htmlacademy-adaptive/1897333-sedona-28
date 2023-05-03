@@ -51,7 +51,7 @@
 
 .hero__text {
   width: 282px;
-  margin-top: -14px;
+  margin-top: 5px;
 
   &--small {
     margin-top: -15px;
@@ -59,10 +59,15 @@
 
   @media (min-width: $tablet-width) {
     width: 457px;
+    margin-top: -15px;
 
     &--small {
       top:50px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -10px;
   }
 }
 

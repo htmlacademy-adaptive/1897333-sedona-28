@@ -17,39 +17,32 @@
 
 <body class="page-body">
   <!--шапка-->
-  <header class="main-header main-header--overflow">
+  <header class="main-header">
     <a href="./index.html" class="main-header__logo-link" alt="ссылка на главную страницу">
       <img class="main-header__logo" src="./img/unredner/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
     </a>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list main-nav__list--left">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html" alt="ссылка на главную страницу">
-              Главная
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html" alt="ссылка на галерею">
-              Фото и видео
-            </a>
-          </li>
-        </ul>
-        <ul class="main-nav__list main-nav__list--right">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html" alt="ссылка на форму отзыва">
-              Форма отзыва
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="https://htmlacademy.ru/" alt="ссылка на HTML Academy">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
+        <span class="main-nav__inner">
+          <a class="main-nav__link" href="index.html" alt="ссылка на главную страницу">
+            Главная
+          </a>
+        </span>
+        <span class="main-nav__inner"><a class="main-nav__link" href="catalog.html" alt="ссылка на галерею">
+            Фото и видео
+          </a>
+        </span>
+        <span class="main-nav__inner--empty"></span>
+        <span class="main-nav__inner"><a class="main-nav__link" href="form.html" alt="ссылка на форму отзыва">
+            Форма отзыва
+          </a>
+        </span>
+        <span class="main-nav__inner"><a class="main-nav__link" href="https://htmlacademy.ru/" alt="ссылка на HTML Academy">
+            HTML Academy
+          </a>
+        </span>
       </div>
       <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
         <span class="main-nav__toggle-line"></span>
         <span class="main-nav__toggle-line"></span>
         <span class="main-nav__toggle-line"></span>
