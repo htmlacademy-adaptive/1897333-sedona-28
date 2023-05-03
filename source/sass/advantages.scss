@@ -224,6 +224,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 0 0 15px;
+    width: 100%;
     &--grey {
       padding: 0;
     }
@@ -246,7 +247,7 @@
     flex-direction: column;
     align-items: center;
     width: calc(100% / 3);
-    padding: 60px $tablet-padding 45px;
+    padding: 60px 0 45px;
   }
 
   @media (min-width: $desktop-width) {

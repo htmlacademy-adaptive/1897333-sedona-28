@@ -82,7 +82,7 @@
   height: 56px;
 
   @media (min-width: $tablet-width) {
-    display: relative;
+    background-color: #ffffff;
   }
 }
 
@@ -107,7 +107,7 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(5, 20%);
     position: relative;
-    background-color: #ffffff;
+    background-color: transparent;
     z-index: 0;
     transform: translateX(0);
     transition: none;
