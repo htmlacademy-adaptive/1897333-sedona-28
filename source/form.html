@@ -303,15 +303,15 @@
       </div>
     </div>
   </footer>
-  <section class="modal">
-    <div class="modal__container">
+  <section class="modal modal--error">
+    <div class="modal__container modal__container--error">
       <h3 class="modal__title">Что-то пошло не так!</h3>
       <p class="modal__caption">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="modal__confirm">Ок</button>
     </div>
   </section>
-  <section class="modal">
-    <div class="modal__container">
+  <section class="modal modal--ok">
+    <div class="modal__container modal__container--ok">
       <h3 class="modal__title">Ваш отзыв отправлен!</h3>
       <p class="modal__caption">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем
         его на сайте.</p>
@@ -324,8 +324,11 @@
 <script>
   let menuBtn = document.querySelector('.main-nav__toggle');
   let menu = document.querySelector('.main-nav__wrapper');
+  let cross = document.querySelectorAll('.main-nav__toggle-line');
   menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('main-nav__toggle--active');
     menu.classList.toggle('main-nav__wrapper--active');
+    cross.forEach((element) => { element.classList.toggle('main-nav__toggle-line--active'); })
   })
 </script>
 

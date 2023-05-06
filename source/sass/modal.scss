@@ -1,16 +1,29 @@
 .modal {
+  position: fixed;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
   border: solid 1px #ff0000;
-  position: relative;
-  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &--ok {
+    display: block;
+  }
+
+  &--error {
+    display: none;
+  }
 }
 
 .modal__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  //
+  background-color: #ffffff;
 }
 
 .modal__title {
@@ -24,13 +37,11 @@
 .modal__wrapper {
   width: 100%;
   background-color: #f2f2f2;
-  position: absolute;
   text-align: center;
 }
 
 .modal__confirm {
   @include heading-mobile;
-  //
   color: #ffffff;
   background-color: #81b3d2;
   border: none;
