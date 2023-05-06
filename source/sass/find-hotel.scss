@@ -60,6 +60,16 @@
   background-color: #81b3d2;
   padding: 16px 49px;
 
+  &:hover {
+    background-color: #669EC0;
+  }
+
+  &:active {
+    color:#ffffff4d;
+    ;
+    background-color: #5496BD;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 21px;
     line-height: 26px;

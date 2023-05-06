@@ -23,6 +23,10 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 90px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 87px;
+  }
 }
 
 .argument__title {
@@ -47,4 +51,9 @@
 
 .argument__video {
   width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    height: 500px;
+  }
 }

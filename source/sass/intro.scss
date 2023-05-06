@@ -30,6 +30,10 @@
     &--form {
       padding: 116px 350px 21px
     }
+
+    &--catalog {
+      padding: 97px 0 89px
+    }
   }
 }
 
@@ -54,6 +58,10 @@
     @include heading-desktop;
 
     &--form {
+      font-size: 30px;
+    }
+
+    &--catalog {
       font-size: 30px;
     }
   }
