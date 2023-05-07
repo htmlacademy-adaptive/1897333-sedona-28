@@ -9,13 +9,39 @@
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 116px 0;
 
   &--ok {
-    display: block;
+    display: none;
+    &--active {
+      display: block;
+    }
   }
 
   &--error {
     display: none;
+    &--active {
+      display: block;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--ok {
+      padding: 116px 63px;
+    }
+
+    &--error {
+      padding: 116px 183px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--ok {
+      padding: 116px 319px;
+    }
+    &--error {
+      padding: 116px 439px;
+    }
   }
 }
 
@@ -24,20 +50,95 @@
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
+  padding: 45px 0 0;
+
+  // &--ok {}
+  // &--error {}
+  @media (min-width: $tablet-width) {
+    &--ok {
+      padding-top: 51px;
+    }
+
+    &--error {
+      padding-top: 50px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--error {
+      padding-top: 49px;
+    }
+  }
 }
 
 .modal__title {
   @include heading-desktop;
+  margin: 0 auto;
+  font-size: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+
+    // &--ok {}
+    &--error {
+      line-height: 38px;
+    }
+  }
 }
 
 .modal__caption {
   @include paragraph-mobile;
+  margin: 0 auto;
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    &--ok {
+      padding-top: 30px;
+    }
+
+    &--error {
+      padding-top: 25px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--error {
+      padding-top: 27px;
+    }
+  }
 }
 
 .modal__wrapper {
   width: 100%;
-  background-color: #f2f2f2;
   text-align: center;
+
+  &--ok {
+    background-color: #f2f2f2;
+    margin-top: 45px;
+    padding-top: 20px;
+  }
+
+  &--error {
+    padding-top: 27px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--ok {
+      margin-top: 50px;
+      padding-top: 44px;
+    }
+
+    &--error {
+      padding-top: 47px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--ok {
+      margin-top: 51px;
+      padding-top: 45px;
+    }
+  }
 }
 
 .modal__confirm {
@@ -45,4 +146,32 @@
   color: #ffffff;
   background-color: #81b3d2;
   border: none;
+
+  &--error {
+    margin-bottom: 35px;
+    padding: 18px 78px 14px;
+  }
+
+  &--ok {
+    margin-bottom: 19px;
+    padding: 18px 75px 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+
+    &--ok {
+      padding: 18px 155px 15px;
+      margin-bottom: 43px
+    }
+
+    &--error {
+      padding: 18px 122px 14px;
+      margin-bottom: 49px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+
+  }
 }
