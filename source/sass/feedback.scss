@@ -289,29 +289,29 @@
   @media (min-width: $tablet-width) {
     padding: 28px 36px;
     row-gap: 16px;
-    column-gap: 30px;
+    column-gap: 15px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 46px 46px;
     align-items: center;
 
     &--attractions {
       padding: 28px 83px;
+      column-gap: 30px;
     }
   }
 
   @media (min-width: $desktop-width) {
     row-gap: 0;
     grid-template-rows: 80px;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-top: 19px;
-    padding-bottom: 37px;
+    grid-template-columns: 280px 280px 1fr;
+    padding: 17px 50px 37px;
+    column-gap: 30px;
 
     &--attractions {
-      padding-top: 29px;
-      padding-bottom: 40px;
+      padding: 29px 45px 40px;
       grid-template-rows: 108px;
-      column-gap: 10px;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 64px;
+      grid-template-columns: repeat(4, minmax(153px, 184px));
     }
   }
 }
