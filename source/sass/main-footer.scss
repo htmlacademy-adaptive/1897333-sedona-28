@@ -81,6 +81,12 @@
 }
 
 .main-footer__academy-capture {
+  &:hover {
+    color: #81b3d2;
+  }
+  &:active {
+    color: #b3b3b3;
+  }
   @media (min-width: $tablet-width) {
     padding-top: 3px;
   }

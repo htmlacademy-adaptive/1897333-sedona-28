@@ -29,7 +29,8 @@
             Главная
           </a>
         </span>
-        <span class="main-nav__inner"><a class="main-nav__link main-nav__link--current" href="catalog.html" alt="ссылка на галерею">
+        <span class="main-nav__inner"><a class="main-nav__link main-nav__link--current" href="catalog.html"
+            alt="ссылка на галерею">
             Фото и видео
           </a>
         </span>
@@ -38,7 +39,8 @@
             Форма отзыва
           </a>
         </span>
-        <span class="main-nav__inner"><a class="main-nav__link" href="https://htmlacademy.ru/" alt="ссылка на HTML Academy">
+        <span class="main-nav__inner"><a class="main-nav__link" href="https://htmlacademy.ru/"
+            alt="ссылка на HTML Academy">
             HTML Academy
           </a>
         </span>
@@ -149,7 +151,9 @@
     </section>
     <div class="intro intro--catalog">
       <h2 class="intro__title intro__title--catalog">Фото и видео</h2>
-      <p class="intro__description intro__description--catalog"> Не можете решиться на путешествие<br class="for-mobile"> из-за курса?<br class="for-tablet for-desktop"> Фотографии помогут вам<br class="for-mobile">
+      <p class="intro__description intro__description--catalog"> Не можете решиться на путешествие<br
+          class="for-mobile"> из-за курса?<br class="for-tablet for-desktop"> Фотографии помогут вам<br
+          class="for-mobile">
         забыть о политике и экономике.</p>
     </div>
     <section class="gallery">
@@ -170,7 +174,9 @@
               <p class="gallery__author">Автор фото: Борис</p>
             </div>
             <div class="gallery__rate">
-              <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+              <svg class="gallery__icon">
+                <use xlink:href="img/sprite.svg#icon-like"></use>
+              </svg>
               <p class="gallery__number">1350</p>
             </div>
           </div>
@@ -193,7 +199,9 @@
                 <p class="gallery__author">Автор фото: Сергей</p>
               </div>
               <div class="gallery__rate">
-                <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+                <svg class="gallery__icon">
+                  <use xlink:href="img/sprite.svg#icon-like"></use>
+                </svg>
                 <p class="gallery__number">143</p>
               </div>
             </div>
@@ -215,7 +223,9 @@
                 <p class="gallery__author">Автор фото: Петр</p>
               </div>
               <div class="gallery__rate">
-                <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+                <svg class="gallery__icon">
+                  <use xlink:href="img/sprite.svg#icon-like"></use>
+                </svg>
                 <p class="gallery__number">96</p>
               </div>
             </div>
@@ -232,12 +242,13 @@
             </picture>
             <div class="gallery__wrapper">
               <div class="gallery__caption">
-
                 <h3 class="gallery__title">Мост дьявола</h3>
                 <p class="gallery__author">Автор фото: Антон</p>
               </div>
               <div class="gallery__rate">
-                <img class="gallery__icon" src="./img/unredner/like-icon.svg">
+                <svg class="gallery__icon">
+                  <use xlink:href="img/sprite.svg#icon-like"></use>
+                </svg>
                 <p class="gallery__number">254</p>
               </div>
             </div>
@@ -248,12 +259,13 @@
     <section class="argument">
       <div class="argument__wrapper">
         <h2 class="argument__title">Все еще сомневаетесь?</h2>
-        <p class="argument__description">Смотрите видеопрезентацию и<br class="for-mobile"> скорее за билетами, пока они<br class="for-tablet for-desktop"> не<br class="for-mobile"> подорожали в очередной раз!</p>
+        <p class="argument__description">Смотрите видеопрезентацию и<br class="for-mobile"> скорее за билетами, пока
+          они<br class="for-tablet for-desktop"> не<br class="for-mobile"> подорожали в очередной раз!</p>
       </div>
       <img class="argument__video" src="./img/unredner/catalog/video-desktop.jpg">
     </section>
   </main>
-  <footer class="main-footer main-footer--catalog">
+  <footer class="main-footer">
     <div class="main-footer__wrapper">
       <h3 class="main-footer__title">#visitsedona</h3>
       <div class="main-footer__social social">
@@ -261,17 +273,23 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <img src="./img/unredner/social-vk.svg" alt="вконтакте">
-            </a>
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+              </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-              <img src="./img/unredner/social-tg.svg" alt="Телеграм">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-tg"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <img src="./img/unredner/social-youtube.svg" alt="Youtube">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-youtube"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -286,4 +304,5 @@
   </footer>
 </body>
 <script src="./js/app.js"></script>
+
 </html>

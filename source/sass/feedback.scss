@@ -185,17 +185,18 @@
 
   &--email {
     margin-bottom: calc(34px - 24px);
+
     &::after {
-    content: url("../img/unredner/form/mail.svg");
-    position: absolute;
-    margin: 0;
-    right: 0;
-    bottom: 0px;
-    padding: 20px;
-    padding-top: 19px;
-    background-color: #e6e6e6;
+      content: url("../img/unredner/form/mail.svg");
+      position: absolute;
+      margin: 0;
+      right: 0;
+      bottom: 0px;
+      padding: 20px;
+      padding-top: 19px;
+      background-color: #e6e6e6;
+    }
   }
-}
 
   @media (min-width: $tablet-width) {
     &--submit {
@@ -338,6 +339,14 @@
   padding: 16px 0;
   border: none;
 
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 16px 71px;
   }
@@ -353,6 +362,7 @@
   font-size: 12px;
   text-align: end;
   color: rgba(51, 51, 51, 0.6);
+
   @media (min-width: $tablet-width) {
     font-size: 14px;
   }
@@ -402,7 +412,7 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.feedback__control input:checked ~ .feedback__control-mark::after {
+.feedback__control input:checked~.feedback__control-mark::after {
   display: block;
 }
 
