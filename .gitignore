@@ -12,3 +12,4 @@ source/css/*.css
 source/css/*.map
 source/build
 Thumbs.db
+build/
