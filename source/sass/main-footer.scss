@@ -6,7 +6,6 @@
   // justify-content: end;
   flex-grow: 1;
   flex-shrink: 0;
-  padding-top: 42px;
   position: relative;
   margin: 0 auto;
   padding: 41px 0;
@@ -34,6 +33,7 @@
   @media (min-width: $desktop-width) {
     padding: 36px 120px;
     max-width: $desktop-width;
+
     &--form {
       padding-top: 83px;
     }
@@ -84,9 +84,11 @@
   &:hover {
     color: #81b3d2;
   }
+
   &:active {
     color: #b3b3b3;
   }
+
   @media (min-width: $tablet-width) {
     padding-top: 3px;
   }

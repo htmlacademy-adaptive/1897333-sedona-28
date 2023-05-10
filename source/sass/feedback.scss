@@ -191,7 +191,7 @@
       position: absolute;
       margin: 0;
       right: 0;
-      bottom: 0px;
+      bottom: 0;
       padding: 20px;
       padding-top: 19px;
       background-color: #e6e6e6;
@@ -221,20 +221,21 @@
 }
 
 .feedback__field {
+  @include heading-mobile;
   background-color: #f2f2f2;
   border: none;
   height: 58px;
-  //
   padding: 16px;
+  text-transform: none;
+  text-align: start;
 
-  &::placeholder {
-    @include heading-mobile;
-    text-transform: none;
-    text-align: start;
+  &:hover {
+    background-color: #e5e5e5;
   }
 
-  &--blackplaceholder::placeholder {
-    color: #000000;
+  &:active {
+    background-color: #ffffff;
+    border: solid 4px #e5e5e5;
   }
 
   &--emotions {
@@ -395,6 +396,14 @@
   //
   margin-top: -10px;
 
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+  }
+
   &--radio {
     border-radius: 50%;
   }
@@ -412,7 +421,7 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.feedback__control input:checked~.feedback__control-mark::after {
+.feedback__control input:checked ~ .feedback__control-mark::after {
   display: block;
 }
 
@@ -423,11 +432,15 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #333333;
+  background-color: #333333;
+
+  &:active {
+    background-color: rgba(51, 51, 51, 0.3);
+  }
 }
 
 .feedback__control--checkbox .feedback__control-mark::after {
-  content: url("../img/form/tick.svg");
+  // content: url("../img/form/tick.svg");
   padding: 15px 12px;
 }
 

@@ -33,7 +33,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &--small {
       height: 301px;
     }
@@ -88,10 +87,7 @@
   @media (min-width: $tablet-width) {
     width: 257px;
     height: 85px;
-
   }
-
-  @media (min-width: $desktop-width) {}
 }
 
 .hero__inner-middle {
@@ -114,7 +110,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &--small {
       margin-top: 24px;
     }
@@ -124,6 +119,7 @@
 .hero__inner-bottom {
   margin-top: 33px;
   margin-left: -12px;
+
   &--small {
     display: none;
   }
@@ -133,10 +129,7 @@
     height: 80px;
     margin-top: 54px;
     margin-left: -20px;
-
   }
-
-  @media (min-width: $desktop-width) {}
 }
 
 // .hero__text-top {
