@@ -181,13 +181,27 @@
               <legend class="feedback__legend feedback__legend--contacts">Контактная информация:</legend>
               <div class="feedback__wrapper feedback__wrapper--phone">
                 <label class="feedback__caption" for="contacts-phone">Контактный телефон*:</label>
-                <input class="feedback__field feedback__field--phone" type="text" id="contacts-phone"
+                <div class="feedback__input-wrapper">
+                  <input class="feedback__field feedback__field--phone" type="text" id="contacts-phone"
                   name="contacts-phone" placeholder="Введите телефон" required>
+                  <div class="feedback__input-icon-wrapper">
+                    <svg class="feedback__input-icon">
+                      <use xlink:href="img/sprite.svg#icon-phone"></use>
+                    </svg>
+                  </div>
+                </div>
               </div>
               <div class="feedback__wrapper feedback__wrapper--last feedback__wrapper--email">
                 <label class="feedback__caption" for="e-mail">Электронная почта*:</label>
-                <input class="feedback__field feedback__field--email" type="email" id="e-mail" name="e-mail"
+                <div class="feedback__input-wrapper">
+                  <input class="feedback__field feedback__field--email" type="email" id="e-mail" name="e-mail"
                   placeholder="Введите e-mail" required>
+                  <div class="feedback__input-icon-wrapper">
+                    <svg class="feedback__input-icon">
+                      <use xlink:href="img/sprite.svg#icon-mail"></use>
+                    </svg>
+                  </div>
+                </div>
               </div>
             </fieldset>
           </div>
