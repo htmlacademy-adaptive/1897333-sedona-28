@@ -174,7 +174,7 @@
   }
 
   &--phone::after {
-    content: url("../img/unredner/form/phone.svg");
+    content: url("../img/form/phone.svg");
     position: absolute;
     margin: 0;
     right: 0;
@@ -187,7 +187,7 @@
     margin-bottom: calc(34px - 24px);
 
     &::after {
-      content: url("../img/unredner/form/mail.svg");
+      content: url("../img/form/mail.svg");
       position: absolute;
       margin: 0;
       right: 0;
@@ -427,7 +427,7 @@
 }
 
 .feedback__control--checkbox .feedback__control-mark::after {
-  content: url("../img/unredner/form/tick.svg");
+  content: url("../img/form/tick.svg");
   padding: 15px 12px;
 }
 

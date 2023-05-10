@@ -81,59 +81,59 @@
 
   // &--road {
   //   background-color: #ab772f;
-  //   content: url("../img/unredner/catalog/gallery/photo-1-mobile.jpg");
+  //   content: url("../img/catalog/gallery/photo-1-mobile.jpg");
   // }
 
   // &--cactus {
   //   background-color: #ad7f59;
-  //   content: url("../img/unredner/catalog/gallery/photo-2-mobile.jpg");
+  //   content: url("../img/catalog/gallery/photo-2-mobile.jpg");
   // }
 
   // &--north-road {
   //   background-color: #3b4c36;
-  //   content: url("../img/unredner/catalog/gallery/photo-3-mobile.jpg");
+  //   content: url("../img/catalog/gallery/photo-3-mobile.jpg");
   // }
 
   // &--devil-bridge {
   //   background-color: #9a7c72;
-  //   content: url("../img/unredner/catalog/gallery/photo-4-mobile.jpg");
+  //   content: url("../img/catalog/gallery/photo-4-mobile.jpg");
   // }
 
   @media (min-width: $tablet-width) {
     margin: 0;
 
     // &--road {
-    //   content: url("../img/unredner/catalog/gallery/photo-1-tablet.jpg");
+    //   content: url("../img/catalog/gallery/photo-1-tablet.jpg");
     // }
 
     // &--cactus {
-    //   content: url("../img/unredner/catalog/gallery/photo-2-tablet.jpg");
+    //   content: url("../img/catalog/gallery/photo-2-tablet.jpg");
     // }
 
     // &--north-road {
-    //   content: url("../img/unredner/catalog/gallery/photo-3-tablet.jpg");
+    //   content: url("../img/catalog/gallery/photo-3-tablet.jpg");
     // }
 
     // &--devil-bridge {
-    //   content: url("../img/unredner/catalog/gallery/photo-4-tablet.jpg");
+    //   content: url("../img/catalog/gallery/photo-4-tablet.jpg");
     // }
   }
 
   @media (min-width: 1200px) {
     // &--road {
-    //   content: url("../img/unredner/catalog/gallery/photo-1-desktop.jpg");
+    //   content: url("../img/catalog/gallery/photo-1-desktop.jpg");
     // }
 
     // &--cactus {
-    //   content: url("../img/unredner/catalog/gallery/photo-2-desktop.jpg");
+    //   content: url("../img/catalog/gallery/photo-2-desktop.jpg");
     // }
 
     // &--north-road {
-    //   content: url("../img/unredner/catalog/gallery/photo-3-desktop.jpg");
+    //   content: url("../img/catalog/gallery/photo-3-desktop.jpg");
     // }
 
     // &--devil-bridge {
-    //   content: url("../img/unredner/catalog/gallery/photo-4-desktop.jpg");
+    //   content: url("../img/catalog/gallery/photo-4-desktop.jpg");
     // }
   }
 }
@@ -209,6 +209,7 @@
   flex-direction: row;
   align-items: baseline;
   padding-top: 11px;
+  color: #000000;
 
   @media (min-width: $tablet-width) {
     padding-top: 5px;

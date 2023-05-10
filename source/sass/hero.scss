@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 389px;
-  background-image: url("../img/unredner/global/hero/back-mobile.jpg");
+  background-image: url("../img/global/hero/back-mobile.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,7 +10,7 @@
   &::after {
     content: "";
     display: block;
-    background: url("../img/unredner/global/hero/hero-border-bottom.svg");
+    background: url("../img/global/hero/hero-border-bottom.svg");
     background-position: center;
     position: absolute;
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    background-image: url("../img/unredner/global/hero/back-desktop.jpg");
+    background-image: url("../img/global/hero/back-desktop.jpg");
     height: 518px;
 
     &--small {
@@ -49,7 +49,7 @@
   // &::after {
   //   content: "";
   //   display: block;
-  //   background: url("../img/unredner/global/hero/hero-border-bottom.svg");
+  //   background: url("../img/global/hero/hero-border-bottom.svg");
   //   background-position: center;
   //   position: absolute;
   //   background-repeat: no-repeat;
