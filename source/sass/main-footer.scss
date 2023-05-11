@@ -9,6 +9,7 @@
   position: relative;
   margin: 0 auto;
   padding: 41px 0;
+  width: 100%;
 
   &--form {
     padding: 19px 0;
@@ -78,6 +79,14 @@
   flex-wrap: nowrap;
   align-items: center;
   column-gap: 14px;
+
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
 }
 
 .main-footer__academy-capture {
@@ -92,4 +101,9 @@
   @media (min-width: $tablet-width) {
     padding-top: 3px;
   }
+}
+
+.main-footer__academy-icon {
+  width: 27px;
+  height: 36px;
 }
