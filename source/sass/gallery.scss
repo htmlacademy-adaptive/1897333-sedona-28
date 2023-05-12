@@ -142,11 +142,10 @@
 .gallery__wrapper {
   display: flex;
   flex-direction: column;
-  padding-top: 12px;
+  padding-top: 15px;
 
   @media (min-width: $tablet-width) {
-    padding: 22px 20px 15px;
-    margin-top: -4px;
+    padding: 22px 20px 14px;
     //
     flex-direction: row;
     justify-content: space-between;
@@ -157,10 +156,10 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop-width) {
     position: relative;
     background-color: rgba(0, 0, 0, 0.3);
-    margin-top: -83px;
+    margin-top: -80px;
 
     &--even {
       background-color: rgba(0, 0, 0, 0.3);
@@ -168,9 +167,21 @@
   }
 }
 
+.gallery__wrapper--subitem {
+  @media (min-width: $desktop-width) {
+    padding: 18px 20px 15px;
+  }
+}
+
 .gallery__caption {
   display: flex;
   flex-direction: column;
+}
+
+.gallery__caption--subitem {
+  @media (min-width: $desktop-width) {
+    padding-left: 5px;
+  }
 }
 
 .gallery__title {
@@ -199,34 +210,57 @@
   //
   margin: 0;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop-width) {
     color: #ffffff;
+    padding-top: 2px;
+  }
+}
+
+.gallery__author--subitem {
+  @media (min-width: $desktop-width) {
+    padding-top: 5px;
   }
 }
 
 .gallery__rate {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
-  padding-top: 11px;
+  align-items: end;
+  padding-top: 7px;
   color: #000000;
 
   @media (min-width: $tablet-width) {
-    padding-top: 5px;
+    height: 100%;
+    padding-top: 0;
+    align-items: center;
   }
 
-  @media (min-width: $tablet-width) {
-    padding-top: 3px;
+  @media (min-width: $desktop-width) {
+    color: #ffffff;
+  }
+}
+
+.gallery__rate--subitem {
+  @media (min-width: $desktop-width) {
+    padding-top: 5px;
   }
 }
 
 .gallery__icon {
-  width: 23px;
-  height: 21px;
-  margin-right: 14px;
+  width: 32px;
+  height: 32px;
+  margin-right: 9px;
+  margin-left: -4px;
+  margin-bottom: -2px;
+  opacity: 0.3;
 
   @media (min-width: $tablet-width) {
-    padding-right: 9px;
+    margin-bottom: 7px;
+    margin-right: 5px;
+  }
+
+    @media (min-width: $desktop-width) {
+    opacity: 1;
   }
 }
 

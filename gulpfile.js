@@ -68,14 +68,28 @@ const createWebP = () => {
 
 const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
-  .pipe(svgo())
+  .pipe(svgo({
+    plugins: [
+        {
+            removeViewBox: false,
+        },
+        'sortAttrs',
+    ],
+}))
   .pipe(gulp.dest('build/img'));
 }
 
 //Sprite
 const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
-  .pipe(svgo())
+  .pipe(svgo({
+    plugins: [
+        {
+            removeViewBox: false,
+        },
+        'sortAttrs',
+    ],
+}))
   .pipe(svgstore({inlineSvg: true
   }))
   .pipe(rename('sprite.svg'))
