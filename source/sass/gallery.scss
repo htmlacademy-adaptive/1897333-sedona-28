@@ -152,7 +152,7 @@
   padding-top: 15px;
 
   @media (min-width: $tablet-width) {
-    padding: 22px 20px 14px;
+    padding: 22px 20px 16px;
     //
     flex-direction: row;
     justify-content: space-between;
@@ -164,6 +164,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 22px 20px 14px;
     position: relative;
     background-color: rgba(0, 0, 0, 0.3);
     margin-top: -80px;
