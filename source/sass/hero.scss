@@ -23,12 +23,20 @@
     height: 158px;
   }
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/global/hero/back-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     background-image: url("../img/global/hero/back-desktop.jpg");
     height: 518px;
 
     &--small {
       height: 290px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/global/hero/back-desktop@2x.jpg");
     }
   }
 
