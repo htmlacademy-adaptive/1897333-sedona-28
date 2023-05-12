@@ -45,7 +45,7 @@
   @include reset;
   padding-top: 27px;
 
-  @media (min-width: $tablet-padding) {
+  @media (min-width: $tablet-width) {
     padding-top: 32px;
   }
 }

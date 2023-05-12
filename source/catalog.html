@@ -19,28 +19,27 @@
 <body class="page-body">
   <!--шапка-->
   <header class="main-header">
-    <a href="./index.html" class="main-header__logo-link" alt="ссылка на главную страницу">
+    <a href="./index.html" class="main-header__logo-link">
       <img class="main-header__logo" src="./img/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
     </a>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
         <span class="main-nav__inner">
-          <a class="main-nav__link" href="index.html" alt="ссылка на главную страницу">
+          <a class="main-nav__link" href="index.html">
             Главная
           </a>
         </span>
-        <span class="main-nav__inner"><a class="main-nav__link main-nav__link--current" href="catalog.html"
-            alt="ссылка на галерею">
+        <span class="main-nav__inner">
+          <a class="main-nav__link main-nav__link--current" href="catalog.html">
             Фото и видео
           </a>
         </span>
         <span class="main-nav__inner--empty"></span>
-        <span class="main-nav__inner"><a class="main-nav__link" href="form.html" alt="ссылка на форму отзыва">
+        <span class="main-nav__inner"><a class="main-nav__link" href="form.html">
             Форма отзыва
           </a>
         </span>
-        <span class="main-nav__inner"><a class="main-nav__link" href="https://htmlacademy.ru/"
-            alt="ссылка на HTML Academy">
+        <span class="main-nav__inner"><a class="main-nav__link" href="https://htmlacademy.ru/">
             HTML Academy
           </a>
         </span>
@@ -165,8 +164,7 @@
             <source media="(min-width: 768px)"
               srcset="./img/catalog/gallery/photo-1-tablet.jpg 1x, ./img/catalog/gallery/photo-1-tablet@2x.jpg 2x">
             <img class="gallery__picture gallery__picture--road" src="./img/catalog/gallery/photo-1-mobile.jpg"
-              srcset="./img/catalog/gallery/photo-1-mobile@2x.jpg 2x" width="280px" height="280px"
-              alt="фото дороги">
+              srcset="./img/catalog/gallery/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="фото дороги">
           </picture>
           <div class="gallery__wrapper">
             <div class="gallery__caption">
@@ -181,78 +179,81 @@
             </div>
           </div>
         </li>
-        <ul class="gallery__sublist">
-          <li class="gallery__item">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/catalog/gallery/photo-2-desktop.jpg 1x, ./img/catalog/gallery/photo-2-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="./img/catalog/gallery/photo-2-tablet.jpg 1x, ./img/catalog/gallery/photo-2-tablet@2x.jpg 2x">
-              <img src="./img/catalog/gallery/photo-2-mobile.jpg"
-                srcset="./img/catalog/gallery/photo-2-mobile@2x.jpg 2x"
-                class="gallery__picture gallery__picture--cactus" width="280px" height="280px" alt="фото кактуса">
-            </picture>
-            <div class="gallery__wrapper gallery__wrapper--subitem">
-              <div class="gallery__caption gallery__caption--subitem">
-                <h3 class="gallery__title">Местная растительность</h3>
-                <p class="gallery__author gallery__author--subitem">Автор фото: Сергей</p>
+        <li class="gallery__item gallery__item--sublist">
+          <ul class="gallery__sublist">
+            <li class="gallery__item">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/catalog/gallery/photo-2-desktop.jpg 1x, ./img/catalog/gallery/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/gallery/photo-2-tablet.jpg 1x, ./img/catalog/gallery/photo-2-tablet@2x.jpg 2x">
+                <img src="./img/catalog/gallery/photo-2-mobile.jpg"
+                  srcset="./img/catalog/gallery/photo-2-mobile@2x.jpg 2x"
+                  class="gallery__picture gallery__picture--cactus" width="280" height="280" alt="фото кактуса">
+              </picture>
+              <div class="gallery__wrapper gallery__wrapper--subitem">
+                <div class="gallery__caption gallery__caption--subitem">
+                  <h3 class="gallery__title">Местная растительность</h3>
+                  <p class="gallery__author gallery__author--subitem">Автор фото: Сергей</p>
+                </div>
+                <div class="gallery__rate gallery__rate--subitem">
+                  <svg class="gallery__icon">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                  </svg>
+                  <p class="gallery__number">143</p>
+                </div>
               </div>
-              <div class="gallery__rate gallery__rate--subitem">
-                <svg class="gallery__icon">
-                  <use xlink:href="img/sprite.svg#icon-like"></use>
-                </svg>
-                <p class="gallery__number">143</p>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/catalog/gallery/photo-3-desktop.jpg 1x, ./img/catalog/gallery/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/gallery/photo-3-tablet.jpg 1x, ./img/catalog/gallery/photo-3-tablet@2x.jpg 2x">
+                <img src="./img/catalog/gallery/photo-3-mobile.jpg"
+                  srcset="./img/catalog/gallery/photo-3-mobile@2x.jpg 2x"
+                  class="gallery__picture gallery__picture--north-road" width="280" height="280"
+                  alt="фото дороги в горах">
+              </picture>
+              <div class="gallery__wrapper gallery__wrapper--subitem gallery__wrapper--even">
+                <div class="gallery__caption gallery__caption--subitem">
+                  <h3 class="gallery__title">Дорога на север</h3>
+                  <p class="gallery__author gallery__author--subitem">Автор фото: Петр</p>
+                </div>
+                <div class="gallery__rate gallery__rate--subitem">
+                  <svg class="gallery__icon">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                  </svg>
+                  <p class="gallery__number">96</p>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="gallery__item">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/catalog/gallery/photo-3-desktop.jpg 1x, ./img/catalog/gallery/photo-3-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="./img/catalog/gallery/photo-3-tablet.jpg 1x, ./img/catalog/gallery/photo-3-tablet@2x.jpg 2x">
-              <img src="./img/catalog/gallery/photo-3-mobile.jpg"
-                srcset="./img/catalog/gallery/photo-3-mobile@2x.jpg 2x"
-                class="gallery__picture gallery__picture--north-road" width="280px" height="280px"
-                alt="фото дороги в горах">
-            </picture>
-            <div class="gallery__wrapper gallery__wrapper--subitem gallery__wrapper--even">
-              <div class="gallery__caption gallery__caption--subitem">
-                <h3 class="gallery__title">Дорога на север</h3>
-                <p class="gallery__author gallery__author--subitem">Автор фото: Петр</p>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/catalog/gallery/photo-4-desktop.jpg 1x, ./img/catalog/gallery/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/gallery/photo-4-tablet.jpg 1x, ./img/catalog/gallery/photo-4-tablet@2x.jpg 2x">
+                <img src="./img/catalog/gallery/photo-4-mobile.jpg"
+                  srcset="./img/catalog/gallery/photo-4-mobile@2x.jpg 2x"
+                  class="gallery__picture gallery__picture--devil-bridge" width="280" height="280"
+                  alt="мост дьявола">
+              </picture>
+              <div class="gallery__wrapper gallery__wrapper--subitem">
+                <div class="gallery__caption gallery__caption--subitem">
+                  <h3 class="gallery__title">Мост дьявола</h3>
+                  <p class="gallery__author gallery__author--subitem">Автор фото: Антон</p>
+                </div>
+                <div class="gallery__rate gallery__rate--subitem">
+                  <svg class="gallery__icon">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                  </svg>
+                  <p class="gallery__number">254</p>
+                </div>
               </div>
-              <div class="gallery__rate gallery__rate--subitem">
-                <svg class="gallery__icon">
-                  <use xlink:href="img/sprite.svg#icon-like"></use>
-                </svg>
-                <p class="gallery__number">96</p>
-              </div>
-            </div>
-          </li>
-          <li class="gallery__item">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/catalog/gallery/photo-4-desktop.jpg 1x, ./img/catalog/gallery/photo-4-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="./img/catalog/gallery/photo-4-tablet.jpg 1x, ./img/catalog/gallery/photo-4-tablet@2x.jpg 2x">
-              <img src="./img/catalog/gallery/photo-4-mobile.jpg"
-                srcset="./img/catalog/gallery/photo-4-mobile@2x.jpg 2x"
-                class="gallery__picture gallery__picture--devil-bridge" width="280px" height="280px" alt="мост дьявола">
-            </picture>
-            <div class="gallery__wrapper gallery__wrapper--subitem">
-              <div class="gallery__caption gallery__caption--subitem">
-                <h3 class="gallery__title">Мост дьявола</h3>
-                <p class="gallery__author gallery__author--subitem">Автор фото: Антон</p>
-              </div>
-              <div class="gallery__rate gallery__rate--subitem">
-                <svg class="gallery__icon">
-                  <use xlink:href="img/sprite.svg#icon-like"></use>
-                </svg>
-                <p class="gallery__number">254</p>
-              </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </section>
     <section class="argument">
@@ -261,7 +262,7 @@
         <p class="argument__description">Смотрите видеопрезентацию и<br class="for-mobile"> скорее за билетами, пока
           они<br class="for-tablet"><br class="for-desktop"> не<br class="for-mobile"> подорожали в очередной раз!</p>
       </div>
-      <img class="argument__video" src="./img/catalog/video-desktop.jpg">
+      <img class="argument__video" src="./img/catalog/video-desktop.jpg" alt="видеозапись">
     </section>
   </main>
   <footer class="main-footer main-footer--catalog">
@@ -275,7 +276,7 @@
               <svg class="social__icon">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
-              </a>
+            </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
