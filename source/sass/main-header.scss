@@ -1,11 +1,16 @@
 .main-header {
-  height: 56px;
   flex-shrink: 0;
+
   &--overflow {
     position: absolute;
     width: 100%;
     z-index: 1;
     background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    margin: 0 auto;
   }
 }
 

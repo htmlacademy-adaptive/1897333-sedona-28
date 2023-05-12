@@ -1,13 +1,43 @@
 .main-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
+  background-color: #ffffff;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: end;
   flex-grow: 1;
-  padding-top: 42px;
+  flex-shrink: 0;
+  position: relative;
+  margin: 0 auto;
+  padding: 41px 0;
+  width: 100%;
+
+  &--form {
+    padding: 19px 0;
+  }
+
+  &--catalog {
+    padding: 34px 0;
+  }
 
   @media (min-width: $tablet-width) {
-    padding-top: 36px;
+    padding: 36px $tablet-padding;
+
+    &--form {
+      padding-top: 83px;
+    }
+
+    &--catalog {
+      padding: 16px $tablet-padding;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 36px 120px;
+    max-width: $desktop-width;
+
+    &--form {
+      padding-top: 85px;
+    }
   }
 }
 
@@ -21,14 +51,15 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    column-gap: 113px;
   }
 
-  @media (min-width: 1200px) {
-    justify-content: space-around;
+  @media (min-width: $desktop-width) {
     background-color: #ffffff;
-    max-width: 1200px;
+    max-width: $desktop-width;
     margin: 0 auto;
+    column-gap: 270px;
   }
 }
 
@@ -48,4 +79,31 @@
   flex-wrap: nowrap;
   align-items: center;
   column-gap: 14px;
+
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}
+
+.main-footer__academy-capture {
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 3px;
+  }
+}
+
+.main-footer__academy-icon {
+  width: 27px;
+  height: 36px;
 }

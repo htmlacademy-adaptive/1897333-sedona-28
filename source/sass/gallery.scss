@@ -4,6 +4,14 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 $tablet-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 
@@ -13,6 +21,7 @@
   flex-direction: column;
   align-items: center;
   //
+  width: 100%;
   padding: 0;
   margin: 0;
 }
@@ -23,6 +32,7 @@
   flex-direction: column;
   align-items: center;
   //
+  width: 100%;
   padding: 0;
 
   @media (min-width: $tablet-width) {
@@ -40,20 +50,28 @@
 .gallery__item {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
+  // min-width: 320px;
+  width: 100%;
   border-top: solid 1px #e5e5e5;
-  padding: 24px 20px 25px;
+  padding: 25px 20px;
 
-  &:last-child {
-    border-bottom: solid 1px #e5e5e5;
+  &--sublist {
+    padding: 0;
+    border: none;
+
+    &:last-child {
+      border-bottom: solid 1px #e5e5e5;
+    }
   }
 
   @media (min-width: $tablet-width) {
     padding: 0;
     border: none;
 
-    &:last-child {
-      border-bottom: none;
+    &--sublist {
+      &:last-child {
+        border-bottom: none;
+      }
     }
   }
 
@@ -70,59 +88,59 @@
 
   // &--road {
   //   background-color: #ab772f;
-  //   content: url("../img/unredner/catalog/gallery/photo-1-mobile.jpg");
+  //   content: url("../img/catalog/gallery/photo-1-mobile.jpg");
   // }
 
   // &--cactus {
   //   background-color: #ad7f59;
-  //   content: url("../img/unredner/catalog/gallery/photo-2-mobile.jpg");
+  //   content: url("../img/catalog/gallery/photo-2-mobile.jpg");
   // }
 
   // &--north-road {
   //   background-color: #3b4c36;
-  //   content: url("../img/unredner/catalog/gallery/photo-3-mobile.jpg");
+  //   content: url("../img/catalog/gallery/photo-3-mobile.jpg");
   // }
 
   // &--devil-bridge {
   //   background-color: #9a7c72;
-  //   content: url("../img/unredner/catalog/gallery/photo-4-mobile.jpg");
+  //   content: url("../img/catalog/gallery/photo-4-mobile.jpg");
   // }
 
   @media (min-width: $tablet-width) {
     margin: 0;
 
     // &--road {
-    //   content: url("../img/unredner/catalog/gallery/photo-1-tablet.jpg");
+    //   content: url("../img/catalog/gallery/photo-1-tablet.jpg");
     // }
 
     // &--cactus {
-    //   content: url("../img/unredner/catalog/gallery/photo-2-tablet.jpg");
+    //   content: url("../img/catalog/gallery/photo-2-tablet.jpg");
     // }
 
     // &--north-road {
-    //   content: url("../img/unredner/catalog/gallery/photo-3-tablet.jpg");
+    //   content: url("../img/catalog/gallery/photo-3-tablet.jpg");
     // }
 
     // &--devil-bridge {
-    //   content: url("../img/unredner/catalog/gallery/photo-4-tablet.jpg");
+    //   content: url("../img/catalog/gallery/photo-4-tablet.jpg");
     // }
   }
 
   @media (min-width: 1200px) {
     // &--road {
-    //   content: url("../img/unredner/catalog/gallery/photo-1-desktop.jpg");
+    //   content: url("../img/catalog/gallery/photo-1-desktop.jpg");
     // }
 
     // &--cactus {
-    //   content: url("../img/unredner/catalog/gallery/photo-2-desktop.jpg");
+    //   content: url("../img/catalog/gallery/photo-2-desktop.jpg");
     // }
 
     // &--north-road {
-    //   content: url("../img/unredner/catalog/gallery/photo-3-desktop.jpg");
+    //   content: url("../img/catalog/gallery/photo-3-desktop.jpg");
     // }
 
     // &--devil-bridge {
-    //   content: url("../img/unredner/catalog/gallery/photo-4-desktop.jpg");
+    //   content: url("../img/catalog/gallery/photo-4-desktop.jpg");
     // }
   }
 }
@@ -131,12 +149,10 @@
 .gallery__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0 $catalog-mobile-padding;
   padding-top: 15px;
 
   @media (min-width: $tablet-width) {
-    padding: 22px $catalog-mobile-padding 15px;
-    margin-top: -4px;
+    padding: 22px 20px 16px;
     //
     flex-direction: row;
     justify-content: space-between;
@@ -147,14 +163,21 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop-width) {
+    padding: 22px 20px 14px;
     position: relative;
     background-color: rgba(0, 0, 0, 0.3);
-    margin-top: -83px;
+    margin-top: -80px;
 
     &--even {
       background-color: rgba(0, 0, 0, 0.3);
     }
+  }
+}
+
+.gallery__wrapper--subitem {
+  @media (min-width: $desktop-width) {
+    padding: 18px 20px 15px;
   }
 }
 
@@ -163,16 +186,17 @@
   flex-direction: column;
 }
 
+.gallery__caption--subitem {
+  @media (min-width: $desktop-width) {
+    padding-left: 5px;
+  }
+}
+
 .gallery__title {
-  font-family: "PT Sans", sans-serif;
+  @include heading-mobile;
   font-size: 14px;
-  font-weight: 700;
   line-height: 21px;
-  letter-spacing: 0;
-  text-transform: uppercase;
   text-align: left;
-  overflow-wrap: anywhere;
-  //
   margin: 0;
 
   @media (min-width: 1200px) {
@@ -189,33 +213,64 @@
   //
   margin: 0;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop-width) {
     color: #ffffff;
+    padding-top: 2px;
+  }
+}
+
+.gallery__author--subitem {
+  @media (min-width: $desktop-width) {
+    padding-top: 5px;
   }
 }
 
 .gallery__rate {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding-top: 11px;
+  align-items: end;
+  padding-top: 7px;
+  color: #000000;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
+    height: 100%;
+    padding-top: 0;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: #ffffff;
+  }
+}
+
+.gallery__rate--subitem {
+  @media (min-width: $desktop-width) {
+    padding-top: 5px;
   }
 }
 
 .gallery__icon {
-  padding-right: 14px;
+  width: 32px;
+  height: 32px;
+  margin-right: 9px;
+  margin-left: -4px;
+  margin-bottom: -2px;
+  opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 7px;
+    margin-right: 5px;
+  }
+
+    @media (min-width: $desktop-width) {
+    opacity: 1;
+  }
 }
 
 .gallery__number {
   @include reset;
-  font-family: "PT Sans", sans-serif;
-  font-size: 14px;
+  @include paragraph-mobile;
   font-weight: 700;
-  line-height: 21px;
-  letter-spacing: 0;
   text-align: left;
 
 

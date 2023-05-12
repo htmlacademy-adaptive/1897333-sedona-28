@@ -20,12 +20,20 @@
     display: flex;
     flex-direction: row;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 120px;
+  }
 }
 
 .feedback__inner {
   border-top: solid 1px #e5e5e5;
   width: 100%;
-  padding: 24px 20px 39px;
+  padding: 24px 20px 24px;
+
+  &--contacts {
+    padding-bottom: 34px;
+  }
 
   &--last {
     border-top: none;
@@ -40,15 +48,38 @@
     &--full-name {
       padding-right: 43px;
       border-right: solid 1px #e5e5e5;
+      width: 50%;
     }
 
     &--contacts {
       padding-left: 43px;
+      width: 50%;
+    }
+
+    &--attractions {
+      margin-top: 20px;
+    }
+
+    &--emotions {
+      margin-top: 15px;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 120px;
+
+    &--full-name {
+      padding: 0;
+      padding-right: 60px;
+      width: 50%;
+      min-width: 494px;
+    }
+
+    &--contacts {
+      padding: 0;
+      padding-left: 65px;
+      width: 50%;
+    }
   }
 }
 
@@ -75,7 +106,7 @@
 
   @media (min-width: $desktop-width) {
     &--emotions {
-      padding: 0 60px;
+      padding: 0 95px;
     }
   }
 }
@@ -84,12 +115,18 @@
 .feedback__legend {
   @include heading-mobile;
   padding-bottom: 20px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 28px;
     font-size: 21px;
 
+    &--full-name {
+      padding-left: 46px;
+    }
+
     &--contacts {
-      margin: 0 calc(26px - 43px);
+      margin-left: -19px;
     }
 
     &--impressions {
@@ -105,33 +142,42 @@
       padding: 0 66px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &--full-name {
+      padding-left: 65px;
+    }
+
+    &--contacts {
+      margin-left: 27px;
+    }
+
+    &--impressions {
+      padding: 8px 66px;
+    }
+
+    &--attractions {
+      padding: 0 66px;
+    }
+  }
 }
 
 .feedback__wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 
-  &--phone::after {
-    content: url("../img/unredner/form/phone.svg");
-    position: absolute;
-    margin: 0;
-    right: 0;
-    bottom: 16px;
-    padding: 18px;
-    background-color: #e6e6e6;
+  &--submit {
+    margin-top: 8px;
   }
 
-  &--email::after {
-    content: url("../img/unredner/form/mail.svg");
-    position: absolute;
-    margin: 0;
-    right: 0;
-    bottom: 16px;
-    padding: 20px;
-    padding-top: 19px;
-    background-color: #e6e6e6;
+  &--last {
+    margin-bottom: 0;
+  }
+
+  &--patronymic {
+    margin-bottom: calc(39px - 24px);
   }
 
   @media (min-width: $tablet-width) {
@@ -143,9 +189,9 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     &--submit {
-      padding: 48px 64px;
+      padding: 0 96px;
     }
   }
 }
@@ -156,21 +202,38 @@
   padding-left: 16px;
 }
 
+.feedback__input-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 .feedback__field {
+  @include heading-mobile;
   background-color: #f2f2f2;
   border: none;
   height: 58px;
-  //
   padding: 16px;
+  text-transform: none;
+  text-align: start;
 
-  &::placeholder {
-    @include heading-mobile;
-    text-transform: none;
-    text-align: start;
+  &:hover {
+    background-color: #e5e5e5;
   }
 
-  &--blackplaceholder::placeholder {
-    color: #000000;
+  &:active {
+    background-color: #ffffff;
+    border: solid 4px #e5e5e5;
+  }
+
+  &--phone {
+    width: 80%;
+    flex-grow: 1;
+  }
+
+  &--email {
+    width: 80%;
+    flex-grow: 1;
   }
 
   &--emotions {
@@ -183,21 +246,30 @@
   @media (min-width: $tablet-width) {
     &--emotions {
       margin-top: 28px;
+      height: 160px;
+      padding: 16px 15px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--emotions {
+      padding: 16px 45px;
     }
   }
 }
 
-.feedback__contacts {
-  position: relative;
-  border: none;
-  border-top: solid 1px #e5e5e5;
+.feedback__input-icon-wrapper {
+  height: 58px;
+  width: 58px;
+  background-color: #e6e6e6;
   display: flex;
-  flex-direction: column;
-  //
-  padding: 0;
-  margin: 0;
-  padding-top: 70px;
-  padding-bottom: 34px;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback__input-icon {
+  width: 18px;
+  height: 18px;
 }
 
 .feedback__impressions {
@@ -214,30 +286,39 @@
 }
 
 .feedback__list {
+  @include reset;
+  padding: 10px 0;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 36px;
-  padding: 0;
-  margin: 0;
 
   @media (min-width: $tablet-width) {
     padding: 28px 36px;
     row-gap: 16px;
+    column-gap: 15px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 46px 46px;
     align-items: center;
+
+    &--attractions {
+      padding: 28px 83px;
+      column-gap: 30px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     row-gap: 0;
     grid-template-rows: 80px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 280px 280px 1fr;
+    padding: 20px 50px 35px;
+    column-gap: 30px;
 
     &--attractions {
+      padding: 29px 45px 40px;
       grid-template-rows: 108px;
-      column-gap: 40px;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 64px;
+      grid-template-columns: repeat(4, minmax(153px, 184px));
     }
   }
 }
@@ -257,30 +338,47 @@
 }
 
 .feedback_button {
-  @include paragraph-mobile;
+  @include heading-desktop;
   text-decoration: none;
   color: #ffffff;
   background-color: #81b3d2;
-  padding: 16px 49px;
+  padding: 16px 0;
   border: none;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 16px 71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 16px 100px;
   }
 }
 
 .feedback__warning {
   @include paragraph-mobile;
   @include reset;
+  font-size: 12px;
   text-align: end;
   color: rgba(51, 51, 51, 0.6);
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
 }
 
 //-------------RADIO&CHECKBOX------------//
 .feedback__control {
   display: block;
   position: relative;
-  padding-left: 50px;
+  padding-left: 47px;
   cursor: pointer;
 }
 
@@ -303,6 +401,14 @@
   //
   margin-top: -10px;
 
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+  }
+
   &--radio {
     border-radius: 50%;
   }
@@ -319,8 +425,17 @@
   display: none;
 }
 
+.feedback__control-mark--tick {
+  position: absolute;
+  display: none;
+}
+
 /* Show the indicator (dot/circle) when checked */
 .feedback__control input:checked ~ .feedback__control-mark::after {
+  display: block;
+}
+
+.feedback__control input:checked ~ .feedback__control-mark--tick {
   display: block;
 }
 
@@ -331,11 +446,18 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #333333;
+  background-color: #333333;
+}
+
+.feedback__control-mark--tick {
+  width: 32px;
+  height: 32px;
+  top: -6px;
+  left: 8px;
 }
 
 .feedback__control--checkbox .feedback__control-mark::after {
-  content: url("../img/unredner/form/tick.svg");
+  // content: url("../img/form/tick.svg");
   padding: 15px 12px;
 }
 

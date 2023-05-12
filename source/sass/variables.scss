@@ -2,8 +2,7 @@
 $tablet-width: 768px;
 $desktop-width: 1200px;
 $mobile-padding: 18px;
-$tablet-padding: 33px;
-$catalog-mobile-padding: 20px;
+$tablet-padding: 60px;
 //
 @mixin reset {
   padding: 0;
@@ -11,7 +10,7 @@ $catalog-mobile-padding: 20px;
 }
 // text-styles
 @mixin heading-mobile {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -21,7 +20,7 @@ $catalog-mobile-padding: 20px;
 }
 
 @mixin heading-desktop {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -31,7 +30,7 @@ $catalog-mobile-padding: 20px;
 }
 
 @mixin paragraph-mobile {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;

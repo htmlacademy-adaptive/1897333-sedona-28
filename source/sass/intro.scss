@@ -3,15 +3,12 @@
   text-align: center;
   padding: 34px $mobile-padding;
 
-  &--catalog {
-    max-width: 320px;
-    @media (min-width: $tablet-width) {
-      max-width: 100%;
-    }
-  }
-
   &--form {
     padding: 36px $mobile-padding 28px;
+  }
+
+  &--catalog {
+    padding: 39px $mobile-padding 36px;
   }
 
   @media (min-width: $tablet-width) {
@@ -21,10 +18,22 @@
     &--form {
       padding: 64px 150px calc(108px - 48px);
     }
+
+    &--catalog {
+      padding: 66px 0 81px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 59px 350px 44px;
+
+    &--form {
+      padding: 116px 350px 20px;
+    }
+
+    &--catalog {
+      padding: 97px 0 89px;
+    }
   }
 }
 
@@ -35,6 +44,26 @@
 
   @media (min-width: $tablet-width) {
     @include heading-desktop;
+
+    &--form {
+      font-size: 30px;
+    }
+
+    &--catalog {
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include heading-desktop;
+
+    &--form {
+      font-size: 30px;
+    }
+
+    &--catalog {
+      font-size: 30px;
+    }
   }
 }
 
@@ -42,9 +71,27 @@
   @include paragraph-mobile;
   @include reset;
   color: #333333;
-  padding-top: 35px;
+  padding-top: 36px;
+
+  &--form {
+    padding-top: 25px;
+  }
+
+  &--catalog {
+    padding-top: 24px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 30px;
+
+    &--form {
+      padding-top: 19px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--form {
+      padding-top: 30px;
+    }
   }
 }
