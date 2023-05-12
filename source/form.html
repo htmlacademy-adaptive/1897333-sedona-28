@@ -18,27 +18,28 @@
 <body class="page-body">
   <!--шапка-->
   <header class="main-header">
-    <a href="./index.html" class="main-header__logo-link" alt="ссылка на главную страницу">
+    <a href="./index.html" class="main-header__logo-link">
       <img class="main-header__logo" src="./img/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
     </a>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
         <span class="main-nav__inner">
-          <a class="main-nav__link" href="index.html" alt="ссылка на главную страницу">
+          <a class="main-nav__link" href="index.html">
             Главная
           </a>
         </span>
-        <span class="main-nav__inner"><a class="main-nav__link" href="catalog.html" alt="ссылка на галерею">
+        <span class="main-nav__inner">
+          <a class="main-nav__link" href="catalog.html">
             Фото и видео
           </a>
         </span>
         <span class="main-nav__inner--empty"></span>
         <span class="main-nav__inner">
-          <a class="main-nav__link main-nav__link--current" href="form.html" alt="ссылка на форму отзыва">
+          <a class="main-nav__link main-nav__link--current" href="form.html">
             Форма отзыва
           </a>
         </span>
-        <span class="main-nav__inner"><a class="main-nav__link" href="https://htmlacademy.ru/" alt="ссылка на HTML Academy">
+        <span class="main-nav__inner"><a class="main-nav__link" href="https://htmlacademy.ru/">
             HTML Academy
           </a>
         </span>
@@ -149,7 +150,9 @@
     </section>
     <section class="intro intro--form">
       <h2 class="intro__title intro__title--form">оставьте свой отзыв</h2>
-      <p class="intro__description intro__description--form">Помогите нашим отелям стать лучше!<br class="for-mobile"> оставьте отзыв о них<br class="for-tablet"><br class="for-desktop"> а также о<br class="for-mobile"> посещенных вами<br class="for-mobile">
+      <p class="intro__description intro__description--form">Помогите нашим отелям стать лучше!<br class="for-mobile">
+        оставьте отзыв о них<br class="for-tablet"><br class="for-desktop"> а также о<br class="for-mobile"> посещенных
+        вами<br class="for-mobile">
         достопримечательностях</p>
     </section>
     <section class="feedback">
@@ -183,7 +186,7 @@
                 <label class="feedback__caption" for="contacts-phone">Контактный телефон*:</label>
                 <div class="feedback__input-wrapper">
                   <input class="feedback__field feedback__field--phone" type="text" id="contacts-phone"
-                  name="contacts-phone" placeholder="Введите телефон" required>
+                    name="contacts-phone" placeholder="Введите телефон" required>
                   <div class="feedback__input-icon-wrapper">
                     <svg class="feedback__input-icon">
                       <use xlink:href="img/sprite.svg#icon-phone"></use>
@@ -195,7 +198,7 @@
                 <label class="feedback__caption" for="e-mail">Электронная почта*:</label>
                 <div class="feedback__input-wrapper">
                   <input class="feedback__field feedback__field--email" type="email" id="e-mail" name="e-mail"
-                  placeholder="Введите e-mail" required>
+                    placeholder="Введите e-mail" required>
                   <div class="feedback__input-icon-wrapper">
                     <svg class="feedback__input-icon">
                       <use xlink:href="img/sprite.svg#icon-mail"></use>
@@ -284,9 +287,9 @@
         </div>
         <div class="feedback__inner feedback__inner--emotions">
           <fieldset class="feedback__fieldset feedback__fieldset--emotions">
-            <legend class="feedback__legend feedback__legend--emotions" for="emotions">Опишите свои эмоции:</legend>
-            <textarea class="feedback__field feedback__field--emotions" id="emotions" name="emotions" rows="" cols=""
-              placeholder="Опишите подробно все свои восторги" required></textarea>
+            <legend class="feedback__legend feedback__legend--emotions">Опишите свои эмоции:</legend>
+            <textarea class="feedback__field feedback__field--emotions" placeholder="Опишите подробно все свои восторги"
+              required></textarea>
           </fieldset>
         </div>
         <div class="feedback__inner feedback__inner--submit feedback__inner--last">
@@ -310,7 +313,7 @@
               <svg class="social__icon">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
-              </a>
+            </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
@@ -340,18 +343,21 @@
   </footer>
   <section class="modal modal--error">
     <div class="modal__container modal__container--error">
-      <h3 class="modal__title modal__title--error">Что-то пошло <br class="for-tablet"><br class="for-desktop">не так!</h3>
-      <p class="modal__caption modal__caption--error">Проверьте поля, выделенные <br class="for-mobile">красным, <br class="for-tablet"><br class="for-desktop">скорее всего вы <br class="for-mobile">забыли их заполнить</p>
+      <h3 class="modal__title modal__title--error">Что-то пошло <br class="for-tablet"><br class="for-desktop">не так!
+      </h3>
+      <p class="modal__caption modal__caption--error">Проверьте поля, выделенные <br class="for-mobile">красным, <br
+          class="for-tablet"><br class="for-desktop">скорее всего вы <br class="for-mobile">забыли их заполнить</p>
       <div class="modal__wrapper modal__wrapper--error">
-      <button class="modal__confirm modal__confirm--error">Ок</button>
-    </div>
-    </div>
+        <button class="modal__confirm modal__confirm--error">Ок</button>
+      </div>
     </div>
   </section>
   <section class="modal modal--ok">
     <div class="modal__container modal__container--ok">
       <h3 class="modal__title modal__title--ok">Ваш отзыв отправлен!</h3>
-      <p class="modal__caption modal__caption--ok">Спасибо за ваше участие, ваш<br class="for-mobile"> отзыв уже поступил к нам.<br class="for-mobile"><br class="for-tablet"><br class="for-desktop"> В ближайшее время мы<br class="for-mobile"> опубликуем его на сайте.</p>
+      <p class="modal__caption modal__caption--ok">Спасибо за ваше участие, ваш<br class="for-mobile"> отзыв уже
+        поступил к нам.<br class="for-mobile"><br class="for-tablet"><br class="for-desktop"> В ближайшее время мы<br
+          class="for-mobile"> опубликуем его на сайте.</p>
       <div class="modal__wrapper modal__wrapper--ok">
         <button class="modal__confirm modal__confirm--ok">Закрыть окно</button>
       </div>
