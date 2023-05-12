@@ -125,6 +125,10 @@
       padding-left: 46px;
     }
 
+    &--contacts {
+      margin-left: -19px;
+    }
+
     &--impressions {
       padding: 0 66px;
     }
@@ -145,7 +149,7 @@
     }
 
     &--contacts {
-      margin-left: -33px;
+      margin-left: 27px;
     }
 
     &--impressions {
@@ -223,10 +227,12 @@
   }
 
   &--phone {
+    width: 80%;
     flex-grow: 1;
   }
 
   &--email {
+    width: 80%;
     flex-grow: 1;
   }
 
