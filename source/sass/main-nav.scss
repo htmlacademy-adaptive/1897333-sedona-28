@@ -91,11 +91,11 @@
       color: #766357;
     }
 
-    &:hover {
+    &[href]:hover {
       color: #81b3d2;
     }
 
-    &:active {
+    &[href]:active {
       color: rgba(0, 0, 0, 0.3);
     }
   }
