@@ -86,6 +86,11 @@
   @media (min-width: $tablet-width) {
     padding: 30px 50px 0;
 
+    &--catalog {
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
     &--form {
       padding-top: 19px;
     }

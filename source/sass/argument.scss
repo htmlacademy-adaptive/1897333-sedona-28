@@ -43,10 +43,13 @@
 .argument__description {
   @include paragraph-mobile;
   @include reset;
+  margin: 0 auto;
   padding-top: 27px;
+  max-width: 250px;
 
   @media (min-width: $tablet-width) {
     padding-top: 32px;
+    max-width: 450px;
   }
 }
 
