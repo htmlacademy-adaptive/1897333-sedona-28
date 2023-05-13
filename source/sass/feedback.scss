@@ -242,6 +242,10 @@
     height: 150px;
     border: none;
     resize: none;
+    &:active {
+      padding-left: 12px;
+      padding-top: 12px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -249,12 +253,18 @@
       margin-top: 28px;
       height: 160px;
       padding: 16px 15px;
+      &:active {
+        padding: 12px 11px;
+      }
     }
   }
 
   @media (min-width: $desktop-width) {
     &--emotions {
       padding: 16px 45px;
+      &:active {
+        padding: 12px 41px;
+      }
     }
   }
 }
@@ -338,7 +348,7 @@
   flex-direction: column;
 }
 
-.feedback_button {
+.feedback__button {
   @include heading-desktop;
   text-decoration: none;
   color: #ffffff;
@@ -431,7 +441,7 @@
   position: absolute;
   width: 32px;
   height: 32px;
-  top: -6px;
+  top: 6px;
   left: 8px;
 }
 
