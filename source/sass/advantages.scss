@@ -23,6 +23,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: start;
   }
 }
 
@@ -33,11 +34,13 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
     &--grey {
       border: none;
       width: calc(100% / 3);
+      background-color: #eeeeee;
+      min-height: 256px;
     }
   }
 
@@ -241,22 +244,11 @@
   background-color: #ffffff;
   padding: 0 $mobile-padding 21px;
 
-  &--grey {
-    padding: 0;
-    width: 100%;
-    background-color: #eeeeee;
-    min-height: 256px;
-  }
-
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 0;
     width: 100%;
-
-    &--grey {
-      padding: 0;
-    }
   }
 }
 

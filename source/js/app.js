@@ -3,6 +3,9 @@
 let menuBtn = document.querySelector('.main-nav__toggle');
 let menu = document.querySelector('.main-nav__wrapper');
 let cross = document.querySelectorAll('.main-nav__toggle-line');
+////delete nojs class
+menuBtn.classList.remove('main-nav__toggle--nojs');
+menu.classList.remove('main-nav__wrapper--nojs');
 ////show&hide mobile menu
 menuBtn.addEventListener('click', function () {
   menuBtn.classList.toggle('main-nav__toggle--active');

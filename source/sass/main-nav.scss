@@ -1,5 +1,5 @@
 .main-nav {
-  height: 56px;
+  height: 100%;
 
   @media (min-width: $tablet-width) {
     background-color: #ffffff;
@@ -32,6 +32,11 @@
     transform: translateX(0);
     transition: none;
   }
+}
+
+.main-nav__wrapper--nojs {
+  position: relative;
+  transform: none;
 }
 
 .main-nav__inner {
@@ -113,6 +118,10 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.main-nav__toggle--nojs {
+  display: none;
 }
 
 .main-nav__toggle span {

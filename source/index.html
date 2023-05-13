@@ -22,7 +22,7 @@
       <img class="main-header__logo" src="./img/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
     </a>
     <nav class="main-nav">
-      <div class="main-nav__wrapper">
+      <div class="main-nav__wrapper main-nav__wrapper--nojs">
         <span class="main-nav__inner">
           <a class="main-nav__link main-nav__link--current" href="index.html">
             Главная
@@ -43,7 +43,7 @@
           </a>
         </span>
       </div>
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
         <span class="main-nav__toggle-line"></span>
         <span class="main-nav__toggle-line"></span>
         <span class="main-nav__toggle-line"></span>
@@ -180,8 +180,6 @@
             <img class="advantages__image advantages__image--city" src="./img/index/photo-city-mobile@1x.jpg"
               srcset="./img/index/photo-city-mobile@2x.jpg 2x" width="320" height="260" alt="Фото города">
           </picture>
-        </li>
-        <li class="advantages__item advantages__item--sublist">
           <ul class="advantages__sublist">
             <li class="advantages__subitem">
               <svg class="advantages__icon">
@@ -189,7 +187,8 @@
               </svg>
               <h3 class="advantages__title advantages__title--subitem">Жилье</h3>
               <span></span>
-              <p class="advantages__description advantages__description--subitem advantages__description--subitem--first">
+              <p
+                class="advantages__description advantages__description--subitem advantages__description--subitem--first">
                 Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
             <li class="advantages__subitem">
@@ -223,11 +222,11 @@
           </div>
           <picture class="advantages__picture advantages__picture--reverse">
             <source type="image/webp" media="(min-width: 1200px)"
-            srcset="./img/index/photo-bridge-desktop@1x.webp, ./img/index/photo-bridge-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="./img/index/photo-bridge-tablet@1x.webp, ./img/index/photo-bridge-tablet@2x.webp 2x">
-          <source type="image/webp"
-            srcset="./img/index/photo-bridge-mobile@1x.webp, ./img/index/photo-bridge-mobile@2x.webp 2x">
+              srcset="./img/index/photo-bridge-desktop@1x.webp, ./img/index/photo-bridge-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="./img/index/photo-bridge-tablet@1x.webp, ./img/index/photo-bridge-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="./img/index/photo-bridge-mobile@1x.webp, ./img/index/photo-bridge-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)"
               srcset="./img/index/photo-bridge-desktop@1x.jpg 1x, ./img/index/photo-bridge-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)"
@@ -236,47 +235,44 @@
               srcset="./img/index/photo-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Фото города">
           </picture>
         </li>
-        <li class="advantages__item">
-          <ul class="advantages__sublist advantages__sublist--grey">
-            <li class="advantages__item advantages__item--grey">
-              <div class="advantages__wrapper advantages__wrapper--grey">
-                <h3 class="advantages__title advantages__title--grey">
-                  Небольшая площадь
-                </h3>
-                <p class="advantages__number">— №3 —</p>
-                <p class="advantages__description advantages__description--grey">
-                  Все интересные места находятся очень близко</p>
-              </div>
-            </li>
-            <li class="advantages__item advantages__item--grey">
-              <div class="advantages__wrapper advantages__wrapper--grey">
-                <h3 class="advantages__title advantages__title--grey">
-                  Красивая дорога
-                </h3>
-                <p class="advantages__number">— №4 —</p>
-                <p class="advantages__description advantages__description--grey">
-                  Ехать в Седону из Лас-Вегаса совсем <br class="for-tablet"><br class="for-desktop">не скучно!</p>
-              </div>
-            </li>
-            <li class="advantages__item advantages__item--grey">
-              <div class="advantages__wrapper advantages__wrapper--grey advantages__wrapper--grey--last">
-                <h3 class="advantages__title advantages__title--grey">
-                  Мало туристов
-                </h3>
-                <p class="advantages__number">— №5 —</p>
-                <p class="advantages__description advantages__description--grey">
-                  Большинство едет в гранд каньон и толпятся там
-                </p>
-              </div>
-            </li>
-          </ul>
+        <li class="advantages__item advantages__item--grey">
+          <div class="advantages__wrapper advantages__wrapper--grey">
+            <h3 class="advantages__title advantages__title--grey">
+              Небольшая площадь
+            </h3>
+            <p class="advantages__number">— №3 —</p>
+            <p class="advantages__description advantages__description--grey">
+              Все интересные места находятся очень близко</p>
+          </div>
+        </li>
+        <li class="advantages__item advantages__item--grey">
+          <div class="advantages__wrapper advantages__wrapper--grey">
+            <h3 class="advantages__title advantages__title--grey">
+              Красивая дорога
+            </h3>
+            <p class="advantages__number">— №4 —</p>
+            <p class="advantages__description advantages__description--grey">
+              Ехать в Седону из Лас-Вегаса совсем <br class="for-tablet"><br class="for-desktop">не скучно!</p>
+          </div>
+        </li>
+        <li class="advantages__item advantages__item--grey">
+          <div class="advantages__wrapper advantages__wrapper--grey advantages__wrapper--grey--last">
+            <h3 class="advantages__title advantages__title--grey">
+              Мало туристов
+            </h3>
+            <p class="advantages__number">— №5 —</p>
+            <p class="advantages__description advantages__description--grey">
+              Большинство едет в гранд каньон и толпятся там
+            </p>
+          </div>
         </li>
       </ol>
     </section>
     <section class="find-hotel">
       <h3 class="find-hotel__title">Заинтересовались?</h3>
       <p class="find-hotel__description">
-        Укажите предполагаемые даты поездки,<br class="for-tablet"><br class="for-desktop"> и мы покажем вам лучшие предложения гостиниц в Седоне
+        Укажите предполагаемые даты поездки,<br class="for-tablet"><br class="for-desktop"> и мы покажем вам лучшие
+        предложения гостиниц в Седоне
       </p>
       <div class="find-hotel__wrapper">
         <a class="find-hotel__link" href="./catalog.html">Найти гостиницу</a>
