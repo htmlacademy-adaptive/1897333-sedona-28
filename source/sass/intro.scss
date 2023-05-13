@@ -13,7 +13,7 @@
 
   @media (min-width: $tablet-width) {
     background-color: #ffffff;
-    padding: 47.5px 124px 55.5px;
+    padding: 47px 0 55px;
 
     &--form {
       padding: 64px 150px calc(108px - 48px);
@@ -25,7 +25,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 59px 350px 44px;
+    padding: 59px 0 44px;
 
     &--form {
       padding: 116px 350px 20px;
@@ -41,9 +41,11 @@
   @include heading-mobile;
   @include reset;
   display: inline-block;
+  max-width: 270px;
 
   @media (min-width: $tablet-width) {
     @include heading-desktop;
+    max-width: 520px;
 
     &--form {
       font-size: 30px;
@@ -82,7 +84,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 30px;
+    padding: 30px 50px 0;
 
     &--form {
       padding-top: 19px;

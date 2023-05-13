@@ -58,6 +58,7 @@
 .advantages__wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 0 $mobile-padding;
 
   &--blue {
@@ -109,19 +110,16 @@
     &--grey {
       @include reset;
       margin: 0 auto;
-      padding: 41px 0 42px;
+      padding: 39px 0 39px;
       border-bottom: none;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 50px;
-    padding-top: 37px;
-    padding-bottom: 50px;
+    padding: 37px 0 50px;
 
     &--grey {
-      padding: 52px 50px;
-      padding-bottom: 27px;
+      padding: 54px 0 27px;
     }
   }
 }
@@ -143,21 +141,26 @@
     font-size: 21px;
     padding: 4px 0;
 
+    &--blue {
+      max-width: 150px;
+    }
+
     &--subitem {
       padding-top: 26px;
     }
 
     &--grey {
-      padding-top: 3px;
+      max-width: 150px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 17px 75px;
-    padding-bottom: 0;
+    padding: 17px 0 0;
+    max-width: 170px;
 
     &--grey {
-      padding-top: 2px;
+      padding: 0;
+      max-width: 140px;
     }
   }
 }
@@ -207,16 +210,27 @@
     &--subitem {
       padding: 0;
       padding-top: 18px;
+      max-width: 170px;
     }
 
     &--grey {
       padding: 23px 0 0;
+      max-width: 190px;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 24px;
     padding-bottom: 0;
+    max-width: 300px;
+
+    &--subitem {
+      max-width: 300px;
+    }
+
+    &--grey {
+      max-width: 290px;
+    }
   }
 }
 
@@ -237,16 +251,12 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 0 0 15px;
+    padding: 0;
     width: 100%;
 
     &--grey {
       padding: 0;
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 24px;
   }
 }
 
@@ -268,12 +278,13 @@
     flex-direction: column;
     align-items: center;
     width: calc(100% / 3);
-    padding: 60px 0 45px;
+    padding: 60px 0 62px;
     grid-template-columns: 47px 1fr;
   }
 
   @media (min-width: $desktop-width) {
     width: 400px;
+    padding: 60px 0 69px;
   }
 }
 
