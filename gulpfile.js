@@ -24,7 +24,7 @@ export const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    // .pipe(rename('style.min.css')) //если включить - надо подключить новый файл в html файлах
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
@@ -140,11 +140,12 @@ const reload = (done) => {
 // Watcher
 const watcher = () => {
 gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+gulp.watch('source/js/**/script.js', gulp.series(scripts));
 gulp.watch('source/*.html', gulp.series(html, reload));
 };
 
 //Build
-export const Build = gulp.series(
+export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
@@ -175,51 +176,5 @@ export default gulp.series(
   gulp.series(
     server,
     watcher
-  ));
-
-// import gulp from 'gulp';
-// import plumber from 'gulp-plumber';
-// import sass from 'gulp-dart-sass';
-// import postcss from 'gulp-postcss';
-// import autoprefixer from 'autoprefixer';
-// import browser from 'browser-sync';
-// import terser from 'gulp-terser';
-
-// // Styles
-
-// export const styles = () => {
-//   return gulp.src('source/sass/style.scss', { sourcemaps: true })
-//     .pipe(plumber())
-//     .pipe(sass().on('error', sass.logError))
-//     .pipe(postcss([
-//       autoprefixer()
-//     ]))
-//     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
-//     .pipe(browser.stream());
-// }
-
-// // Server
-
-// const server = (done) => {
-//   browser.init({
-//     server: {
-//       baseDir: 'source'
-//     },
-//     cors: true,
-//     notify: false,
-//     ui: false,
-//   });
-//   done();
-// }
-
-// // Watcher
-
-// const watcher = () => {
-//   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-//   gulp.watch('source/*.html').on('change', browser.reload);
-// }
-
-
-// export default gulp.series(
-//   styles, server, watcher
-// );
+   )
+  );

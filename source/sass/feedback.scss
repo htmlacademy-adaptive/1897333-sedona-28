@@ -382,7 +382,7 @@
   cursor: pointer;
 }
 
-/* Hide the browser's default radio button */
+/* Скрыть дефолтную радио кнопку */
 .feedback__control-input {
   position: absolute;
   opacity: 0;
@@ -418,7 +418,7 @@
   }
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
+/* создать новую отметку (скрытую) */
 .feedback__control-mark::after {
   content: "";
   position: absolute;
@@ -426,11 +426,15 @@
 }
 
 .feedback__control-mark--tick {
-  position: absolute;
   display: none;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -6px;
+  left: 8px;
 }
 
-/* Show the indicator (dot/circle) when checked */
+/* Показать отметку */
 .feedback__control input:checked ~ .feedback__control-mark::after {
   display: block;
 }
@@ -439,7 +443,7 @@
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
+/* стили для новой отметки */
 .feedback__control--radio .feedback__control-mark::after {
   top: 15px;
   left: 15px;
@@ -447,18 +451,6 @@
   height: 16px;
   border-radius: 50%;
   background-color: #333333;
-}
-
-.feedback__control-mark--tick {
-  width: 32px;
-  height: 32px;
-  top: -6px;
-  left: 8px;
-}
-
-.feedback__control--checkbox .feedback__control-mark::after {
-  // content: url("../img/form/tick.svg");
-  padding: 15px 12px;
 }
 
 .feedback__control-label {

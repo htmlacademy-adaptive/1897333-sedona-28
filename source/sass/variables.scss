@@ -3,11 +3,13 @@ $tablet-width: 768px;
 $desktop-width: 1200px;
 $mobile-padding: 18px;
 $tablet-padding: 60px;
-//
+
+// reset
 @mixin reset {
   padding: 0;
   margin: 0;
 }
+
 // text-styles
 @mixin heading-mobile {
   font-family: "PT Sans", "Arial", sans-serif;

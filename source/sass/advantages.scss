@@ -189,6 +189,10 @@
     &--first {
       padding-bottom: 24px;
     }
+
+    @media (min-width: 500px) {
+      text-align: center;
+    }
   }
 
   &--grey {
@@ -213,12 +217,6 @@
   @media (min-width: $desktop-width) {
     padding-top: 24px;
     padding-bottom: 0;
-  }
-}
-
-.advantages__description--subitem {
-  @media (min-width: 500px) {
-    text-align: center;
   }
 }
 
