@@ -1,84 +1,6 @@
-// .main-nav {
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   flex-direction: column;
-
-//   @media (min-width: $tablet-width) {
-//     flex-direction: row;
-//     align-items: center;
-//   }
-
-//   @media (min-width: $tablet-width) {
-//     margin: 0 auto;
-//     background-color: #ffffff;
-//     max-width: 1200px;
-//   }
-// }
-
-// .main-nav__wrapper {
-//   box-sizing: border-box;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   transform: translateY(-100%);
-//   transition: transform 0.5s;
-//   z-index: 1;
-//   background-color: #81b3d2;
-
-//   &--active {
-//     display: block;
-//     transform: translateX(0);
-//     transition: 1s;
-//   }
-
-//   @media (min-width: $tablet-width) {
-//     position: relative;
-//     display: flex;
-//     z-index: 0;
-//     background-color: #ffffff;
-//     justify-content: space-between;
-//     transform: translateX(0);
-//     transition: none;
-//   }
-// }
-
-
-// .main-nav__list {
-//   @include reset;
-//   list-style: none;
-
-//   @media (min-width: $tablet-width) {
-//     display: flex;
-//     justify-content: space-around;
-
-//     &--left {
-//       width: 37%;
-//       justify-content: space-between;
-//     }
-
-//     &--right {
-//       width: 37%;
-//       justify-content: space-between;
-//     }
-//   }
-// }
-
-// .main-nav__item {
-//   text-align: center;
-//   margin-bottom: 1px;
-//   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-//   padding: 17px 0 12px;
-
-//   @media (min-width: $tablet-width) {
-//     box-shadow: none;
-//     padding: 0;
-//     width: 50%;
-//   }
-// }
 .main-nav {
-  height: 56px;
+  min-height: 56px;
+  height: 100%;
 
   @media (min-width: $tablet-width) {
     background-color: #ffffff;
@@ -113,6 +35,11 @@
   }
 }
 
+.main-nav__wrapper--nojs {
+  position: relative;
+  transform: none;
+}
+
 .main-nav__inner {
   width: 100%;
   text-align: center;
@@ -136,6 +63,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding: 17px 10px 0;
     background-color: #ffffff;
     box-shadow: none;
 
@@ -164,11 +92,11 @@
       color: #766357;
     }
 
-    &:hover {
+    &[href]:hover {
       color: #81b3d2;
     }
 
-    &:active {
+    &[href]:active {
       color: rgba(0, 0, 0, 0.3);
     }
   }
@@ -185,7 +113,6 @@
   right: 0;
   top: 0;
   background-color: transparent;
-  /* Green */
   border: none;
   width: calc(22.9px + 20px * 2);
   height: 56px;
@@ -193,6 +120,10 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.main-nav__toggle--nojs {
+  display: none;
 }
 
 .main-nav__toggle span {

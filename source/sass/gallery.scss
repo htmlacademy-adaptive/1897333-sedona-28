@@ -20,7 +20,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  //
   width: 100%;
   padding: 0;
   margin: 0;
@@ -31,15 +30,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  //
   width: 100%;
   padding: 0;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    //
     margin: 0;
+    align-items: start;
   }
 
   @media (min-width: 1200px) {
@@ -50,7 +48,6 @@
 .gallery__item {
   display: flex;
   flex-direction: column;
-  // min-width: 320px;
   width: 100%;
   border-top: solid 1px #e5e5e5;
   padding: 25px 20px;
@@ -85,64 +82,6 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-
-  // &--road {
-  //   background-color: #ab772f;
-  //   content: url("../img/catalog/gallery/photo-1-mobile.jpg");
-  // }
-
-  // &--cactus {
-  //   background-color: #ad7f59;
-  //   content: url("../img/catalog/gallery/photo-2-mobile.jpg");
-  // }
-
-  // &--north-road {
-  //   background-color: #3b4c36;
-  //   content: url("../img/catalog/gallery/photo-3-mobile.jpg");
-  // }
-
-  // &--devil-bridge {
-  //   background-color: #9a7c72;
-  //   content: url("../img/catalog/gallery/photo-4-mobile.jpg");
-  // }
-
-  @media (min-width: $tablet-width) {
-    margin: 0;
-
-    // &--road {
-    //   content: url("../img/catalog/gallery/photo-1-tablet.jpg");
-    // }
-
-    // &--cactus {
-    //   content: url("../img/catalog/gallery/photo-2-tablet.jpg");
-    // }
-
-    // &--north-road {
-    //   content: url("../img/catalog/gallery/photo-3-tablet.jpg");
-    // }
-
-    // &--devil-bridge {
-    //   content: url("../img/catalog/gallery/photo-4-tablet.jpg");
-    // }
-  }
-
-  @media (min-width: 1200px) {
-    // &--road {
-    //   content: url("../img/catalog/gallery/photo-1-desktop.jpg");
-    // }
-
-    // &--cactus {
-    //   content: url("../img/catalog/gallery/photo-2-desktop.jpg");
-    // }
-
-    // &--north-road {
-    //   content: url("../img/catalog/gallery/photo-3-desktop.jpg");
-    // }
-
-    // &--devil-bridge {
-    //   content: url("../img/catalog/gallery/photo-4-desktop.jpg");
-    // }
-  }
 }
 
 
@@ -153,7 +92,6 @@
 
   @media (min-width: $tablet-width) {
     padding: 22px 20px 16px;
-    //
     flex-direction: row;
     justify-content: space-between;
     background-color: #f2f2f2;
@@ -165,9 +103,10 @@
 
   @media (min-width: $desktop-width) {
     padding: 22px 20px 14px;
-    position: relative;
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.3);
-    margin-top: -80px;
+    bottom: 0;
+    width: 100%;
 
     &--even {
       background-color: rgba(0, 0, 0, 0.3);
@@ -209,8 +148,6 @@
   text-transform: none;
   color: #333333;
   text-align: left;
-  overflow-wrap: anywhere;
-  //
   margin: 0;
 
   @media (min-width: $desktop-width) {
@@ -256,13 +193,14 @@
   margin-left: -4px;
   margin-bottom: -2px;
   opacity: 0.3;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 7px;
     margin-right: 5px;
   }
 
-    @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     opacity: 1;
   }
 }

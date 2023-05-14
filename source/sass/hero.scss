@@ -23,8 +23,16 @@
     height: 158px;
   }
 
+  @supports (background: url("../img/global/hero/back-mobile.webp")) {
+    background-image: url("../img/global/hero/back-mobile.webp");
+  }
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/global/hero/back-mobile@2x.jpg");
+
+    @supports (background: url("../img/global/hero/back-mobile@2x.webp")) {
+      background-image: url("../img/global/hero/back-mobile@2x.webp");
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -35,8 +43,16 @@
       height: 290px;
     }
 
+    @supports (background: url("../img/global/hero/back-desktop.webp")) {
+      background-image: url("../img/global/hero/back-desktop.webp");
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/global/hero/back-desktop@2x.jpg");
+
+      @supports (background: url("../img/global/hero/back-desktop@2x.webp")) {
+        background-image: url("../img/global/hero/back-desktop@2x.webp");
+      }
     }
   }
 
@@ -52,18 +68,6 @@
   flex-direction: column;
   align-items: center;
   padding-top: 90px;
-
-  // &::after {
-  //   content: "";
-  //   display: block;
-  //   background: url("../img/global/hero/hero-border-bottom.svg");
-  //   background-position: center;
-  //   position: absolute;
-  //   background-repeat: no-repeat;
-  //   width: 100%;
-  //   height: 57px;
-  //   bottom: 0;
-  // }
 
   @media (min-width: $tablet-width) {
     height: 518px;
@@ -139,18 +143,3 @@
     margin-left: -20px;
   }
 }
-
-// .hero__text-top {
-//   display: block;
-// }
-
-// .hero__text-middle {
-//   display: block;
-//   margin-top: 31px;
-// }
-
-// .hero__text-bottom {
-//   display: block;
-//   margin-left: -11px;
-//     margin-top: 33px;
-// }

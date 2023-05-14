@@ -80,6 +80,10 @@
       padding-left: 65px;
       width: 50%;
     }
+
+    &--impressions {
+      padding-bottom: 28px;
+    }
   }
 }
 
@@ -120,6 +124,7 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 28px;
     font-size: 21px;
+    max-width: 450px;
 
     &--full-name {
       padding-left: 46px;
@@ -135,7 +140,6 @@
 
     &--attractions {
       padding: 0 66px;
-      width: 407px;
     }
 
     &--emotions {
@@ -224,6 +228,7 @@
   &:active {
     background-color: #ffffff;
     border: solid 4px #e5e5e5;
+    padding-left: 12px;
   }
 
   &--phone {
@@ -241,6 +246,10 @@
     height: 150px;
     border: none;
     resize: none;
+    &:active {
+      padding-left: 12px;
+      padding-top: 12px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -248,12 +257,18 @@
       margin-top: 28px;
       height: 160px;
       padding: 16px 15px;
+      &:active {
+        padding: 12px 11px;
+      }
     }
   }
 
   @media (min-width: $desktop-width) {
     &--emotions {
       padding: 16px 45px;
+      &:active {
+        padding: 12px 41px;
+      }
     }
   }
 }
@@ -294,29 +309,27 @@
   row-gap: 36px;
 
   @media (min-width: $tablet-width) {
-    padding: 28px 36px;
-    row-gap: 16px;
+    padding: 40px 36px;
+    row-gap: 36px;
     column-gap: 15px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 46px 46px;
     align-items: center;
 
     &--attractions {
-      padding: 28px 83px;
+      padding: 37px 83px;
       column-gap: 30px;
     }
   }
 
   @media (min-width: $desktop-width) {
     row-gap: 0;
-    grid-template-rows: 80px;
     grid-template-columns: 280px 280px 1fr;
-    padding: 20px 50px 35px;
+    padding: 48px 0px 35px 50px;
     column-gap: 30px;
+    row-gap: 30px;
 
     &--attractions {
-      padding: 29px 45px 40px;
-      grid-template-rows: 108px;
+      padding: 70px 45px 81px;
       column-gap: 64px;
       grid-template-columns: repeat(4, minmax(153px, 184px));
     }
@@ -337,13 +350,14 @@
   flex-direction: column;
 }
 
-.feedback_button {
+.feedback__button {
   @include heading-desktop;
   text-decoration: none;
   color: #ffffff;
   background-color: #81b3d2;
   padding: 16px 0;
   border: none;
+  cursor: pointer;
 
   &:hover {
     background-color: #669ec0;
@@ -382,7 +396,7 @@
   cursor: pointer;
 }
 
-/* Hide the browser's default radio button */
+/* Скрыть дефолтную радио кнопку */
 .feedback__control-input {
   position: absolute;
   opacity: 0;
@@ -418,7 +432,7 @@
   }
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
+/* создать новую отметку (скрытую) */
 .feedback__control-mark::after {
   content: "";
   position: absolute;
@@ -426,11 +440,15 @@
 }
 
 .feedback__control-mark--tick {
-  position: absolute;
   display: none;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 10px;
+  left: 11px;
 }
 
-/* Show the indicator (dot/circle) when checked */
+/* Показать отметку */
 .feedback__control input:checked ~ .feedback__control-mark::after {
   display: block;
 }
@@ -439,7 +457,7 @@
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
+/* стили для новой отметки */
 .feedback__control--radio .feedback__control-mark::after {
   top: 15px;
   left: 15px;
@@ -447,18 +465,6 @@
   height: 16px;
   border-radius: 50%;
   background-color: #333333;
-}
-
-.feedback__control-mark--tick {
-  width: 32px;
-  height: 32px;
-  top: -6px;
-  left: 8px;
-}
-
-.feedback__control--checkbox .feedback__control-mark::after {
-  // content: url("../img/form/tick.svg");
-  padding: 15px 12px;
 }
 
 .feedback__control-label {

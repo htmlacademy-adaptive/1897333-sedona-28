@@ -1,0 +1,36 @@
+// reset
+@mixin reset {
+  padding: 0;
+  margin: 0;
+}
+
+// text-styles
+@mixin heading-mobile {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin heading-desktop {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin paragraph-mobile {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-align: center;
+}

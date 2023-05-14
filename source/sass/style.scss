@@ -1,5 +1,8 @@
 // Начните писать стили здесь
 @import "./variables.scss";
+@import "./mixins.scss";
+@import "./base.scss";
+@import "./global.scss";
 @import "./main-container.scss";
 @import "./container.scss";
 @import "./fonts.scss";
@@ -8,7 +11,6 @@
 @import "./feedback.scss";
 @import "./find-hotel.scss";
 @import "./gallery.scss";
-@import "./global.scss";
 @import "./hero.scss";
 @import "./intro.scss";
 @import "./main-footer.scss";
@@ -18,13 +20,3 @@
 @import "./social.scss";
 @import "./visually-hidden.scss";
 @import "./modal.scss";
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-img {
-  display: block;
-}
