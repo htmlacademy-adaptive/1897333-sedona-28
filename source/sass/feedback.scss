@@ -246,6 +246,7 @@
     height: 150px;
     border: none;
     resize: none;
+
     &:active {
       padding-left: 12px;
       padding-top: 12px;
@@ -257,6 +258,7 @@
       margin-top: 28px;
       height: 160px;
       padding: 16px 15px;
+
       &:active {
         padding: 12px 11px;
       }
@@ -266,6 +268,7 @@
   @media (min-width: $desktop-width) {
     &--emotions {
       padding: 16px 45px;
+
       &:active {
         padding: 12px 41px;
       }
@@ -322,9 +325,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    row-gap: 0;
     grid-template-columns: 280px 280px 1fr;
-    padding: 48px 0px 35px 50px;
+    padding: 48px 0 35px 50px;
     column-gap: 30px;
     row-gap: 30px;
 
