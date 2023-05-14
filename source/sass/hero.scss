@@ -23,8 +23,16 @@
     height: 158px;
   }
 
+  @supports (background: url("../img/global/hero/back-mobile.webp")) {
+    background-image: url("../img/global/hero/back-mobile.webp");
+  }
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/global/hero/back-mobile@2x.jpg");
+
+    @supports (background: url("../img/global/hero/back-mobile@2x.webp")) {
+      background-image: url("../img/global/hero/back-mobile@2x.webp");
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -35,8 +43,16 @@
       height: 290px;
     }
 
+    @supports (background: url("../img/global/hero/back-desktop.webp")) {
+      background-image: url("../img/global/hero/back-desktop.webp");
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/global/hero/back-desktop@2x.jpg");
+
+      @supports (background: url("../img/global/hero/back-desktop@2x.webp")) {
+        background-image: url("../img/global/hero/back-desktop@2x.webp");
+      }
     }
   }
 
