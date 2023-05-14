@@ -80,6 +80,10 @@
       padding-left: 65px;
       width: 50%;
     }
+
+    &--impressions {
+      padding-bottom: 28px;
+    }
   }
 }
 
@@ -120,6 +124,7 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 28px;
     font-size: 21px;
+    max-width: 450px;
 
     &--full-name {
       padding-left: 46px;
@@ -135,7 +140,6 @@
 
     &--attractions {
       padding: 0 66px;
-      width: 407px;
     }
 
     &--emotions {
@@ -305,29 +309,27 @@
   row-gap: 36px;
 
   @media (min-width: $tablet-width) {
-    padding: 28px 36px;
-    row-gap: 16px;
+    padding: 40px 36px;
+    row-gap: 36px;
     column-gap: 15px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 46px 46px;
     align-items: center;
 
     &--attractions {
-      padding: 28px 83px;
+      padding: 37px 83px;
       column-gap: 30px;
     }
   }
 
   @media (min-width: $desktop-width) {
     row-gap: 0;
-    grid-template-rows: 80px;
     grid-template-columns: 280px 280px 1fr;
-    padding: 20px 50px 35px;
+    padding: 48px 0px 35px 50px;
     column-gap: 30px;
+    row-gap: 30px;
 
     &--attractions {
-      padding: 29px 45px 40px;
-      grid-template-rows: 108px;
+      padding: 70px 45px 81px;
       column-gap: 64px;
       grid-template-columns: repeat(4, minmax(153px, 184px));
     }
@@ -440,10 +442,10 @@
 .feedback__control-mark--tick {
   display: none;
   position: absolute;
-  width: 32px;
-  height: 32px;
-  top: 6px;
-  left: 8px;
+  width: 24px;
+  height: 24px;
+  top: 10px;
+  left: 11px;
 }
 
 /* Показать отметку */

@@ -2,7 +2,11 @@
   @include reset;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   column-gap: 6px;
+  row-gap: 6px;
+  max-width: 210px;
 }
 
 .social__link {

@@ -37,6 +37,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0;
+    align-items: start;
   }
 
   @media (min-width: 1200px) {
@@ -102,9 +103,10 @@
 
   @media (min-width: $desktop-width) {
     padding: 22px 20px 14px;
-    position: relative;
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.3);
-    margin-top: -80px;
+    bottom: 0;
+    width: 100%;
 
     &--even {
       background-color: rgba(0, 0, 0, 0.3);
