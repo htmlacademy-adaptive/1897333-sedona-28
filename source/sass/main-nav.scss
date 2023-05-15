@@ -77,6 +77,14 @@
   }
 }
 
+.main-nav__inner--empty {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
 .main-nav__link {
   @include heading-mobile;
   text-decoration: none;
