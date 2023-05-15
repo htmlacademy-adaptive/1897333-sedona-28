@@ -115,7 +115,6 @@
   }
 }
 
-
 .feedback__legend {
   @include heading-mobile;
   padding-bottom: 20px;
@@ -297,7 +296,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  //
   padding: 0;
   margin: 0;
   padding-top: 70px;
@@ -451,11 +449,11 @@
 }
 
 /* Показать отметку */
-.feedback__control input:checked ~ .feedback__control-mark::after {
+.feedback__control input:checked~.feedback__control-mark::after {
   display: block;
 }
 
-.feedback__control input:checked ~ .feedback__control-mark--tick {
+.feedback__control input:checked~.feedback__control-mark--tick {
   display: block;
 }
 

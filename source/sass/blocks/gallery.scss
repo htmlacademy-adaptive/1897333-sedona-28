@@ -14,7 +14,6 @@
   }
 }
 
-
 .gallery__list {
   list-style: none;
   display: flex;
@@ -78,28 +77,26 @@
 }
 
 .gallery__item--road {
-  background-color: rgb(121,51,4);
+  background-color: rgb(121, 51, 4);
 }
 
 .gallery__item--cactus {
-  background-color: rgb(98,76,23);
+  background-color: rgb(98, 76, 23);
 }
 
 .gallery__item--north-road {
-  background-color: rgb(46,75,49);
+  background-color: rgb(46, 75, 49);
 }
 
 .gallery__item--devil-bridge {
-  background-color: rgb(215,96,58);
+  background-color: rgb(215, 96, 58);
 }
-
 
 .gallery__picture {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-
 
 .gallery__wrapper {
   display: flex;
