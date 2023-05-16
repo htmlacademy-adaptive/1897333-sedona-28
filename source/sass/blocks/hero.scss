@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 389px;
+  min-height: 389px;
   background-image: url("../img/global/hero/back-mobile.jpg");
   background-color: rgb(93, 93, 101);
   background-position: center center;
@@ -68,79 +68,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 90px;
-
-  @media (min-width: $tablet-width) {
-    height: 518px;
-    padding-top: 77px;
-
-    &--small {
-      height: 346px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &--small {
-      height: calc(300px + 56px);
-    }
-  }
+  // margin-top: 72px;
 }
 
-.hero__container svg {
-  display: block;
-  width: 100%;
+.hero__text {
+  width: 282px;
   height: 100%;
-}
-
-.hero__inner-top {
-  &--small {
-    display: none;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 257px;
-    height: 85px;
-  }
-}
-
-.hero__inner-middle {
-  margin-top: 31px;
-
-  &--small {
-    margin-top: -39px;
-    width: 231px;
-  }
+  margin-top: 90px;
 
   @media (min-width: $tablet-width) {
     width: 461px;
-    height: 80px;
-    margin-top: 51px;
-
-    &--small {
-      width: 460px;
-      margin-top: 17px;
-    }
+    margin-top: 77px;
   }
 
   @media (min-width: $desktop-width) {
-    &--small {
-      margin-top: 24px;
-    }
+    width: 460px;
+    margin-top: 78px;
   }
 }
 
-.hero__inner-bottom {
-  margin-top: 33px;
-  margin-left: -12px;
-
-  &--small {
-    display: none;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 295px;
-    height: 80px;
-    margin-top: 54px;
-    margin-left: -20px;
-  }
-}
+// .hero__container svg {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+// }
