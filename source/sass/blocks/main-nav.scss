@@ -1,9 +1,18 @@
 .main-nav {
   min-height: 56px;
-  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     background-color: #ffffff;
+  }
+}
+
+.main-nav--nojs {
+  @media (max-width: $tablet-width) {
+    min-height: 0;
   }
 }
 
@@ -19,7 +28,7 @@
   width: 100%;
   transform: translateY(-100%);
   transition: transform 0.5s;
-  z-index: 1;
+  z-index: 2;
   background-color: #81b3d2;
 
   &--active {
@@ -113,7 +122,7 @@
 }
 
 .main-nav__toggle {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   display: flex;
   flex-direction: column;
