@@ -19,7 +19,6 @@
 .find-hotel__title {
   @include heading-desktop;
   @include reset;
-
   @media (min-width: $tablet-width) {
     font-size: 30px;
   }
@@ -41,18 +40,11 @@
   }
 }
 
-.find-hotel__wrapper {
-
-
-  @media (min-width: $tablet-width) {}
-}
-
 .find-hotel__link {
   @include heading-desktop;
   margin-top: 32px;
   min-width: 284px;
   max-width: 400px;
-  //
   display: block;
   text-decoration: none;
   color: #ffffff;
@@ -65,7 +57,6 @@
 
   &:active {
     color: #ffffff4d;
-
     background-color: #5496bd;
   }
 
@@ -73,7 +64,6 @@
     font-size: 21px;
     line-height: 26px;
     padding-top: 15px;
-    //
     margin-top: 44px;
     min-width: 458px;
     max-width: 550px;
