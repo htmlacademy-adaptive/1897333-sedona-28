@@ -22,7 +22,7 @@ let form = document.querySelector('.feedback');
 
 if (form) {
 ////form variables
-let submit = document.querySelector('.feedback_button');
+let submit = document.querySelector('.feedback__button');
 let confirmButtonOk = document.querySelector('.modal__confirm--ok');
 let confirmButtonError = document.querySelector('.modal__confirm--error');
 let modalOk = document.querySelector('.modal--ok');
