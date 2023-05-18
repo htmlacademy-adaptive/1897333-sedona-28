@@ -18,29 +18,26 @@
 <body class="page-body">
   <!--шапка-->
   <header class="main-header">
-    <a href="./index.html" class="main-header__logo-link">
-      <img class="main-header__logo" src="./img/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
-    </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--nojs">
       <ul class="main-nav__wrapper main-nav__wrapper--nojs">
         <li class="main-nav__inner">
-          <a class="main-nav__link" href="index.html">
+          <a class="main-nav__link" href="index.html" aria-label="Главная страница">
             Главная
           </a>
         </li>
         <li class="main-nav__inner">
-          <a class="main-nav__link" href="catalog.html">
+          <a class="main-nav__link" href="catalog.html" aria-label="Галлерея">
             Фото и видео
           </a>
         </li>
         <li class="main-nav__inner main-nav__inner--empty"></li>
         <li class="main-nav__inner">
-          <a class="main-nav__link main-nav__link--current">
+          <a class="main-nav__link main-nav__link--current" aria-label="Форма отзыва">
             Форма отзыва
           </a>
         </li>
         <li class="main-nav__inner">
-          <a class="main-nav__link" href="https://htmlacademy.ru/">
+          <a class="main-nav__link" href="https://htmlacademy.ru/" aria-label="HTML Academy">
             HTML Academy
           </a>
         </li>
@@ -51,6 +48,9 @@
         <span class="main-nav__toggle-line"></span>
       </button>
     </nav>
+    <a href="./index.html" class="main-header__logo-link main-header__logo-link--nojs" aria-label="ссылка на главную страницу">
+      <img class="main-header__logo" src="./img/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
+    </a>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Пожалуйста оставьте свой отзыв</h1>
@@ -218,21 +218,22 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте">
               <svg class="social__icon">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" aria-label="Телеграм">
               <svg class="social__icon">
                 <use xlink:href="img/sprite.svg#icon-tg"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
+              aria-label="YouTube">
               <svg class="social__icon">
                 <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
@@ -241,7 +242,7 @@
         </ul>
       </div>
       <div class="main-footer__academy">
-        <a class="main-footer__academy-link">
+        <a class="main-footer__academy-link" aria-label="HTML Academy">
           <span class="main-footer__academy-capture">Разработано</span>
           <svg class="main-footer__academy-icon">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
@@ -249,8 +250,7 @@
         </a>
       </div>
     </div>
-  </footer>
-  <section class="modal modal--error">
+  </footer>  <section class="modal modal--error">
     <div class="modal__container modal__container--error">
       <h3 class="modal__title modal__title--error">Что-то пошло <br class="for-tablet"><br class="for-desktop">не так!
       </h3>
