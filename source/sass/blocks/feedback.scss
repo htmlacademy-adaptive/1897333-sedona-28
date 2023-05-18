@@ -405,6 +405,11 @@
   top: 3px;
 }
 
+/*Отобразить фокусы*/
+.feedback__control-input:focus + .feedback__control-mark {
+  outline: auto;
+}
+
 .feedback__control-mark {
   position: absolute;
   top: 0;
