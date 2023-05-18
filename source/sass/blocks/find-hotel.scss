@@ -42,19 +42,17 @@
 }
 
 .find-hotel__wrapper {
-  padding-top: 32px;
-  min-width: 284px;
-  max-width: 400px;
 
-  @media (min-width: $tablet-width) {
-    padding-top: 46px;
-    min-width: 458px;
-    max-width: 550px;
-  }
+
+  @media (min-width: $tablet-width) {}
 }
 
 .find-hotel__link {
   @include heading-desktop;
+  margin-top: 32px;
+  min-width: 284px;
+  max-width: 400px;
+  //
   display: block;
   text-decoration: none;
   color: #ffffff;
@@ -75,5 +73,9 @@
     font-size: 21px;
     line-height: 26px;
     padding-top: 15px;
+    //
+    margin-top: 44px;
+    min-width: 458px;
+    max-width: 550px;
   }
 }

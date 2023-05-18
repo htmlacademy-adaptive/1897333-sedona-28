@@ -58,7 +58,6 @@
   align-items: center;
 }
 
-
 .advantages__wrapper {
   display: flex;
   flex-direction: column;
@@ -299,6 +298,8 @@
 }
 
 .advantages__picture {
+  background-color: rgb(138, 82, 51);
+
   picture {
     display: contents;
   }
