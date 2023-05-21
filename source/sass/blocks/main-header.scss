@@ -26,13 +26,9 @@
 }
 
 .main-header__logo-link--nojs {
-  position: relative;
-  left: 0;
-  transform: translateX(0);
-
-  @media (min-width:$tablet-width) {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  @media (max-width: calc($tablet-width - 1px)) {
+    position: relative;
+    left: 0;
+    transform: translateX(0);
   }
 }

@@ -4,12 +4,10 @@ let menuBtn = document.querySelector('.main-nav__toggle');
 let menu = document.querySelector('.main-nav__wrapper');
 let cross = document.querySelectorAll('.main-nav__toggle-line');
 let logo = document.querySelector('.main-header__logo-link');
-let headerr = document.querySelector('.main-nav');
 ////delete nojs class
 menuBtn.classList.remove('main-nav__toggle--nojs');
 menu.classList.remove('main-nav__wrapper--nojs');
 logo.classList.remove('main-header__logo-link--nojs');
-headerr.classList.remove('main-nav--nojs');
 ////show&hide mobile menu
 menuBtn.addEventListener('click', function () {
   menuBtn.classList.toggle('main-nav__toggle--active');

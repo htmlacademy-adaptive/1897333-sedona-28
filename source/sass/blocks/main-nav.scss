@@ -10,12 +10,6 @@
   }
 }
 
-.main-nav--nojs {
-  @media (max-width: $tablet-width) {
-    min-height: 0;
-  }
-}
-
 .main-nav__wrapper {
   @include reset;
   list-style: none;
