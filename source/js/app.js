@@ -27,8 +27,7 @@ let confirmButtonOk = document.querySelector('.modal__confirm--ok');
 let confirmButtonError = document.querySelector('.modal__confirm--error');
 let modalOk = document.querySelector('.modal--ok');
 let modalError = document.querySelector('.modal--error');
-let modalOkActive = document.querySelector('.modal--ok--active');
-let modalErrorActive = document.querySelector('.modal--error--active');
+let modalActive = document.querySelector('.modal--active');
 ////randomizer
 function randomIntFromInterval(min, max) { // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min)
@@ -38,19 +37,19 @@ function randomIntFromInterval(min, max) { // min and max included
 submit.addEventListener('click', function () {
   let rndNum = randomIntFromInterval(1, 100);
   if (rndNum<51) {
-    modalOk.classList.add('modal--ok--active');
+    modalOk.classList.add('modal--active');
     console.log('ok')
   } else {
-    modalError.classList.add('modal--error--active');
+    modalError.classList.add('modal--active');
     console.log('error')
   }
 });
 ////hide modals
 confirmButtonOk.addEventListener('click', function () {
-  modalOk.classList.remove('modal--ok--active');
+  modalOk.classList.remove('modal--active');
 });
 
 confirmButtonError.addEventListener('click', function () {
-  modalError.classList.remove('modal--error--active');
+  modalError.classList.remove('modal--active');
 });
 }

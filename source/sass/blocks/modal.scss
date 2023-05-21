@@ -1,5 +1,6 @@
 .modal {
   position: fixed;
+  display: none;
   z-index: 1;
   background: rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -9,32 +10,17 @@
   left: 0;
   right: 0;
   padding: 116px 0;
+}
 
-  &--ok {
-    display: none;
-
-    &--active {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  &--error {
-    display: none;
-
-    &--active {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+.modal--active {
+  display: block;
 }
 
 .modal__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
   background-color: #ffffff;
   padding: 45px 0 0;
   min-width: 320px;
