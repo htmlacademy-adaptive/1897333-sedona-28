@@ -20,6 +20,10 @@
 <body class="page-body">
   <!--шапка-->
   <header class="main-header">
+    <a href="./index.html" class="main-header__logo-link main-header__logo-link--nojs"
+      aria-label="ссылка на главную страницу">
+      <img class="main-header__logo" src="./img/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
+    </a>
     <nav class="main-nav main-nav--nojs">
       <ul class="main-nav__wrapper main-nav__wrapper--nojs">
         <li class="main-nav__inner">
@@ -50,15 +54,13 @@
         <span class="main-nav__toggle-line"></span>
       </button>
     </nav>
-    <a href="./index.html" class="main-header__logo-link main-header__logo-link--nojs" aria-label="ссылка на главную страницу">
-      <img class="main-header__logo" src="./img/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
-    </a>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Пожалуйста оставьте свой отзыв</h1>
     <section class="hero hero--shrinked">
       <div class="hero__container hero__container--shrinked">
-        <img class="hero__text hero__text--sedona" src="./img/global/hero/text-sedona.svg" alt="Добро пожаловать в Седону">
+        <img class="hero__text hero__text--sedona" src="./img/global/hero/text-sedona.svg"
+          alt="Добро пожаловать в Седону">
       </div>
     </section>
     <section class="intro intro--form">
@@ -252,7 +254,8 @@
         </a>
       </div>
     </div>
-  </footer>  <section class="modal modal--error">
+  </footer>
+  <section class="modal modal--error">
     <div class="modal__container modal__container--error">
       <h3 class="modal__title modal__title--error">Что-то пошло <br class="for-tablet"><br class="for-desktop">не так!
       </h3>
