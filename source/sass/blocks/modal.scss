@@ -26,21 +26,15 @@
   min-width: 320px;
 
   @media (min-width: $tablet-width) {
-    max-width: 700px;
-
     &--ok {
       padding-top: 51px;
-      min-width: 640px;
+      max-width: 640px;
     }
 
     &--error {
       padding-top: 50px;
-      min-width: 400px;
+      max-width: 400px;
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 1000px;
   }
 }
 
