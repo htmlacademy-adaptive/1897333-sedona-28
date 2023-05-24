@@ -453,11 +453,11 @@
 }
 
 /* Показать отметку */
-.feedback__control input:checked~.feedback__control-mark::after {
+.feedback__control input:checked ~ .feedback__control-mark::after {
   display: block;
 }
 
-.feedback__control input:checked~.feedback__control-mark--tick {
+.feedback__control input:checked ~ .feedback__control-mark--tick {
   display: block;
 }
 
