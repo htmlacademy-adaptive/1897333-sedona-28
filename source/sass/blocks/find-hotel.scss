@@ -19,6 +19,7 @@
 .find-hotel__title {
   @include heading-desktop;
   @include reset;
+
   @media (min-width: $tablet-width) {
     font-size: 30px;
   }
