@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -18,7 +20,11 @@
 <body class="page-body">
   <!--шапка-->
   <header class="main-header">
-    <nav class="main-nav main-nav--nojs">
+    <a href="./index.html" class="main-header__logo-link main-header__logo-link--nojs"
+      aria-label="ссылка на главную страницу">
+      <img class="main-header__logo" src="./img/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
+    </a>
+    <nav class="main-nav">
       <ul class="main-nav__wrapper main-nav__wrapper--nojs">
         <li class="main-nav__inner">
           <a class="main-nav__link main-nav__link--current" aria-label="Главная страница">
@@ -30,7 +36,6 @@
             Фото и видео
           </a>
         </li>
-        <li class="main-nav__inner main-nav__inner--empty"></li>
         <li class="main-nav__inner">
           <a class="main-nav__link" href="form.html" aria-label="Форма отзыва">
             Форма отзыва
@@ -48,9 +53,6 @@
         <span class="main-nav__toggle-line"></span>
       </button>
     </nav>
-    <a href="./index.html" class="main-header__logo-link main-header__logo-link--nojs" aria-label="ссылка на главную страницу">
-      <img class="main-header__logo" src="./img/logo.svg" alt="Логотип в шапке сайта" width="185" height="96">
-    </a>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
@@ -222,7 +224,8 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="YouTube">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
+              aria-label="YouTube">
               <svg class="social__icon">
                 <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
